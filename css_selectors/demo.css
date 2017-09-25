@@ -1,0 +1,65 @@
+
+/*===============================================*/
+/*================ Selectors ====================*/
+/*===============================================*/
+body { font-family: Arial }
+hr {margin: 80px 0 }
+.first-div { background-color: red; height: 300px; width: 300px; }
+
+/* Descendent Selector ( ) - selects all .child elements that are descendants of any div element */
+.first-div section { background-color: yellow; }
+
+.first-div p { background-color: pink; }
+
+/* Direct Child selector (>) - only selects p elements that are immediate children of article */
+article.direct-child > p { color: green; }
+
+/* Adjacent Sibling selector (+) - selects the sibling p that directly follows h1 */
+h2.adjacent-sib + p { font-size: 20px; color: blue }
+
+/* General Sibling selector (~) - selects all siblings that immediately follow h2 */
+section.general-sibling-selector h2 ~ p { color: red; }
+
+
+
+
+/*===============================================*/
+/*============= Pseudo Selectors ================*/
+/*===============================================*/
+
+h2.pseudo:hover { background-color: violet; }
+
+ul.pseudo-ul li:first-child {color: orange; }
+ul.pseudo-ul li:last-child {color: green; }
+
+.pseudo-ul-2 li:nth-of-type(even) { background-color: purple; }
+.pseudo-ul-2 li:nth-of-type(odd) { background-color: blue; }
+.pseudo-ul-2 li:nth-child(4) { color: white; }
+
+
+/* select all but the first 3 */
+/*.pseudo-ul-3 li:nth-child(n+4) { color: pink; }*/
+
+/* select only the first 3*/
+/*.pseudo-ul-3 li:nth-child(-n+3) { color: pink; }*/
+
+/* select every third, starting at the second */
+/*.pseudo-ul-3 li:nth-child(3n+2) { color: pink }*/
+
+
+/* :before and :after */
+.after:before { content: "hi"; color:red; }
+
+.after + a:after { content: " [" attr(href) "]"; }
+
+/*===============================================*/
+/*================= CSS Filter ==================*/
+/*===============================================*/
+
+/*#cloud {filter: blur(5px)}*/
+/*#cloud {filter: brightness(2)}*/
+/*#cloud {filter: sepia(1)}*/
+/*#cloud {filter: saturate(4)}*/
+/*#cloud {filter: brightness(2)}*/
+/*#cloud {filter: drop-shadow(0px 0px 20px black)}*/
+/*#cloud {filter: blur(2px) sepia(1) brightness(2) }*/

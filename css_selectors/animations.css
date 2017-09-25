@@ -1,0 +1,39 @@
+body { background-color: #FBFBEF; font-family: 'Open Sans', sans-serif; }
+section { margin-top: 100px; }
+h1 {text-align: center; text-decoration: underline;}
+
+
+
+
+#link { max-width: 370px; }
+.animate-link {
+    /*transform: translateX(200px); */
+    /*transform: translate(200px, 100px);*/
+    /*transform: skew(60deg)*/
+    transform: translate(200px, 50px) scale(1.5);
+    /*transform: rotate(130deg);*/
+}
+
+
+
+#earthbound {
+    height: 500px;
+    transition: opacity 2s ease-in-out;
+}
+.animate-earthbound {
+    opacity: 0;
+}
+
+
+
+#mewtwo{}
+.animate-mewtwo {
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(900px) rotate(270deg);}
+    100% {transform: translateX(0);}
+}

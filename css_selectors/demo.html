@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Selectors + Filter</title>
+        <link rel="stylesheet" href="demo.css" media="screen">
+    </head>
+    <body>
+
+        <h2>Descendent Selector</h2>
+        <div class="first-div">
+            <div class="second-div">
+                <p>We are inside the second div</p>
+                <section>This is such a fun exercise!</section>
+                <p>Another p tag</p>
+            </div>
+        </div>
+
+
+
+        <hr>
+
+
+
+        <h2>Direct Child Selector</h2>
+        <article class="direct-child">
+            <p>This paragraph will be selected</p>
+            <div>
+                <p>...the inner p tag</p>
+            </div>
+        </article>
+
+
+
+        <hr>
+
+
+
+        <h2>Adjacent Sibling Selector</h2>
+        <p>...</p>
+        <section>
+            <p>One p tag</p>
+            <h2 class="adjacent-sib">this is our h2</h2>
+            <p>This paragraph will be selected</p>
+            <div>
+                <p>nested stuff</p>
+            </div>
+            <p>just filling up content</p>
+        </section>
+
+
+
+        <hr>
+
+
+
+        <h2>General Sibling Selector</h2>
+        <section class="general-sibling-selector">
+            <p>p tag one</p>
+            <h2>this is our h2</h2>
+            <p>This paragraph will be selected</p>
+            <div>
+                <p>p tag two</p>
+            </div>
+            <p>This paragraph will be selected</p>
+        </section>
+
+
+       
+        <hr>
+
+
+        <!-- ******** PSEUDO SELECTORS ************ -->
+
+        <h2 class="pseudo">Time for Pseudo Classes!</h2>
+
+        <ul class="pseudo-ul">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fourth</li>
+            <li>fifth</li>
+            <li>sixth</li>
+        </ul>
+
+        <hr>
+
+        <ul class="pseudo-ul-2">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fourth</li>
+            <li>fifth</li>
+            <li>sixth</li>
+        </ul>
+
+        <hr>
+
+        <ul class="pseudo-ul-3">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+            <li>fourth</li>
+            <li>fifth</li>
+            <li>sixth</li>
+        </ul>
+
+
+        <hr>
+
+
+        <h2 class="after">:before &amp; :after</h2>
+
+        <a href="http://www.mattfewer.com">My website</a>
+
+
+
+
+        <hr>
+
+
+
+
+        <h2>Filter!</h2>
+
+        <img id="cloud" src="http://static.giantbomb.com/uploads/original/0/2806/2182492-150px_cloud_strife_field_model.jpg" alt="" />
+
+
+
+
+
+    </body>
+</html>

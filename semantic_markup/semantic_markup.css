@@ -1,0 +1,28 @@
+body { margin: 0 }
+header { float: left; margin: 10px 0 }
+
+#top { display: inline-block; width: 100%; background-color: #333; padding: 10px; }
+nav { float: right; overflow: hidden; background-color: #333; }
+nav ul { margin: 0 }
+nav li { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 17px; }
+nav li a { color: white; }
+
+main { margin: 20px; }
+
+footer { text-align: center; background-color: orange; left: 0; bottom: 0; overflow: hidden; width: 100%; padding: 15px}
+
+.col-2 { width: 20%; }
+.col-8 { width: 80%; }
+
+section {padding: 15px; margin-bottom: 15px; }
+section:nth-of-type(odd) {background-color: #FFF7E5; }
+section:nth-of-type(even) {background-color: #d5d5d5;}
+q { color: red; }
+
+h1 { text-align: center; }
+
+aside {float: right; width: 33.33%; margin: 10px; background-color: rgb(157, 246, 116); padding: 10px}
+aside h2 {display: inline-block; margin: 0}
+
+#cupcakes {background-color: #06dae0; padding: 20px; margin: 30px}
+#cupcakes img {float: left; margin: 15px 15px 15px 0}

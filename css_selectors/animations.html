@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animations</title>
+        <link rel="stylesheet" href="animations.css" media="screen" title="no title">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CSS Animations</h1>
+
+        <section class="animation-1-wrapper">
+            <h2>Transform</h2>
+            <img id="link" src="http://vignette2.wikia.nocookie.net/zelda/images/d/d5/Young_Link_Artwork_1_(Ocarina_of_Time).png/revision/latest?cb=20090321143530" alt="link_and_fairy" />
+            <br>
+            <button id="animate-link" type="button" name="button">Animate!</button>
+        </section>
+
+
+
+        <section class="animation-2-wrapper">
+            <h2>Transition</h2>
+							<img id="earthbound" src="http://starmen.net/mother2/images/official/clay_starman.png" alt="earthbound_cast" />
+            <br>
+            <button id="animate-earthbound" type="button" name="button">Animate!</button>
+        </section>
+
+
+
+        <section class="animation-3-wrapper">
+            <h2>Animation</h2>
+            <img id="mewtwo" src="http://static.giantbomb.com/uploads/original/9/95666/1890568-mewtwo_black_white_pokemon_kanto_red_blue_green_gen_i_v_dream.png" alt="" />
+            <br>
+            <button id="animate-mewtwo" type="button" name="button">Animate!</button>
+        </section>
+
+    </body>
+
+
+
+
+    <script type="text/javascript">
+        var link = document.getElementById('link'),
+            linkbtn = document.getElementById('animate-link'),
+            earthbound = document.getElementById('earthbound'),
+            earthboundbtn = document.getElementById('animate-earthbound'),
+            mewtwo = document.getElementById('mewtwo'),
+            mewtwobtn = document.getElementById('animate-mewtwo');
+
+        earthboundbtn.addEventListener('click', function(){
+            earthbound.classList.toggle('animate-earthbound');
+        });
+
+        linkbtn.addEventListener('click', function(){
+            link.classList.toggle('animate-link');
+        });
+
+        mewtwobtn.addEventListener('click', function(){
+            mewtwo.classList.toggle('animate-mewtwo');
+        });
+    </script>
+</html>
