@@ -26,7 +26,7 @@ const exclaim = str => {
 };
 ```
 
-If the body of your function contains just a one-line expression, you can omit the curly braces and not use the `return` keyword.
+If the body of your function contains just one expression, you can omit the curly braces and not use the `return` keyword.
 
 ```js
 const exclaim = str => str.toUpperCase() + '!!!';
