@@ -23,7 +23,7 @@ You may also want to set Atom as your default editor by following these instruct
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v6.11.2/node-v6.11.2.pkg">v6.11.2</a>. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3.pkg">v6.11.3</a>. Installation should be straightforward on both macOS and Windows.
 
 ## Set up ESLint in Atom
 It's helpful to have a linter check your code's syntax when you save it so you can catch errors early. ESLint is a linter that does this and that can be plugged in to Atom as a package. Follow these steps:
