@@ -68,7 +68,7 @@ const a = 100;
 a = 200; // TypeError: Assignment to constant variable.
 ```
 
-Unlike `var` declarations, `let` and `const` declarations do not undergo hoisting. They happen in the place they appear and not as soon as the function they are in begins to execute.
+`let` and `const` declarations do not undergo hoisting in the same way as `var` declarations. They happen in the place they appear and not as soon as the function they are in begins to execute. Attempts to use variables declared with `let` or `const` in the scope in which they are declared prior to the declarations, an error will occur.
 
 When `let` and `const` are used to declare variables in global scope, global variables are created but global properties are not.
 
