@@ -90,7 +90,7 @@ class Square extends Rectangle {
 
 ### Scope
 
-Unlike function declarations, `class` declarations are not hoisted. Code that uses them must appear after the code that defines them.
+`class` declarations are not hoisted in the same manner as `function` declarations. Code that uses a class must appear after that class is defined.
 
 Classes use block scoping.
 
