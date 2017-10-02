@@ -75,7 +75,7 @@ One of the most powerful and useful parts of git is its branches. By branching o
 
 ##### To delete a local branch:
 
-`git checkout -D <branch_to_delete>`
+`git branch -D <branch_to_delete>`
 
 You may also need the `-f` flag if you have unmerged changes. It may also prompt you to use the `-D`. 
 
