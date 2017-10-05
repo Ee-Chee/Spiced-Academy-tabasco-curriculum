@@ -31,3 +31,33 @@
 [CSS Selectors](css_selectors)
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
+
+# Week 2
+
+### Monday
+
+<a href="wk1_dy5_constructors_prototypes">Constructors, Prototypes,</a> and <a href="wk1_dy5_this">`this`</a>
+
+[The Document Object Model](wk2_dy1_dom)
+
+### Tuesday
+
+[Ticker](wk2_dy4_ticker)
+
+[DOM Events](wk2_dy2_dom_events)
+
+### Wednesday
+
+[Hamburger Menu](wk2_dy3_hamburger_menu)
+
+[Ticker](wk2_dy4_ticker)
+
+### Thursday
+
+[Flexbox](flexbox)
+
+[Canvas](wk2_dy4_canvas)
+
+### Friday
+
+[Kitty Carousel](wk2_carousel)
