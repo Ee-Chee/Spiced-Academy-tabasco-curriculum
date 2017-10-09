@@ -61,3 +61,5 @@
 ### Friday
 
 [Kitty Carousel](wk2_carousel)
+
+[Career WS: Self-Awareness](https://github.com/spicedacademy/career-workshop/tree/master/Self_Awareness)
