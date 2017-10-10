@@ -86,7 +86,7 @@ Other interesting properties of event objects include:
 
 * `changedTouches` - a list of objects representing touches that have changed since the last touch event
 
-* `key` - a string representing the key that was involved in a keyboard event
+* `keyCode` - a number representing the key that was involved in a keyboard event
 
 ## Event types
 There is <a href="https://developer.mozilla.org/en-US/docs/Web/Events">a huge number of events</a> that can be handled. Below is a list of a few that are of particular interest to us at this time.
