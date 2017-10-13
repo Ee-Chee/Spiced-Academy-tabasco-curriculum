@@ -99,7 +99,7 @@ const leo = {
 };
 ```
 
-Functions can be assigned using the same syntax used with [`class`](../es6_class).
+You can also now add functions to object literals with more concise syntax.
 
 ```js
 const leo = {
@@ -108,27 +108,8 @@ const leo = {
         console.log(`Hello, my name is ${this.name}`);
     }
 };
-```
 
-Computed properties can also be created with the same syntax used with `class`.
-
-```js
-const square = {
-    width: 4,
-    height: 4,
-    get area() {
-        return this.width * this.height;
-    },
-    set area(val) {
-        this.width = this.height = Math.sqrt(val);
-    }
-};
-
-square.area; //16
-
-square.area = 25;
-
-square.width; //5
+leo.hello();
 ```
 
 Creating objects with dynamically determined property names has always been annoying because it's a two step process. First you have to create the object and then you have to add the property or properties. 
