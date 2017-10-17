@@ -84,8 +84,6 @@
 
 [HTTP Review](wk3_http)
 
-[CSS Grid](css_grid)
-
 ### Thursday
 
 [`XMLHttpRequest`](wk3_xmlhttprequest)
