@@ -92,6 +92,8 @@
 
 [Incremental Search - Part 2](wk2_dy3_incremental_search/part2.md)
 
+[Career WS: Self-Awareness](https://github.com/spicedacademy/career-workshop/tree/master/Self_Awareness)
+
 ### Friday
 
 [Connect Four](connect_four)
