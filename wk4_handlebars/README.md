@@ -78,7 +78,7 @@ In the example above, the opening `{{#job}}` sets the context to be the `job` pr
 }
 ```
 
-It the context is a string, you can use `{{.}}` to print it out.
+If the context is a string, you can use `{{.}}` to print it out.
 
 ```HTML
     {{name}}'s job title is {{#job}}
@@ -88,7 +88,19 @@ It the context is a string, you can use `{{.}}` to print it out.
     {{/job}} and she lives in {{location}}.
 ```
 
-If the context is set to an array, Handlebars will automatically iterate over it.
+You can also navigate down to the properties of sub-objects without nesting by using syntax similar to that used to navigate file systems:
+
+```HTML
+    {{name}}'s job title is {{job/title}} and she lives in {{location}}.
+```
+
+Similar syntax can be used to navigate _up_ to a higher object.
+
+```HTML
+    {{name}}'s job title is {{#job}}{{title}} and she lives in {{../location}}{{/job}}.
+```
+
+When the context is set to an array, Handlebars will automatically iterate over it.
 
 ```HTML
 {{#authors}}
