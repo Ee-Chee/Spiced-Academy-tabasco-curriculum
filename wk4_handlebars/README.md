@@ -78,6 +78,16 @@ In the example above, the opening `{{#job}}` sets the context to be the `job` pr
 }
 ```
 
+It the context is a string, you can use `{{.}}` to print it out.
+
+```HTML
+    {{name}}'s job title is {{#job}}
+        {{#title}}
+            {{.}}
+        {{/title}}
+    {{/job}} and she lives in {{location}}.
+```
+
 If the context is set to an array, Handlebars will automatically iterate over it.
 
 ```HTML
