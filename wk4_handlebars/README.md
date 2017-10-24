@@ -103,16 +103,17 @@ Similar syntax can be used to navigate _up_ to a higher object.
 When the context is set to an array, Handlebars will automatically iterate over it.
 
 ```HTML
+<ul class="authors">
 {{#authors}}
-    <div class="author">
+    <li class="author">
         {{name}}
-        <div class="books">
+        <ul class="books">
             {{#books}}
-                <div class="book">{{title}}</div>
+                <li class="book">{{title}}
             {{/books}}
-        </div>
-    </div>
+        </ul>
 {{/authors}}
+</ul>
 ```
 
 In the example above, if the object that is passed to the template has no `authors` property, an empty string would be returned.
