@@ -61,7 +61,7 @@ router.route('/profile')
         res.redirect('/');
     })
 
-    .post(req, res) => {
+    .post((req, res) => {
         var age = req.body.age,
             city = req.body.city,
             homepageUrl = req.body.homepage_url,
@@ -80,11 +80,7 @@ The above is the same as writing….
 router.get('/profile', function(req, res){ /*...*/ });
 
 router.post('/profile', function(req, res){ /*...*/ })
-
-router.put('/profile', function(req, res){ /*...*/ })
 ```
-
-
 
 ## Structuring your Express App
 
