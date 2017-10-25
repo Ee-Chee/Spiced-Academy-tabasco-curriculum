@@ -27,15 +27,15 @@ You use the Router as you normally would when writing your routes in express.
 // ./routers/router.js
 
 router.get('/', (req,res)=>{
-  res.render('home');
-});
+  res.render('home')
+})
 
 router.post('/signup', (req,res)=>{
   // run your post route
-});
+})
 
 //export your router
-module.exports = router;
+module.exports = router
 ```
 
 Include it in your server with: 
@@ -58,7 +58,7 @@ Calling `.route` on an instance of `Router` returns a route instance for the giv
 router.route('/profile')
 
     .get((req, res) => {
-        res.redirect('/');
+        res.redirect('/')
     })
 
     .post((req, res) => {
@@ -77,7 +77,7 @@ router.route('/profile')
 The above is the same as writing….
 
 ```javascript
-router.get('/profile', function(req, res){ /*...*/ });
+router.get('/profile', function(req, res){ /*...*/ })
 
 router.post('/profile', function(req, res){ /*...*/ })
 ```
