@@ -21,7 +21,7 @@ In general, your game should work as follows:
 var story = {
     q: "Welcome to The Land Of Wizards! Would you like to play?",
     answers: {
-        "yes": {
+        yes: {
             q: "You are alone in a dark forest and facing a fork in the road. Which direction do you turn?",
             answers: {
                 left: {
@@ -33,8 +33,8 @@ var story = {
                 right: "This was not the right choice. Goodbye!"
             }
         },
-        "no": "Alright then. Enjoy your day!"
-    },
+        no: "Alright then. Enjoy your day!"
+    }
 };
 ```
 
