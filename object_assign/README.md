@@ -73,9 +73,12 @@ function Rectangle(w, h) {
     this.width = w;
     this.height = h;
 }
-Rectangle.prototype.getArea = () => this.width * this.height;
 
-const rect = new Rectangle;
+Rectangle.prototype.getArea = function() {
+    return this.width * this.height;
+};
+
+const rect = new Rectangle(4, 5);
 
 rect.width * rect.height; // 20
 
