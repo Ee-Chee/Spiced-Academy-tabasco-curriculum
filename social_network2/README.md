@@ -42,7 +42,7 @@ The `Router` element simply sets up the routing functionality and has no visual 
 
 `Route` elements map components to paths. The first `Route` element indicates that the `Welcome` component should be rendered for the root path (`'/'`).
 
-`Route` elements can be nested. A nested `Route` element indicates a child component that should be rendered when for a specified path.
+`Route` elements can be nested. A nested `Route` element indicates a child component that should be rendered for a specified path.
 
 The `IndexRoute` element indicates a child component that should be rendered when there is nothing added to the parent `Route`'s path.'
 
