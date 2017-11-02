@@ -176,11 +176,7 @@
 
 ### Wednesday
 
-[Twitter API](wk6_twitter_api)
-
 [Intro to SQL](wk7_sql)
-
-### Thursday
 
 [Node + Postgres](wk7_node_postgres)
 
@@ -188,8 +184,13 @@
 
 [Petition - Part 1](wk7_petition)
 
+### Thursday
+
+[Petition - Part 2](wk7_petition2)
 
 ### Friday
 
-[Petition - Part 2](wk7_petition2)
+[Auth](wk8_passwords)
+
+[Petition - Part 3](wk7_petition3)
 
