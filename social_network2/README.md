@@ -21,7 +21,7 @@ Consider the following example:
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, IndexRoute, hashHistory } from 'react-router';
-import { Welcome, Registration, Login } from './welcome';,
+import { Welcome, Registration, Login } from './welcome';
 
 
 const router = (
