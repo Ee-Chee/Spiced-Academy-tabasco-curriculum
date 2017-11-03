@@ -31,3 +31,5 @@ Note that even after you confirm a tweet has only one url and you remove it from
 ## Part 2
 
 Get headlines from two additional news sources of your choosing. The requests for tweets from all three news sources should be made simultaneously. The combined list of tweets that you send to the client should be sorted in reverse chronological order. You should also append to each tweet the name of the source in parentheses.
+
+Note: this task will be made much easier if you use [promises](wk6_promises).
