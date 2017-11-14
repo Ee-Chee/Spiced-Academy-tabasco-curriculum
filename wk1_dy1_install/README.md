@@ -1,6 +1,6 @@
 ## Create and set up your Github account
 
-1. If you do not have a Github account, go to https://github.com/ and create one. 
+1. If you do not have a Github account, go to https://github.com/ and create one.
 
 2. After you create your account you will have to add an SSH key to it. Github has instructions for generating and adding an SSH key for both <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-mac">macOS</a> and <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-windows">Windows</a>.
 
@@ -23,7 +23,7 @@ You may also want to set Atom as your default editor by following these instruct
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v6.11.3/node-v6.11.3.pkg">v6.11.3</a>. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.9.1/node-v8.9.1.pkg">v8.9.1</a>. Installation should be straightforward on both macOS and Windows.
 
 ## Set up ESLint in Atom
 It's helpful to have a linter check your code's syntax when you save it so you can catch errors early. ESLint is a linter that does this and that can be plugged in to Atom as a package. Follow these steps:
