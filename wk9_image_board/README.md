@@ -28,7 +28,7 @@ This will be a single-page application (SPA) built with [Backbone](../wk9_mvc_ba
 
 Every screen should have a link to the image upload form as well as a link to the home screen.
 
-## Bonus Feature
+## Bonus Features
 
 1. Add to the image upload form a text field in which users can specify a list of tags for the image separated by commas. Display the image's tags on the image screen and make each of them a link to a screen that shows all of the images that have that tag. You can reuse the layout from the home screen for this display.
 2. On the home screen, periodically notify users if additional  images have been uploaded since they arrived and allow them to refresh the display to include those images.
