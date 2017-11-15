@@ -2,8 +2,6 @@
 
 Imagine a site where anybody could go and post an image of their choosing, along with a title and a textual description of that image, and others could go and look at that image and make thoughtful remarks about it. We have the technology to make this vision a reality.
 
-We will not plan on making this site available on the World Wide Web for a couple of reasons. One is that we do not want to require registration to post or comment, so if we put this thing out there it would probably take about five minutes for it to be overrun with pornographic images and hate speech. Another reason is that we don't want to invest any time in devising and implementing a storage solution for uploaded images. We'll just keep them on our local disks.
-
 This will be a single-page application (SPA) built with [Backbone](../wk9_mvc_backbone). 
 
 ## Screens
