@@ -8,7 +8,7 @@
 
 <a href="wk1_git">Git Basics</a>
 
-[Formatting](formatting)
+[Indentation](formatting)
 
 ### Wednesday
 
