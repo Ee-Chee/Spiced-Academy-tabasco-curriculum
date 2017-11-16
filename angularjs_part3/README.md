@@ -2,9 +2,7 @@
 
 ![dwayde](https://media.giphy.com/media/3otPoEr9lqlawmVDfG/giphy.gif?response_id=592484b48e0776f4a0084ba3)
 
-Just a few more concepts that I think you all should know...
-
-In this lecture we will discuss:
+Just a few more concepts you all should know:
 
 1. ng-model & ng-bind
 2. $q & AngularJS Promises
