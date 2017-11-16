@@ -8,6 +8,8 @@
 
 <a href="wk1_git">Git Basics</a>
 
+[Formatting](formatting)
+
 ### Wednesday
 
 <a href="wk1_dy2_data_types">Data Types</a> / <a href="wk1_dy2_control_flow">Control Flow</a>
