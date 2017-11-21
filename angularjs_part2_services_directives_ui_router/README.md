@@ -1,13 +1,5 @@
 # Angular - Services, Directives, & UI Router
 
-We will discuss some more components of Angular.
-
-1. Services
-2. Directives
-3. UI Router
-
-
-
 ## Services
 
 Services are JS objects that are able to be shared throughout your Angular app using **dependency injection**.  Services are designed to provide functionality for parts of your application.  Angular has several built-in services, such as `$http`, `$routeProvider`, and `$scope`.  Notice they all start with `$`. Custom services should **NOT** start with a `$`.  All Angular services are *singletons*, meaning each service is instantiated only once, and everytime it is used, the singleton is being referenced.  You can think of services as a means of holding functions that you want to be able to use throughout your Angular app.
