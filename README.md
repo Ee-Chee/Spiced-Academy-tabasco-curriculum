@@ -10,13 +10,13 @@
 
 [Indentation](formatting)
 
-### Wednesday
+### Tuesday
 
 <a href="wk1_dy2_data_types">Data Types</a> / <a href="wk1_dy2_control_flow">Control Flow</a>
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
 
-### Thursday
+### Wednesday
 
 <a href="wk1_dy3_functions_scope">Functions and Scope</a>
 
@@ -24,7 +24,7 @@
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
 
-### Friday
+### Thursday
 
 <a href="wk1_dy4_objects">Objects</a> and <a href="wk1_dy4_arrays">Arrays</a>
 
@@ -33,3 +33,9 @@
 [CSS Selectors](css_selectors)
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
+
+### Friday
+
+<a href="wk1_dy5_constructors_prototypes">Constructors, Prototypes,</a> and <a href="wk1_dy5_this">`this`</a>
+
+<a href="wk1_html_css_lab_2">HTML/CSS Lab</a>
