@@ -22,6 +22,8 @@
 
 [Semantic Markup](semantic_markup)
 
+[CSS Selectors](css_selectors)
+
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
 
 ### Thursday
@@ -29,8 +31,6 @@
 <a href="wk1_dy4_objects">Objects</a> and <a href="wk1_dy4_arrays">Arrays</a>
 
 [Media Queries](media_queries)
-
-[CSS Selectors](css_selectors)
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
 
