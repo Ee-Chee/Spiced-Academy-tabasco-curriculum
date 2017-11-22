@@ -7,9 +7,9 @@ Services are JS objects that are able to be shared throughout your Angular app u
 We will create a service which will have a method that will send a GET request:
 
 ```javascript
-// app/articles/article.service.js
+// app/articles/app.service.js
 
-angular.module('app.factory.articles', [])
+angular.module('app.service.articles', [])
 
 .service('serviceHttp', function($http){
     this.getArticles = function(){
