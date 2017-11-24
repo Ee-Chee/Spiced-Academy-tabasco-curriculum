@@ -16,6 +16,8 @@
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
 
+[Placing Elements with CSS](css_positioning)
+
 ### Wednesday
 
 <a href="wk1_dy3_functions_scope">Functions and Scope</a>
