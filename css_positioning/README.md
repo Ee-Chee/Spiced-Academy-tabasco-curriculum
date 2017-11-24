@@ -215,7 +215,7 @@ Having these two elements be inline-block would be problematic because of the sp
 
 For `display: table-cell` to work, the element that has it must be contained by an element with `display-table`. Logically, it would be they should also be contained by an element with `display: table-row` but CSS does not require it.
 
-Here is what the html and css for the `display: table-cell` solution would look like.
+Here is what the html and css for the `display: table-cell` solution would look like. A border has been added to the two pseudo-table cells so they can be seen.
 
 ```HTML
 <header>
@@ -239,6 +239,7 @@ header {
 .pseudo-cell {
     width: 50%;
     display: table-cell;
+    border: 1px black dotted
 }
 
 .second {
@@ -259,6 +260,10 @@ header {
     text-align: left;
 }
 ```
+
+The result:
+
+![layout](img8.png)
 
 We had to set the width of the header to 100% because by default elements with their display property set to `table` do not fill all of the available horizontal space unless it is necessary.
 
