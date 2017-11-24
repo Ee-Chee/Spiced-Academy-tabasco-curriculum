@@ -4,7 +4,7 @@ Much of the work we have to do in CSS is getting elements to go to the places on
 
 There are several new ways that have big advantages over older techniques, most notably [flexbox](../flexbox) and [grid layouts](../layouts). We will consider these newer approaches later and stick to the older techniques for now.
 
-To examine these assorted old school techniques, lets use a layout resembling the header area of our [Sprint/Reichstag page](../wk1_html_css_lab) page in which we want to have two elements on a single line with one element on the left of the screen and the other on the right. Well replace the sprint logo with an orange box, the hamburger menu button with a pink box, and put a border around the header area (to make things standout more) as well as some padding inside it so the boxes don't touch the edges.
+To examine these assorted old school techniques, lets use a layout resembling the header area of our [Sprint/Reichstag page](../wk1_html_css_lab) page in which we want to have two elements on a single line with one element on the left of the screen and the other on the right. We'll replace the sprint logo with an orange box, the hamburger menu button with a pink box, and put a border around the header area (to make things standout more) as well as some padding inside it so the boxes don't touch the edges.
 
 We'll start with the following css:
 
