@@ -169,7 +169,7 @@ Inline elements (such as `<span>, '<a>', '<strong>'`) do not cause new lines and
 
 Just because elements start out with values for their `display` properties there is no reason you can't change them if you want to. There are several values you might to change an element's display property to.
 
-For example, we can give the `display` property of `inline-block`. The makes them act like block elements within themselves but like inline elements outside. That is, they do not cause line breaks after them.
+For example, we can give our two boxes the `display` property of `inline-block`. The makes them act like block elements within themselves but like inline elements outside. That is, they do not cause line breaks after them.
 
 ```CSS
 header {
