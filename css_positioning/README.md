@@ -265,6 +265,6 @@ The result:
 
 ![layout](img8.png)
 
-We had to set the width of the header to 100% because by default elements with their display property set to `table` do not fill all of the available horizontal space unless it is necessary.
+We had to set the width of the header to 100% because by default elements with their `display` property set to `table` do not fill all of the available horizontal space unless it is necessary.
 
 You may be wondering why we are using the `<div>` tags with their `display` properties set to make them act like `<table>` and `<td>` tags rather than just using `<table>`, `<tr>`, and `<td>` directly. The reason for this is that using tables for laying out content is generally considered to be uncouth for [reasons](../semantic_markup) we shall discuss soon.
