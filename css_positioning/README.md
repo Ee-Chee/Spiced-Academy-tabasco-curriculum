@@ -82,7 +82,7 @@ And get this result:
 
 ![layout](img2.png)
 
-That looks pretty good! But be aware that this only looks this right because we set the height of the `<header>` element. If we took that out, it would look like this:
+That looks pretty good! But be aware that this only looks right because we set the height of the `<header>` element. If we took that out, it would look like this:
 
 ![layout](img3.png)
 
