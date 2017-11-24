@@ -46,7 +46,7 @@ Notice that the header grows in height to contain the two elements. We actually 
 
 ```CSS
 header {
-    padding: 20px;
+    padding: 10px;
     border: 1px gray dashed;
     height: 70px;
 }
