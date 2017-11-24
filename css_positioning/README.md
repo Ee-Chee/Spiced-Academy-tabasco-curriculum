@@ -20,14 +20,12 @@ header {
     height: 50px;
     width: 50px;
     background: orange;
-    float: left;
 }
 
 #menu-button {
     height: 50px;
     width: 50px;
     background: pink;
-    float: right;
 }
 ```
 
