@@ -9,13 +9,11 @@ To examine these assorted old school techniques, lets use a layout resembling th
 We'll start with the following css:
 
 ```CSS
-* {
-    box-sizing: border-box;
-}
 header {
     padding: 20px;
     border: 1px gray dashed;
 }
+
 #logo {
     height: 50px;
     width: 50px;
