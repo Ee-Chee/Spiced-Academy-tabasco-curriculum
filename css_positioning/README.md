@@ -92,7 +92,7 @@ There are multiple ways to avoid these problems. One is to not using floating el
 
 ## Position
 
-By default, all elements have `position` property set to the value `static`. There are several values you can assign and when elements have a position property set to one of these values we consider them positioned elements. The three position values we are most interested in are:
+By default, all elements have a `position` property set to the value `static`. There are several values you can assign and when elements have a position property set to one of these values we consider them positioned elements. The three position values we are most interested in are:
 
 * relative
 * absolute
