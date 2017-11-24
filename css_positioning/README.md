@@ -88,7 +88,7 @@ That looks pretty good! But be aware that this only looks right because we set t
 
 This is because floating elements do not affect the elements surrounding them in the usual way. They don't increase the height of their containers, which can cause lots of problems.
 
-There are multiple ways to avoid these problems. One is to not using floating elements at all, if that's possible. Another is to set the height of the container, as we do here, but that is not always possible. Setting the `overlfow` property of the container to `hidden` has a similar effect to setting the height in situations in which the height cannot be set. Yet another approach is to make sure that an element that must cause a line break appears after the floating element(s).
+There are multiple ways to avoid these problems. One is to not using floating elements at all, if that's possible. Another is to set the height of the container, as we do here, but that is not always possible. Setting the `overflow` property of the container to `hidden` has a similar effect to setting the height in situations in which the height cannot be set. Yet another approach is to make sure that an element that must cause a line break appears after the floating element(s).
 
 ## Position
 
