@@ -85,6 +85,6 @@ You may also need the `-f` flag if you have unmerged changes. It may also prompt
 
 `git remote -v` --> check where the remote for your git repo is.
 
-`git push origin --delete <branch_name>` --> delete a REMOTE branch
+`git push origin :<branch_name>` --> delete a REMOTE branch
 
-`git clone -b <branch> <remote_repo>` --> clone a remote branch to your local computer. This is what you use if you want to copy code from github onto your computer.
+`git clone <remote_repo>` --> clone a remote branch to your local computer. This is what you use if you want to copy code from github onto your computer.
