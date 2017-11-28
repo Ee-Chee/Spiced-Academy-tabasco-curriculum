@@ -211,7 +211,7 @@ Note that the text in the two boxes are also now right-aligned. If we wanted the
 
 Of course, we don't want both boxes to go to the right, we want just one of them to. A way to do this would be to introduce two new elements, both contained by the header and each containing one of the two boxes. We'd need to set the width of both of them to be 50% of the total available width but make only the second one have a `text-align` property set to right.
 
-Having these two elements be inline-block would be problematic because of the space that would automatically inserted between them. To avoid this, we can give them the `table-cell` display property. Table cells stay on the same line as each other but there is no space automatically inserted between them.
+Having these two elements be inline-block would be problematic because of the space that would be automatically inserted between them. To avoid this, we can give them the `table-cell` display property. Table cells stay on the same line as each other but there is no space automatically inserted between them.
 
 For `display: table-cell` to work, the element that has it must be contained by an element with `display-table`. Logically, they should also be contained by an element with `display: table-row` but CSS does not require it.
 
