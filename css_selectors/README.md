@@ -1,14 +1,5 @@
 # CSS Selectors, Transforms, Transitions, Animations, & Filters
 
-CSS has a lot of cool features that allow us to apply custom styles to specific elements. In this lecture we will look at:
-
-1. CSS Selectors
-2. Pseudo Class Selectors
-3. Transforms
-4. Transitions
-5. Animations
-6. Filters
-
 ## Selectors
 
 CSS Selectors are patterns that are used to select HTML elements in order to apply styles.  We can use different types of selectors to catch multiple elements that satisfy the selector's criteria.  This enables us to do cool stuff like style the odd `<li>` elements in a `<ul>`, or only apply styles to the last child of a div. There are many different combinations we can use to get the output we want.
