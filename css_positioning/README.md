@@ -167,7 +167,7 @@ Every element has a `display` property but the value of the property depends on 
 
 Inline elements (such as `<span>, '<a>', '<strong>'`) do not cause new lines and take up just as much space as they need.
 
-Just because elements start out with values for their `display` properties there is no reason you can't change them if you want to. There are several values you might to change an element's display property to.
+Just because elements start out with values for their `display` properties there is no reason you can't change them if you want to. There are several values you might want to change an element's display property to.
 
 For example, we can give our two boxes the `display` property of `inline-block`. This makes them act like block elements within themselves but like inline elements outside. That is, they do not cause line breaks after them.
 
