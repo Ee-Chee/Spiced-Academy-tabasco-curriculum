@@ -213,7 +213,7 @@ Of course, we don't want both boxes to go to the right, we want just one of them
 
 Having these two elements be inline-block would be problematic because of the space that would be automatically inserted between them. To avoid this, we can give them the `table-cell` display property. Table cells stay on the same line as each other but there is no space automatically inserted between them.
 
-For `display: table-cell` to work, the element that has it must be contained by an element with `display:table`. Logically, they should also be contained by an element with `display: table-row` but CSS does not require it.
+For `display: table-cell` to work, the element that has it must be contained by an element with `display: table`. Logically, they should also be contained by an element with `display: table-row` but CSS does not require it.
 
 Here is what the html and css for the `display: table-cell` solution would look like. A border has been added to the two pseudo-table cells so they can be seen.
 
