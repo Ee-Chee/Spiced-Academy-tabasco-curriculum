@@ -2,8 +2,6 @@
 
 > If you think responsive's simple, I feel bad for you son. We got 99 viewports, but the iPhone's just one.
 
-![responsive design](http://www.swcta.net/teachers/changcl/dwProject1112/LaOFernandez_queriesWebStorage/images/media-queries-desktop-ipad-iphone.png)
-
 When developing the front end of our applications, usually we must build our pages to be fully responsive for desktop, tablet, and mobile displays.  In order to achieve these different types of layouts, we must incorporate several strategies. One very popular method is the use of **media queries**.
 
 Media queries enable us to limit our styles scope based on constraints that we define. For example, if we only wanted to apply a color change between 601px to 800px, we would write:
