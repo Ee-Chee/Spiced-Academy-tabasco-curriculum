@@ -106,7 +106,7 @@ arr[1]; // 'two items missing'
 arr[2]; // 3
 ```
 
-Do not confuse `splice` with the `slice` method. `slice` takes a start index and an end index as parameters and returns a new array consisting of the specified elements. The array that `slice` is called on remains unchanged. The start and index can be negative numbers to indicate positions from the end of the array. If there is no end index, all of the items from the start index are in the returned array. If no parameters are passed to `slice`, a _clone_ of the array is returned.
+Do not confuse `splice` with the `slice` method. `slice` takes a start index and an end index as parameters and returns a new array consisting of the specified elements. The array that `slice` is called on remains unchanged. The start and end indexes can be negative numbers to indicate positions from the end of the array. If there is no end index, all of the items from the start index are in the returned array. If no parameters are passed to `slice`, a _clone_ of the array is returned.
 
 ```js
 var arr = [0, 1, 2, 3];
