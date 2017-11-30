@@ -68,7 +68,6 @@
 
 [CSS Grid](css_grid)
 
-[Retro `getElementsByClassName`](wk3_retro_by_class_name)
 
 ### Friday
 
