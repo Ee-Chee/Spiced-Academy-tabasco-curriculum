@@ -18,9 +18,9 @@ In addition to `Logo`, the `App` component should contain a `ProfilePic` compone
 
 ![Munity image upload](munity2.png)
 
-This `ProfilePicUpload` component can display as a modal or inline in the page. Whether or not it is displayed should be determine by a property (called, for example, `showProfilePicUpload`) of the `state` of the `App` component. `ProfilePic`  should be passed a function from `App` for setting this property to `true`. 
+This `ProfilePicUpload` component can display as a modal or inline in the page. Whether or not it is displayed should be determine by a property (called, for example, `uploaderVisible`) of the `state` of the `App` component. `ProfilePic`  should be passed a function from `App` for setting this property to `true`. 
 
-The `ProfilePicUpload` component should be passed a function for setting the `profilePicUrl` of the `App` component's state. After a successful upload, it should set this appropriately. This should cause `ProfilePic` to automatically switch to the new image. The function for setting `profilePicUrl` should also  set `showProfilePicUpload` to `false`.
+The `ProfilePicUpload` component should be passed a function for setting the `profilePicUrl` of the `App` component's state. After a successful upload, it should set this appropriately. This should cause `ProfilePic` to automatically switch to the new image. The function for setting `profilePicUrl` should also set `uploaderVisible` to `false`.
 
 
 
