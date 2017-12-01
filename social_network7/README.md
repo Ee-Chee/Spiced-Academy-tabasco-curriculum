@@ -18,3 +18,7 @@ The fetching of the friends and requesters should be caused by the dispatching o
 When requests are accepted and friendships ended, your reducer should change the state object to one that has the new list(s) of users. This should cause re-rendering with either new users appearing in the list of friends or old friends disappearing from it.
 
 **Bonus Feature**: Add to each requester you display a link or button for rejecting the friend request.
+
+## A note about keys
+
+For this part we will be showing two lists of items. When displaying lists of elements constructed from arrays, it helps React render efficiently if you give each element a special attribute named `key` and set each to a unique value. In our present situation, you could use the id of the user or the id of the friend request as the `key`. For more information about keys, see the [_Lists and Keys_](https://reactjs.org/docs/lists-and-keys.html) article from the guide at reactjs.org. 
