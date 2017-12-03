@@ -10,7 +10,7 @@ var basicAuth = require('basic-auth');
 var auth = function(req, res, next) {
     var creds = basicAuth(req);
     if (!creds || creds.name != 'discoduck' || creds.pass != 'opensesame') {
-        res.setHeader('WWW-Authenticate', 'Basic realm="Please enter your username and password."');
+        res.setHeader('WWW-Authenticate', 'Basic realm="Enter your credentials to see this stuff."');
         res.sendStatus(401);
     } else {
         next();
@@ -19,6 +19,8 @@ var auth = function(req, res, next) {
 
 app.use(auth);
 ```
+
+The `realm` in the `WWW-Authenticate` header is meant to describe the area of site that is protected. It allows single site to have multiple protected areas, each with different authentication requirements. Some browsers show users the value set for `realm` in the dialog containing the username and password input fields while others do not.
 
 ### Exercise
 
