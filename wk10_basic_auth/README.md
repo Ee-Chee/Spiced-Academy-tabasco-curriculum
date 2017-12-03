@@ -10,7 +10,7 @@ var basicAuth = require('basic-auth');
 var auth = function(req, res, next) {
     var creds = basicAuth(req);
     if (!creds || creds.name != 'discoduck' || creds.pass != 'opensesame') {
-        res.setHeader('WWW-Authenticate', 'Basic realm=www');
+        res.setHeader('WWW-Authenticate', 'Basic realm="Please enter your username and password."');
         res.sendStatus(401);
     } else {
         next();
