@@ -20,7 +20,7 @@ var auth = function(req, res, next) {
 app.use(auth);
 ```
 
-The `realm` in the `WWW-Authenticate` header is meant to describe the area of the site that is protected. It allows single site to have multiple protected areas, each with different authentication requirements. Some browsers show users the value set for `realm` in the dialog containing the username and password input fields while others do not.
+The `realm` in the `WWW-Authenticate` header is meant to describe the area of the site that is protected. It allows a single site to have multiple protected areas, each with different authentication requirements. Some browsers show users the value set for `realm` in the dialog containing the username and password input fields while others do not.
 
 ### Exercise
 
