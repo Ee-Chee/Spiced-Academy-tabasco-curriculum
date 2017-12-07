@@ -64,6 +64,8 @@
 
 ### Thursday
 
+[Retro `getElementsByClassName`](wk3_retro_by_class_name)
+
 [Flexbox](flexbox)
 
 [CSS Grid](css_grid)
