@@ -74,3 +74,38 @@
 ### Friday
 
 [Kitty Carousel](wk2_carousel)
+
+# Week 3
+
+### Monday
+
+[jQuery](wk3_jquery)
+
+[Resizable Panes](wk4_panes)
+
+### Tuesday
+
+[Incremental Search](wk2_dy3_incremental_search)
+
+### Wednesday
+
+[`JSON`](wk3_json)
+
+[`try...catch`](wk3_try_catch)
+
+[`localStorage`](wk9_localstorage)
+
+[HTTP Review](wk3_http)
+
+### Thursday
+
+[`XMLHttpRequest`](wk3_xmlhttprequest)
+
+[`jQuery.ajax`](wk3_jquery/ajax.md)
+
+[Incremental Search - Part 2](wk2_dy3_incremental_search/part2.md)
+
+### Friday
+
+[Connect Four](connect_four)
+
