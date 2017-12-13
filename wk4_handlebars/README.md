@@ -26,27 +26,27 @@ You will want this tag to appear before any `<script>` that uses the `Handlebars
 
 It is possible to keep your Handlebars templates in individual files and _precompile_ them into a js file containing a function for each template. For now we will include the templates in our HTML files and compile them when the page loads.
 
-Stashing snippets of HTML in a page with the intent to eventually insert them into the DOM is such a common thing that there is now a `<template>` tag designed for this purpose. The contents of a `<template>` tag are not in the DOM, and are not accessible via `document.getElementsByTagName`, `document.getElementsByClassName`,  etc., which is precisely what we want. Unfortunately, the `<template>` tag was not designed with Handlebars templates in mind so we will have to make some adjustments if we want to use it.
+Stashing snippets of HTML in a page with the intent to eventually insert them into the DOM is such a common thing that there is now a `<template>` tag designed for this purpose. Unfortunately, it does not work well with Handlebars templates because it parses its contents as HTML. This means that we cannot have templates that place Handlebars code in places that are invalid locations for text in HTML (such as between a `<table>` and a `<tr>` tag). It also means the the `>` symbol, which is meaningful to Handlebars, will be escaped to `&gt;`.
+
+To get around these problems with `<template>`, it is standard to use `<script>` tags for Handlebars templates. If we give the `<script>` tag a `type` attribute that the browser does not recognize, the browser will ignore the element altogether. HTML contained in it will not be parsed and will not be accessible via `document.getElementsByTagName`, `document.getElementsByClassName`, etc., which is precisely what we want.
 
 ```html
-<template id="hello">
+<script id="hello" type="text/x-handlebars-template">
     <h1>Hello {{name}}!</h1>
-</template>
+</script>
 ```
 
-Our Javascript can find this and other `<template>` elements in the page and compile their contents into functions.
+Our Javascript can find this and other `<script>` elements with this special `type` attribute in the page and compile their contents into functions.
 
 ```js
 Handlebars.templates = Handlebars.templates || {};
 
-var templates = document.querySelectorAll('template');
+var templates = document.querySelectorAll('script[type="text/x-handlebars-template"]');
 
-Array.prototype.slice.call(templates).forEach(function(tmpl) {
-    Handlebars.templates[tmpl.id] = Handlebars.compile(tmpl.innerHTML.replace(/{{&gt;/g, '{{>'));
+Array.prototype.slice.call(templates).forEach(function(script) {
+    Handlebars.templates[script.id] = Handlebars.compile(script.innerHTML);
 });
 ```
-
-The adjustment we must make to use Handlebars with the `<template>` tag is related to the `>` character, which Handlebars uses to include a _partial_ (a template called from another template). The `<template>` tag views the `>` in this context as text and so escapes it with the entity `&gt;`. We have to change it back to `>` before passing the text to `Handlebars.compile`.
 
 Once you have a compiled template, you can call it with the data you want it to use and insert the result into your page.
 
