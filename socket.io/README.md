@@ -63,6 +63,14 @@ io.sockets.sockets[recipientSocketId].emit('request', {
 });
 ```
 
+If you'd like to send a message to every socket _except_ a particular one, you could use the one you do not want to receive the message to do it by using its `broadcast` property.
+
+```js
+io.sockets.sockets[recipientSocketId].broadcast.emit('brag', {
+    message: 'Hey everybody, I just received a new friend request!'
+});
+```
+
 ## Client
 
 The server will serve the client library from the url `/socket.io/socket.io.js` so you could add to your html the following `<script>` tag.
