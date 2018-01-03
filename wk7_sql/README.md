@@ -25,7 +25,7 @@ psql cities
 You can also write your commands in a file and use `psql` to run them.
 
 ```
-psql cities -f setup.sql
+psql -d cities -f setup.sql
 ```
 
 ## Creating a table
