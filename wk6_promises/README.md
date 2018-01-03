@@ -139,37 +139,37 @@ Promise.all([
 
 If the promise is resolved an array containing all of the resolved promises will be passed to the success handler.
 
-## Exercise
+## Exercises
 
-In your <a href="../wk5_fun_with_fs">Fun with fs</a> project create a module that contains promisified versions of `fs.readdir` and `fs.stat`. Use these functions to read the `files` directory and log to the console whether or not each item in it is a directory. After you have done this for every item, log the string "done!" to the console. The result should look like this:
+1. In your <a href="../wk5_fun_with_fs">Fun with fs</a> project create a module that contains promisified versions of `fs.readdir` and `fs.stat`. Use these functions to read the `files` directory and log to the console whether or not each item in it is a directory. After you have done this for every item, log the string "done!" to the console. The result should look like this:
 
-```
-/Users/discoduck/fun-with-fs/files/README.md is not a directory
-/Users/discoduck/fun-with-fs/files/part1 is a directory
-/Users/discoduck/fun-with-fs/files/part2 is a directory
-done!
-```
+    ```
+    /Users/discoduck/fun-with-fs/files/README.md is not a directory
+    /Users/discoduck/fun-with-fs/files/part1 is a directory
+    /Users/discoduck/fun-with-fs/files/part2 is a directory
+    done!
+    ```
 
-**Bonus**: do the same thing recursively. That is, if an item is a directory, read its contents and log to the console whether each item it contains is a directory or not. The result should look like this:
+2. Do the same thing recursively. That is, if an item is a directory, read its contents and log to the console whether each item it contains is a directory or not. The result should look like this:
 
-```
-/Users/discoduck/fun-with-fs/files/README.md is not a directory
-/Users/discoduck/fun-with-fs/files/part2 is a directory
-/Users/discoduck/fun-with-fs/files/part1 is a directory
-/Users/discoduck/fun-with-fs/files/part2/index.html is not a directory
-/Users/discoduck/fun-with-fs/files/part2/script.js is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a is a directory
-/Users/discoduck/fun-with-fs/files/part1/b is a directory
-/Users/discoduck/fun-with-fs/files/part1/a/images is a directory
-/Users/discoduck/fun-with-fs/files/part1/a/index.html is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a/stylesheet.css is not a directory
-/Users/discoduck/fun-with-fs/files/part1/b/images is a directory
-/Users/discoduck/fun-with-fs/files/part1/b/index.html is not a directory
-/Users/discoduck/fun-with-fs/files/part1/b/stylesheet.css is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a/images/cats.png is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a/images/kitty1_150x150.jpg is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a/images/kitty2_150x150.jpg is not a directory
-/Users/discoduck/fun-with-fs/files/part1/a/images/kitty3_150x150.jpg is not a directory
-/Users/discoduck/fun-with-fs/files/part1/b/images/boxes.png is not a directory
-done!
-```
+    ```
+    /Users/discoduck/fun-with-fs/files/README.md is not a directory
+    /Users/discoduck/fun-with-fs/files/part2 is a directory
+    /Users/discoduck/fun-with-fs/files/part1 is a directory
+    /Users/discoduck/fun-with-fs/files/part2/index.html is not a directory
+    /Users/discoduck/fun-with-fs/files/part2/script.js is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a is a directory
+    /Users/discoduck/fun-with-fs/files/part1/b is a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/images is a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/index.html is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/stylesheet.css is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/b/images is a directory
+    /Users/discoduck/fun-with-fs/files/part1/b/index.html is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/b/stylesheet.css is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/images/cats.png is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty1_150x150.jpg is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty2_150x150.jpg is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty3_150x150.jpg is not a directory
+    /Users/discoduck/fun-with-fs/files/part1/b/images/boxes.png is not a directory
+    done!
+    ```
