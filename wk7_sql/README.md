@@ -13,7 +13,7 @@ You can download and install Postgres from <a href="https://www.postgresql.org/d
 After successful installation you can create a new database with the `createdb` command.
 
 ```
-createdb cities
+createdb -d cities
 ```
 
 After creating a database, you can open `psql`, the Postgres command line, to start working with it.
