@@ -8,7 +8,7 @@ There are many SQL databases. We will be using <a href="https://www.postgresql.o
 
 ## Installing and creating a database
 
-You can download and install Postgres from <a href="https://www.postgresql.org/download/">the PostgreSql website</a>. For Mac users, it is strongly recommended that you choose the [Postgres.app](http://postgresapp.com/) option. It is much easier than the other options.
+You can download and install Postgres from <a href="https://www.postgresql.org/download/">the PostgreSql website</a>. For Mac users, it is strongly recommended that you choose the [Postgres.app](http://postgresapp.com/) option. It is much easier than the other options. Installation on Windows is [a little more complicated](win.md).
 
 After successful installation you can create a new database with the `createdb` command.
 
