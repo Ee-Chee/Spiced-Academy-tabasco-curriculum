@@ -89,7 +89,7 @@ function getCity(cityName) {
 
 In the example above, `pg` replaces the `$1` with an escaped `cityName`, preventing any mischief.
 
-![xkcd cartoon on SQL injection] (http://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+![xkcd cartoon on SQL injection](http://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
 ## Exercises
 
