@@ -28,6 +28,8 @@ In your response to your ajax request, include only tweets that have just one ur
 
 Note that even after you confirm a tweet has only one url and you remove it from the text, other urls may still apear in the text. This is because Twitter includes in the tweet text the urls to images and videos that were included in the tweet. Just as the links in a tweet are listed in the tweet's `entities.urls` array, the media urls will be listed in the `entities.media` array. You can loop through these and remove them from the text.
 
+Note also that no changes to your existing ticker code will be necessary. In your express app, you should create a static directory and copy your ticker files into it (except for the json file containing the links, which will not be needed). You should also create a route to handle the ajax request that your client-side Javascript makes (e.g., if your json file had been called "links.json", the url for your route should be `"/links.json"`). It is in this route that you should initiate the retrieval of the token and then the tweets from the Twitter API.
+
 ## Part 2
 
 Get headlines from two additional news sources of your choosing. The requests for tweets from all three news sources should be made simultaneously. The combined list of tweets that you send to the client should be sorted in reverse chronological order. You should also append to each tweet the name of the source in parentheses.
