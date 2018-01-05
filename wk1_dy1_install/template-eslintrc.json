@@ -24,6 +24,10 @@
         "no-unsafe-finally": 0
     },
     "globals": {
-        "$": false
+        "$": false,
+        "jQuery": false,
+        "Handlebars": false,
+        "axios": false,
+        "Vue": false
     }
 }
