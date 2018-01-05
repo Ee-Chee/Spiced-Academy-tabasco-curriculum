@@ -173,3 +173,5 @@ If the promise is resolved an array containing all of the resolved promises will
     /Users/discoduck/fun-with-fs/files/part1/b/images/boxes.png is not a directory
     done!
     ```
+    
+    3. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
