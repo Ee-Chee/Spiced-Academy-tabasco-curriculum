@@ -174,4 +174,4 @@ If the promise is resolved an array containing all of the resolved promises will
     done!
     ```
     
-    3. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
+3. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
