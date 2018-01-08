@@ -185,6 +185,8 @@
 
 [Twitter API](wk6_twitter_api)
 
+Career WS
+
 ### Wednesday
 
 [Twitter API](wk6_twitter_api)
