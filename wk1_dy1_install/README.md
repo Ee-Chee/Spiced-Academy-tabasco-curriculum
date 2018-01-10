@@ -1,9 +1,3 @@
-## Create and set up your Github account
-
-1. If you do not have a Github account, go to https://github.com/ and create one.
-
-2. After you create your account you will have to add an SSH key to it. Github has instructions for generating and adding an SSH key for both <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-mac">macOS</a> and <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-windows">Windows</a>.
-
 ## Install Git
 
 ### macOS
@@ -17,31 +11,35 @@ You can also install Git from <a href="http://git-scm.com/download/mac.">http://
 Download and install Git from <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>
 
 ## Configure git
-When you've made sure git is installed, you should set it up correctly by following the instructions here: https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity
+When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity
+).
 
-You may also want to set Atom as your default editor by following these instructions: https://help.github.com/articles/associating-text-editors-with-git/.
+## Add your public SSH key to your Github account
+
+Github has instructions for generating and adding an SSH key for both <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-mac">macOS</a> and <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-windows">Windows</a>. After you add your key, you will be able to take actions on your remote repositories at Github without having to enter your username and password repeatedly.
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.9.1/node-v8.9.1.pkg">v8.9.1</a>. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.pkg">v8.9.4</a>. Installation should be straightforward on both macOS and Windows.
 
 ## Set up ESLint in Atom
-It's helpful to have a linter check your code's syntax when you save it so you can catch errors early. ESLint is a linter that does this and that can be plugged in to Atom as a package. Follow these steps:
 
-1. Install the ESLint program on your computer. On the command line, type
+A linter is a program that analyzes your code and identifies potential errors and violations of stylistic rules. ESLint is a Javascript linter and linter-eslint is an a package that integrates it into Atom. To install, follow these steps:
+
+1. Install ESLint program on your computer. By typing the following on the command line:
+
   ```
   npm install -g eslint
   ```
+2. Download our [configuration file](https://gist.github.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a) for linter-eslint by pasting the following into your command line:
 
-2. You can tell ESLint exactly which rules you want enforced in the `.eslintrc.json` file. You should create this file in your home directory by typing the following on the command line:
-  ```
-  atom ~/.eslintrc.json
-  ```
-  **Note:** If you are on a Mac and typing `atom` gives you `Command not found`, but you are sure that you have Atom installed, then you should open up Atom, go the Atom menu and select "Install shell commands".
+    ```
+    curl https://gist.githubusercontent.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a/raw/2d7262cbff80936fd721678d8c98c89c3b0e8a05/.eslintrc.json > ~/.eslintrc.json
+    ```
 
-3. This will open the file in Atom. Then, paste the contents of [this file](./template-eslintrc.json) into the new file you just created. Be sure to select the raw content view and don't copy the line numbers. This file contains settings for the linter that make sense for beginners. You can modify the settings for ESLint anytime you wish and read more [here](http://eslint.org/docs/rules/).
+3. In Atom, go to Settings > Packages > Install. Search for the "linter-eslint" package and install it. The package has dependencies (other packages that it needs in order to function correctly) and you will be prompted to install as well.
 
-4. As a last step, tell Atom to use ESLint. Go to Settings > Packages > Install, search for "linter-eslint" and install it. To test if everything works, create JavaScript file in Atom, type some JavaScript and omit a semicolon or a closing curly brace. When you save the file, ESLint should warn you about these errors.
+To test if everything works, create JavaScript file in Atom, type some JavaScript and omit a semicolon or a closing curly brace. When you save the file, ESLint should warn you about these errors.
 
 ## Exercises
 
