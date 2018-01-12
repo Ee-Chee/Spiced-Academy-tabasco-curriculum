@@ -2,13 +2,14 @@
 
 > "Programs must be written for people to read, and only incidentally for machines to execute."
 
->Harold Abelson, _The Structure and Interpretation of Computer Programs_
+> Harold Abelson, _The Structure and Interpretation of Computer Programs_
 
-For the most part, Javascript doesn't care about whitespace in your code. Of course, spaces are used to determine what's what (e.g., saying `newObject();` is not the same as saying `new Object();`) but how many spaces you use does not matter.
+For the most part, Javascript doesn't care about whitespace in your code. Of course, spaces are used to determine what's what (e.g., saying `new Object();` is not the same as saying `newObject();`) but how many spaces you use does not matter.
 
 ```js
-new         Object();
+new Object();
 ```
+
 is equivalent to
 
 ```js
@@ -22,16 +23,11 @@ var a = 10;
 ```
 
 ```js
-var a
-= 10;
+var a = 10;
 ```
 
 ```js
-var
-a
-=
-10
-;
+var a = 10;
 ```
 
 Because of the casual attitude Javascript takes towards whitespace, you may be tempted to adopt a similar posture and not devote much attention to it. That would be a terrible mistake. It is _**absolutely critical**_ that you use whitespace in your code to communicate important information about its structure to its human readers. Without such visual indicators, it will be extremely difficult for anybody, including you yourself, to understand the code you've written.
@@ -52,13 +48,11 @@ if (true) {
 ```
 
 ```js
-for (var i = 0; i < 5; i++) {
-}
+for (var i = 0; i < 5; i++) {}
 ```
 
 ```js
-function fn() {
-}
+function fn() {}
 ```
 
 There are a few exceptions to this. The one we will encounter most frequently at this stage is empty object literals. It is better not to do a line break between the curly braces for an empty object.
@@ -118,21 +112,21 @@ To see why indentation is so important, take a look at the previous example with
 ```js
 // 🚫🚫🚫 Don't do this! Always indent your code!
 function createActor(name, age, oscars) {
-return {
-name: name,
-age: age,
-oscars: oscars,
-hello: hello,
-hasMoreOscarsThan: hasMoreOscarsThan
-};
+    return {
+        name: name,
+        age: age,
+        oscars: oscars,
+        hello: hello,
+        hasMoreOscarsThan: hasMoreOscarsThan
+    };
 
-function hello() {
-console.log('Hello, my name is ' + this.name);
-}
+    function hello() {
+        console.log('Hello, my name is ' + this.name);
+    }
 
-function hasMoreOscarsThan(actor) {
-return this.oscars > actor.oscars;
-}
+    function hasMoreOscarsThan(actor) {
+        return this.oscars > actor.oscars;
+    }
 }
 ```
 
@@ -169,6 +163,7 @@ var obj = {
     age: 42
 };
 ```
+
 ```js
 var fn = function(val) {
     console.log(val);
@@ -193,14 +188,25 @@ setTimeout(function() {
 ```
 
 ```js
-var actors = [{
-    name: 'Jennifer Lawrence',
-    age: 27
-}, {
-    name: 'Meryl Streep',
-    age: 68
-}];
+var actors = [
+    {
+        name: 'Jennifer Lawrence',
+        age: 27
+    },
+    {
+        name: 'Meryl Streep',
+        age: 68
+    }
+];
 ```
+
+### Prettier
+
+[Prettier](https://prettier.io/) is a code formatter that, for the most part, shares SPICED's opinions about how code should be formatted. The Atom integration, which you should install, can be configured to automatically format your code every time you save a file.
+
+1. In Atom, go to Settings > Packages > Install (Windows) or Preferences > Packages > Install (MacOS). Search for the "prettier-atom" package and install it.
+
+2. After installation, find Prettier in the Packages menu and select the "Toggle Format on Save" option.
 
 ### Exercise
 

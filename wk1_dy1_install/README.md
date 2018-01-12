@@ -11,8 +11,8 @@ You can also install Git from <a href="http://git-scm.com/download/mac.">http://
 Download and install Git from <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>
 
 ## Configure git
-When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity
-).
+
+When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity).
 
 ## Add your public SSH key to your Github account
 
@@ -28,16 +28,18 @@ A linter is a program that analyzes your code and identifies potential errors an
 
 1. Install ESLint program on your computer. By typing the following on the command line:
 
-  ```
-  npm install -g eslint
-  ```
+
+```
+npm install -g eslint
+```
+
 2. Download our [configuration file](https://gist.github.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a) for linter-eslint by pasting the following into your command line:
 
-    ```
-    curl https://gist.githubusercontent.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a/raw/2d7262cbff80936fd721678d8c98c89c3b0e8a05/.eslintrc.json > ~/.eslintrc.json
-    ```
+   ```
+   curl https://gist.githubusercontent.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a/raw/2d7262cbff80936fd721678d8c98c89c3b0e8a05/.eslintrc.json > ~/.eslintrc.json
+   ```
 
-3. In Atom, go to Settings > Packages > Install. Search for the "linter-eslint" package and install it. The package has dependencies (other packages that it needs in order to function correctly) and you will be prompted to install as well.
+3. In Atom, go to Preferences > Packages > Install (MacOS) or Settings > Packages > Install (Windows). Search for the "linter-eslint" package and install it. The package has dependencies (other packages that it needs in order to function correctly) and you will be prompted to install as well.
 
 To test if everything works, create JavaScript file in Atom, type some JavaScript and omit a semicolon or a closing curly brace. When you save the file, ESLint should warn you about these errors.
 
