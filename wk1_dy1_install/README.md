@@ -29,9 +29,9 @@ A linter is a program that analyzes your code and identifies potential errors an
 1. Install ESLint program on your computer. By typing the following on the command line:
 
 
-```
-npm install -g eslint
-```
+    ```
+    npm install -g eslint
+    ```
 
 2. Download our [configuration file](https://gist.github.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a) for linter-eslint by pasting the following into your command line:
 
