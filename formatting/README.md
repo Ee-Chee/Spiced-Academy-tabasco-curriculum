@@ -7,7 +7,7 @@
 For the most part, Javascript doesn't care about whitespace in your code. Of course, spaces are used to determine what's what (e.g., saying `new Object();` is not the same as saying `newObject();`) but how many spaces you use does not matter.
 
 ```js
-new Object();
+new         Object();
 ```
 
 is equivalent to
@@ -23,11 +23,15 @@ var a = 10;
 ```
 
 ```js
-var a = 10;
+var a 
+= 10;
 ```
 
 ```js
-var a = 10;
+var
+a
+=
+10;
 ```
 
 Because of the casual attitude Javascript takes towards whitespace, you may be tempted to adopt a similar posture and not devote much attention to it. That would be a terrible mistake. It is _**absolutely critical**_ that you use whitespace in your code to communicate important information about its structure to its human readers. Without such visual indicators, it will be extremely difficult for anybody, including you yourself, to understand the code you've written.
@@ -112,21 +116,21 @@ To see why indentation is so important, take a look at the previous example with
 ```js
 // 🚫🚫🚫 Don't do this! Always indent your code!
 function createActor(name, age, oscars) {
-    return {
-        name: name,
-        age: age,
-        oscars: oscars,
-        hello: hello,
-        hasMoreOscarsThan: hasMoreOscarsThan
-    };
+return {
+name: name,
+age: age,
+oscars: oscars,
+hello: hello,
+hasMoreOscarsThan: hasMoreOscarsThan
+};
 
-    function hello() {
-        console.log('Hello, my name is ' + this.name);
-    }
+function hello() {
+console.log('Hello, my name is ' + this.name);
+}
 
-    function hasMoreOscarsThan(actor) {
-        return this.oscars > actor.oscars;
-    }
+function hasMoreOscarsThan(actor) {
+return this.oscars > actor.oscars;
+}
 }
 ```
 
