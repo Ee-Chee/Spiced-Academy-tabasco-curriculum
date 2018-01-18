@@ -82,7 +82,7 @@ var app = new Vue({
 </div>
 ```
 
-`v-bind` is what is a called a _directive_, a special attribute that begins with `v-` and has a Javascript expression as its value. There are many [directives](https://vuejs.org/v2/api/#Directives) that Vue understands (it is also possible to create your own). For example, `v-if` can be used to render content conditionally and `v-for` can be used to render lists of items.
+`v-bind` is what is called a _directive_, a special attribute that begins with `v-` and has a Javascript expression as its value. There are many [directives](https://vuejs.org/v2/api/#Directives) that Vue understands (it is also possible to create your own). For example, `v-if` can be used to render content conditionally and `v-for` can be used to render lists of items.
 
 ```js
 var app = new Vue({
