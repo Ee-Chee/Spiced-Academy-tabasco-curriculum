@@ -84,7 +84,13 @@ var formData = new FormData();
 formData.append('file', file);
 ```
 
-You can then send the `FormData` instance in an ajax POST request:
+You can then send the `FormData` instance in an ajax POST request. If you are using axios, this is very easy:
+
+```js
+axios.post('/upload', formData);
+```
+
+Things are more complicated if you are using jQuery:
 
 ```js
 $.ajax({
