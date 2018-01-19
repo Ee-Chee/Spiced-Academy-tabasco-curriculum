@@ -6,6 +6,8 @@ With the advent of HTML5, we are introduced to a bunch of new, **semantic** tags
 
 There are A LOT of HTML5 elements, many of which you will rarely use, if at all.  Here is a link for a complete list of [new elements](https://www.w3.org/TR/html5-diff/#new-elements) and everything else about the changes from HTML4 to HTML5.
 
+![markup](./html5_semantic_markup.jpg)
+
 ## The Semantic Elements
 
 **Semantic HTML** refers to strategically using HTML5 elements to reinforce the semantics, or *meaning*, of the info in webpages, rather than merely for presentation.  This makes more sense as you look at the names of HTML5 elements - you can venture a guess as to how that tag would be best utilized.
