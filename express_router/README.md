@@ -1,10 +1,3 @@
-# Fun with Express
-
-We will be talking about
-
-- Express Router
-- app.route()
-- Modularizing your Express app
 
 ## Express Router
 
@@ -81,28 +74,3 @@ router.get('/profile', function(req, res){ /*...*/ })
 
 router.post('/profile', function(req, res){ /*...*/ })
 ```
-
-## Structuring your Express App
-
-As your app grows, it is essential that you organize your code in a way that supports understandability and maintainability. In the sample directory structure below, there is a place for all of the different kinds of modules you may require. 
-
-```
-- app
-    ----- models/
-    ------------- user.js
-    ----- routers/
-    ------------ router.js
-    ------config/
-    -------------- db.json
-    ----- views/  <!-- server-side templates -->
-    ----- public/ <!-- static assets -->
-    -------------- css/
-    -------------- js/
-    -------------- images/
-    ---------------index.html
-    - package.json
-    - server.js
-    - node_modules/
-```
-
-With a directory structure like this in place, you could create as many different modules that export routers as you like, perhaps one for each section of your site. Your `server.js` could be primarily for calling `app.use` - first with middleware that you would like to apply to all routes, and then with the individual routers you have created.
