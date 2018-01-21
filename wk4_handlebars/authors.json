@@ -25,16 +25,15 @@
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Oscar_Wilde_Sarony.jpg/800px-Oscar_Wilde_Sarony.jpg"
         },
         {
-            "name": "Franz Kafka",
-            "born": 1883,
-            "died": 1924,
+            "name": "Sylvia Plath",
+            "born": 1932,
+            "died": 1963,
             "selectedWritings": [
-                "The Trial",
-                "The Metamorphosis",
-                "The Castle"
+                "The Bell Jar",
+                "Ariel"
             ],
-            "quote": "There is an infinite amount of hope in the universe ... but not for us.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Kafka1906_cropped.jpg"
+            "quote": "To the person in the bell jar, blank and stopped as a dead baby, the world itself is a bad dream.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sylvia_Plath.jpg"
         }
     ]
 }
