@@ -35,7 +35,7 @@ Note that both application data (the user objects) and UI state information (the
 
 ## Actions and Action Creators
 
-Actions are plain Javascript objects that represent any occurrence that should result in a change in your application's state. These objects need to have a property that indicates the type of occurrence they represent and they will often have additional properties containing information relevant to the occurrence.  
+Actions are plain Javascript objects that represent any occurrence that should result in a change in your application's state. These objects need to have a property that indicates the type of occurrence they represent and they will often have additional properties containing information relevant to the occurrence.
 
 ```js
 {
@@ -122,12 +122,7 @@ For `connect` to work, the store must be available to it. The way to make the st
 ```js
 let elem = (
     <Provider store={store}>
-        <Router history={browserHistory}>
-            <Route path="/" component={App}>
-                <IndexRoute component={User} />
-                <Route path="user/:id" component={OtherUser} />
-            </Route>
-        </Router>
+        <App />
     </Provider>
 );
 
@@ -150,11 +145,7 @@ const connectBio = connect(mapStateToProps);
 const ConnectedBio = connectBio(Bio);
 
 function Bio(props) {
-    return (
-        <div className="bio">
-            {props.bio || 'Please add your bio'}
-        </div>
-    );
+    return <div className="bio">{props.bio || 'Please add your bio'}</div>;
 }
 ```
 
@@ -170,7 +161,7 @@ In addition to `mapStateToProps`, you can pass another function as the second ar
 
 ```js
 import { connect } from 'react-redux';
-import { showBioEditor } from './actions'
+import { showBioEditor } from './actions';
 
 const mapStateToProps = function(state) {
     return {

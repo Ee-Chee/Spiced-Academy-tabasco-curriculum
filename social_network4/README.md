@@ -1,28 +1,24 @@
 # Social Network - Part 4
 
-Now is a good time to add routing to our logged-in experience. For this we want to use the `browserHistory` option, which uses the [history api](https://developer.mozilla.org/de/docs/Web/API/History) - no hashes! It's neat, but it requires us to do a couple of things.
+Now is a good time to add routing to our logged-in experience. For this we want to use `BrowserRouter` rather than `HashRouter`. `BrowserRouter` uses the [history api](https://developer.mozilla.org/de/docs/Web/API/History) - no hashes! It's neat, but it requires us to do a couple of things to ensure that it works.
 
-For one thing, we have to be diligent about using React Router's `Link` elements for all of our links to routes. We also have to do set up on our server because it is possible that some requests for client-side routes will make it there. For example, if a user is on a route and clicks the reload button in the browser, the result will be a request to the server.
+For one thing, we have to be diligent about using React Router's `Link` elements for all of our links to routes. If we used plain old `<a>` tags with `href` attributes, clicks on our links would result in our page unloading and a request being made to the server.
 
-Fortunately, the server set up  is easy. All you have to do is have a catchall route that serves your `index.html` file.
+Even if we use `Link` for all of our links, it will still be possible for requests for pages to make it to the server. For example, if a user is on a route and uses the browser reload button, a GET request for the url of the page will go to the server. When our server receives such requests, it should serve the index.html file. This can be accomplished with a catch-all route, which you likely already have:
 
 ```js
 app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html');  
-});	
+    res.sendFile(__dirname + '/index.html');
+});
 ```
 
-When this file loads in the browser, React Router will determine and automatically render the correct component(s).
+When index.html loads in the browser, React Router will determine and automatically render the correct component(s) based on the url.
 
-You will probably also want to add to your catchall route a check to make sure the user is logged in. If the user is not logged in, you will want to redirect to `/welcome`.
+For now we are only going to need one `Route` for the path `'/'`. The component that this route will render is the `Profile` component described below.
 
-Your catchall route should be placed after all other routes in your code.
+## Profile
 
-For now we are only going to need one `Route` with an `IndexRoute` nested within it. The component for the main `Route` should be `App` and the component for the child route should be a new `Profile` component we will create now.
-
-## Profile 
-
-The `Profile` module should show the user's profile pic (you can use the `ProfilePic` module from part 2 and use CSS to style it differently), the user's first and last name, and their bio. Initially, users will not have a bio but they have the opportunity to create it here. After they have created, they can always edit it.
+The `Profile` component should show the user's profile pic (you can use the `ProfilePic` module from part 2 and use CSS to style it differently), the user's first and last name, and their bio. Initially, users will not have a bio but they have the opportunity to create it here. After they have created, they can always edit it.
 
 ![Munity add bio](munity1.png)
 
@@ -30,25 +26,22 @@ The `Profile` module should show the user's profile pic (you can use the `Profil
 
 ![Munity bio](munity3.png)
 
-For `Profile` to function correctly, `App` will have to pass it functions and data. Since there will not be a `<Profile>` element in the `App` component's `render` function, these functions and data cannot be passed in the normal way. Instead, React's [`cloneElement`](https://facebook.github.io/react/docs/react-api.html#cloneelement) method can be used to create new elements that have the desired props.
+Since the bio will be in the `state` of our `App` component, neither the `Profile` component nor any child component of it will be able to change it. In order for our bio editing functionality to work, our `App` component must pass a function for changing the bio to the `Profile` component. This function will have to be passed to the `Profile` component along with the user's id, first name, last name, profile pic, and bio.
 
-In the following example, a component passes its `log` function to its children.
+In order to pass props to `Profile`, we can use an alternative to the `component` prop in our `Route`. The `Route` component allows you to specify a `render` function to run for the route. This function should return JSX, which gives us an opportunity to pass props.
 
 ```js
-class MyComponent extends React.Component {
-    log(msg) {
-        console.log(msg);
-    }
-    render() {
-        const children = React.cloneElement(this.props.children, {
-            log: this.log
-        });
-        return (
-            <div>
-                {children}
-            </div>
-        );
-    }
-}
+<Route
+    path="/"
+    render={() => (
+        <Profile
+            id={this.state.id}
+            first={this.state.first}
+            last={this.state.last}
+            profilePic={this.state.profilePic}
+            bio={this.state.bio}
+            setBio={this.setBio}
+        />
+    )}
+/>
 ```
-

@@ -9,7 +9,7 @@ The friends and potential friends shown in these two lists should link to the ap
 We want to use [Redux](../redux) for this feature as well as all other features we add henceforward. You will have to modify your initialization code (which probably still resides in `start.js`) to support this. You will have to
 
 * Create a Redux store and apply the `redux-promise` middleware
-* Wrap your router in the `Provider` component exported by `react-redux` and pass the store to it as a prop
+* Wrap your `App` component in the `Provider` component exported by `react-redux` and pass the store to it as a prop
 
 The component you use for the `/friends` route should be created using the `connect` function from `react-redux`. The component you pass to the function that `connect` returns will have to cause the fetching of the friends and requesters to happen when it mounts, which means that it will have to be created with `class` so you can use the `componentDidMount` method.
 
@@ -21,4 +21,4 @@ When requests are accepted and friendships ended, your reducer should change the
 
 ## A note about keys
 
-For this part we will be showing two lists of items. When displaying lists of elements constructed from arrays, it helps React render efficiently if you give each element a special attribute named `key` and set each to a unique value. In our present situation, you could use the id of the user or the id of the friend request as the `key`. For more information about keys, see the [_Lists and Keys_](https://reactjs.org/docs/lists-and-keys.html) article from the guide at reactjs.org. 
+For this part we will be showing two lists of items. When displaying lists of elements constructed from arrays, it helps React render efficiently if you give each element a special attribute named `key` and set each to a unique value. In our present situation, you could use the id of the user or the id of the friend request as the `key`. For more information about keys, see the [_Lists and Keys_](https://reactjs.org/docs/lists-and-keys.html) article from the guide at reactjs.org.
