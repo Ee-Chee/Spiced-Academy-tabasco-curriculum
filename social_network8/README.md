@@ -6,20 +6,31 @@ Wouldn't be great to know who is using this site right now? It sure would, so le
 
 It's actually not too difficult to build a list of logged in users. Every time a logged in user makes a request, you could push an object representing that user to an array after confirming that that user is not already in the list. The situation would be more complicated if your code was running on multiple servers and/or if you were using [`cluster`](../wk9_cluster), but a simple array in memory would work for us. The problem that arises is this: how do you keep the list updated as users stop using the site? How do you know when a user has left?
 
-We can use [socket.io](../socket.io) to figure it out. If we establish a connection with socket.io when the logged in experience loads, we can use the `'disconnect'` event to detect on the server when the user closes the browser or otherwise unloads  the site. When that happens, we can remove the user from our list.
+We can use [socket.io](../socket.io) to figure it out. If we establish a connection with socket.io when the logged in experience loads, we can use the `'disconnect'` event to detect on the server when the user closes the browser or otherwise unloads the site. When that happens, we can remove the user from our list.
 
-Adding a user to the list becomes a little more complicated now. Each item in our list of online users needs to include not just the user's id but also the id of their socket. The id of the socket is necessary so we can know which user left when the disconnect event occurs. We know the id of the socket when it connects, but we do not know the id of the user since session middleware does not work with socket.io events. It is possible to figure out the cookie from the socket but we would have reproduce the functionality of the session middleware to convert the values in that cookie to an object we can read properties from. It is probably easier to make a route that the client can hit after the socket connects to tell the server the socket id, like so:
+Adding a user to the list becomes a little more complicated now. Each item in our list of online users needs to include not just the user's id but also the id of their socket. The id of the socket is necessary so we can know which user left when the disconnect event occurs.
+
+We can use the socket object passed to our `'connection'` event handler on our server to determine both the id of the socket and the id of the user. The socket will have a property named `id`, which is the id of the socket itself. The id of the user can be determined by using [socket-cookie-session](https://github.com/spicedacademy/socket-cookie-session).
 
 ```js
-let socket = io.connect();
-socket.on('connect', function() {
-    axios.get(`/connected/${socket.id}`);
+const { getSessionFromSocket } = require('socket-cookie-session');
+
+io.on('connection', function(socket) {
+    const session = getSessionFromSocket(socket, {
+        secret: sessionSecret
+    });
+
+    if (!session || !session.user) {
+        return socket.disconnect(true);
+    }
+
+    const userId = session.user.id;
 });
 ```
 
-The `/connected/:socketId` route can then read the user's id from the session and the socket id from `req.params` and put an object that has both of these values as properties into the array of online users.
+Once you have both the id of the socket and the id of the user, you can make each of them properties of an object and put that object in an array. Alternatively, you could have an object that uses socket ids as keys and user ids as values.
 
-Keep in mind that it is possible for a single user to appear in the list more than once. If a user has the site open in two tabs, there will be two sockets associated with that user. For this reason, it is important to only remove the item from the list that has the matching socket id when `'disconnect'` event occurs. If a user who has the site open in two tabs closes one of them, she should remain in the list of online users.
+Keep in mind that it is possible for a single user to appear in your list more than once. If a user has the site open in two tabs, there will be two sockets associated with that user. For this reason, it is important to only remove the item from the list that has the matching socket id when `'disconnect'` event occurs. If a user who has the site open in two tabs closes one of them, she should remain in the list of online users.
 
 When a user is added to the list of online users, the server should send a message to that user with the list of all online users as the payload. Let's call this event `'onlineUsers'`.
 
@@ -35,9 +46,9 @@ A couple of other points:
 
 * Unless you keep full information about everybody in the list of users you maintain on the server, it will be necessary to do a database query prior to to emitting the `'onlineUsers'` event. For this query you will have a list of user ids you want to match rather than just one. You can accomplish this using the [`ANY`](https://www.postgresql.org/docs/9.1/static/functions-comparisons.html) function.
 
-    ```js
-    function getUsersByIds(arrayOfIds) {
-        const query = `SELECT * FROM users WHERE id = ANY($1)`;
-        return db.query(query, [arrayOfIds]);
-    }
-    ```
+  ```js
+  function getUsersByIds(arrayOfIds) {
+      const query = `SELECT * FROM users WHERE id = ANY($1)`;
+      return db.query(query, [arrayOfIds]);
+  }
+  ```
