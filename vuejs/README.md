@@ -175,6 +175,6 @@ Vue.js does not come with any built-in facility to make ajax requests. We will u
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-axios is quite simple to use. It has a `get` method that makes GET requests and a `post` method for making POST requests. You pass the url as the first argument to both of these functions. You can pass an object as the second argument to `get` and it will be converted into a query string. An object passed as the second argument to `post` will be converted into a JSON request body.
+axios is quite simple to use. It has a `get` method that makes GET requests and a `post` method for making POST requests. You pass the url as the first argument to both of these functions. You can pass an object as the second argument to `post` and it will be converted into a JSON request body.
 
 When the promise that `get` and `post` return is resolved, the value the function you passed to `then` will receive is an object representing the received response. It has numerous properties such as `status` and `headers`. Usually what you will be most interested in is the `data` property, which holds the body of the response. JSON response bodies will be parsed automatically.
