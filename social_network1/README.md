@@ -42,6 +42,6 @@ After a successful registration, the user should be redirected to `/`. For now, 
 
 A single component called `Logo` that renders the logo is all this page requires for now.
 
-Since both `/welcome` and `/` serve the same page, you may be wondering how to determine whether the user is logged in or not so you can know what to display. You can do this by checking the`location.pathname` property in `start.js`. If the `pathname` is  `'/welcome'`, pass the `Welcome` component to `ReactDOM.render`. Otherwise, pass `logo`. This requires that the `/welcome` route redirect logged-in users to `/` and the `/` route redirects users to `/welcome`.
+Since both `/welcome` and `/` serve the same page, you may be wondering how to determine whether the user is logged in or not so you can know what to display. You can do this by checking the`location.pathname` property in `start.js`. If the `pathname` is  `'/welcome'`, pass the `Welcome` component to `ReactDOM.render`. Otherwise, pass `logo`. This requires that the `/welcome` route redirect logged-in users to `/` (and, conversely, the `/` route should redirect logged-out users to `/welcome`).
 
 Note that React does not come with a built-in ajax library. We will use the [axios](https://github.com/mzabriskie/axios), a promise-based ajax library.
