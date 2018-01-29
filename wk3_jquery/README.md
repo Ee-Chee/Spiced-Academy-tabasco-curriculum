@@ -67,7 +67,7 @@ $('body').on('whatever', function() {
 
 jQuery also supports creating <a href="http://benalman.com/news/2010/03/jquery-special-events/">custom events</a> that are composites of other events.
 
-## Including jquery
+## Including jQuery
 
 In order to use jquery, you have to include it with a `script` tag in your HTML. You can either download the [latest version](http://jquery.com/download/) or include it from the CDN like so:
 
