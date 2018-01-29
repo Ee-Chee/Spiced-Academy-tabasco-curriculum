@@ -10,7 +10,7 @@ Let's make an incremental search field that allows users to find one of the coun
 
 * If the current value of the input is not at the beginning of any of the country names, the string "No results" should be displayed in gray
 
-* If a list of results is displayed and the user clicks outside of it and outside of the input field, the result list should disapper.
+* If a list of results is displayed and the user clicks outside of it and outside of the input field, the result list should disappear.
 
 * Result lists should reappear when the user gives the input field focus
 
