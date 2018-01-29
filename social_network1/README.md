@@ -4,9 +4,7 @@ For our penultimate project we will make social network on which users can sign 
 
 Everything you will need to install is listed in the `package.json` in the repo. All you need do, as far as installation goes, is type `npm install`.
 
-Prior to running the app, create a directory named `public`. That's where Webpack (the tool we will use to compile and package our Javascript) will place `bundle.js`, the single javascript file the site will need. You will probably also want to use `public` as a static directory and place your css and images in it.
-
-Webpack will start with `src/start.js`. Any js file that `start.js` imports from  (as well as the files that those files import from) will be included in the bundle. The js files you create and import should be placed in the `src` directory.
+Webpack, the tool we use to compile our code, will start with `src/start.js`. Any js file that `start.js` imports from  (as well as the files that those files import from) will be included in the bundle. The js files you create and import should be placed in the `src` directory.
 
 There is already an `index.html` file in the project, and it is served in response to `GET` requests to `/`. This is the only HTML file this project will require.
 
