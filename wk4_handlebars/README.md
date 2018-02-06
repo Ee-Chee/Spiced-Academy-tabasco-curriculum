@@ -120,7 +120,7 @@ In the example above, if the object that is passed to the template has no `autho
 
 ## Exercise
 
-Create a page on which you transform <a href="authors.json">this JSON</a> into HTML using Handlebars. You can lay out the page any way you wish, but all of the data about each author should be shown.
+Create a page on which you transform <a href="authors.json">this JSON</a> into HTML using Handlebars. You can lay out the page any way you wish, but all of the data about each author should be shown. There is no need to make an ajax request to get this data. You can just cut and paste it into your code and store it in a variable.
 
 ## Bonus Exercise
 
