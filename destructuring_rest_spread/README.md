@@ -62,7 +62,7 @@ You can do destructuring with objects as well.
 ```js
 const leo = {
     name: 'Leonardo DiCaprio',
-    age: 42,
+    age: 43,
     oscars: 1
 };
 
@@ -76,7 +76,7 @@ This is great, but we often want to go the other way. That is, we often start ou
 ```js
 const name = "Leonardo DiCaprio";
 const oscars = 1;
-const age = 42;
+const age = 43;
 
 const leo = {
     name: name,
@@ -90,7 +90,7 @@ Now you can do this:
 ```js
 const name = "Leonardo DiCaprio";
 const oscars = 1;
-const age = 42;
+const age = 43;
 
 const leo = {
     name,
@@ -146,7 +146,7 @@ ES 2018 adds support for using `...` with objects. For example, if you want to u
 ```js
 const leo = {
     name: 'Leonardo DiCaprio',
-    age: 42,
+    age: 43,
     oscars: 1
 }
 
@@ -154,7 +154,7 @@ const { name, ...etc } = leo;
 
 console.log(name); // logs "Leonardo DiCaprio"
 
-console.log(etc); // logs "{ age: 42, oscars: 1 }"
+console.log(etc); // logs "{ age: 43, oscars: 1 }"
 ```
 
 It is particularly convenient to use `...` in its capacity as the spread operator to copy properties from one object to another.
@@ -162,13 +162,13 @@ It is particularly convenient to use `...` in its capacity as the spread operato
 ```js
 const leo = {
     name: 'Leonardo DiCaprio',
-    age: 42,
+    age: 43,
     oscars: 1
 }
 
 const pcruz = { ...leo, name: 'Penélope Cruz' };
 
-console.log(pcruz); // logs "{ name: 'Penélope Cruz', age: 42, oscars: 1 }"
+console.log(pcruz); // logs "{ name: 'Penélope Cruz', age: 43, oscars: 1 }"
 ```
 
 
