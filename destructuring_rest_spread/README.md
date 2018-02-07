@@ -150,7 +150,7 @@ const leo = {
     oscars: 1
 }
 
-const { name, ...etc } =  leo;
+const { name, ...etc } = leo;
 
 console.log(name); // logs "Leonardo DiCaprio"
 
