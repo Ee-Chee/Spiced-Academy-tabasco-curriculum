@@ -123,7 +123,7 @@ function createObjWithProp(name, value) {
 
 const obj = createObjWithProp('hello', 'kitty');
 
-console.log(obj); // logs '{ hello: "kitty" }'
+console.log(obj); // logs "{ hello: 'kitty' }"
 
 ```
 
@@ -138,8 +138,39 @@ function createObjWithProp(name, value) {
 
 const obj = createObjWithProp('hello', 'kitty');
 
-console.log(obj); // logs '{ hello: "kitty" }'
+console.log(obj); // logs "{ hello: 'kitty' }"
 ```
+
+ES 2018 adds support for using `...` with objects. For example, if you want to use destructuring assignment to put the value of one property of an object in a variable and assign to a different variable an object with all the other properties, you can do this:
+
+```js
+const leo = {
+    name: 'Leonardo DiCaprio',
+    age: 42,
+    oscars: 1
+}
+
+const { name, ...etc } =  leo;
+
+console.log(name); // logs "Leonardo DiCaprio"
+
+console.log(etc); // logs "{ age: 42, oscars: 1 }"
+```
+
+It is particularly convenient to use `...` in its capacity as the spread operator to copy properties from one object to another.
+
+```js
+const leo = {
+    name: 'Leonardo DiCaprio',
+    age: 42,
+    oscars: 1
+}
+
+const pcruz = { ...leo, name: 'Penélope Cruz' };
+
+console.log(pcruz); // logs "{ name: 'Penélope Cruz', age: 42, oscars: 1 }"
+```
+
 
 # Function arguments
 
@@ -157,7 +188,7 @@ const logName = function({ firstName, lastName }) {
     console.log(lastName + ', ' + firstName);
 };
 
-logName(body); // logs 'duck, disco'
+logName(body); // logs "duck, disco"
 ```
 
 ```js
