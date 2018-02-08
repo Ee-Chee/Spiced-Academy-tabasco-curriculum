@@ -159,8 +159,6 @@
 
 [Portfolio](wk5_portfolio)
 
-[Cluster](wk9_cluster)
-
 ### Wednesday
 
 [Express](wk6_express)
