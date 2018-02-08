@@ -15,7 +15,32 @@ The component you use for the `/friends` route should be created using the `conn
 
 The fetching of the friends and requesters should be caused by the dispatching of an action. It will also be necessary for actions to be dispatched for accepting friend requests and ending friendships. All of these require server requests to be made, so the action creators should return promises that resolve with actions.
 
-When requests are accepted and friendships ended, your reducer should change the state object to one that has the new list(s) of users. This should cause re-rendering with either new users appearing in the list of friends or old friends disappearing from it.
+After fetching the friends and requesters, the state object should look something like this:
+
+```js
+{
+    friendships: [
+        {
+            id: 1,
+            first: 'Funky',
+            last: 'Chicken',
+            image: '/images/default.jpg',
+            status: 2
+        },
+        {
+            id: 2,
+            first: 'Disco',
+            last: 'Duck',
+            image: '/images/default.jpg',
+            status: 1
+        }
+    ]
+}
+```
+
+That is, there should be one array in which both friends and potential friends are commingled. You should use the function you pass as the first argument to `connect` (`mapStateToProps`) to split this array into two lists. 
+
+When requests are accepted and friendships ended, your reducer should change the state object to one that has the new list of users. This should cause re-rendering with either new users appearing in the list of friends or old friends disappearing from it.
 
 **Bonus Feature**: Add to each requester you display a link or button for rejecting the friend request.
 
