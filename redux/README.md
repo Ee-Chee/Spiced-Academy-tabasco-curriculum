@@ -63,7 +63,7 @@ This bears repeating: Reducers _do not_ make changes to the current state. They 
 
 Redux requires that reducers be [pure functions](https://en.wikipedia.org/wiki/Pure_function). That means they can have no side effects. They can't change anything that they did not create themselves.
 
-Typically, the way you make sure that you don't mutate existing state in a reducer is by creating clones of objects using of [`Object.assign`](../object_assign) or the [object spread operator](destructuring_rest_spread#objects).
+Typically, the way you make sure that you don't mutate existing state in a reducer is by creating clones of objects using of [`Object.assign`](../object_assign) or the [object spread operator](../destructuring_rest_spread#objects).
 
 ```js
 function reducer(state = {}, action) {
