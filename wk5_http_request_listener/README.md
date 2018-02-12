@@ -45,7 +45,7 @@ We would like to do a few things differently than in the examples given in the g
 
 * If the request method is POST, log the request body to the console. Do not write a body to the response. Instead, set the `'Location'` header of the response to `'/'` and the status code to `302`. This will cause a redirect.
 
-* If the request method is not GET, HEAD, or POST, send a `403` status code.
+* If the request method is not GET, HEAD, or POST, send a `405` status code.
 
 Use <a href="https://www.getpostman.com/">Postman</a> to test this with various HTTP methods.
 
