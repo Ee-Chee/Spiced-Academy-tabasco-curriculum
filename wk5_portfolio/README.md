@@ -23,6 +23,16 @@
 
 * If there is not an item in the projects directory that matches the `url` of the request, send a 404.
 
+* It is critical that we only allow files that are contained in the projects directory to be served. If you are checking the file system for a file that corresponds to the url with every request, you cannot trust that the url will not be crafted in such a way that when it is appended to `__dirname + '/projects'` it would not refer to a file that is not in that directory. You must perform validation to prevent such mischief. A good way to validate the url would be to use [`path.normalize`](https://nodejs.org/api/path.html#path_path_normalize_path):
+  ```js
+  const myPath = path.normalize(__dirname + '/projects' + req.url);
+  
+  if (!myPath.startsWith(__dirname + '/projects')) {
+      res.statusCode = 403;
+      return res.end();
+  }
+  ```
+
 ## Part 2
 
 Create a page that lists and links to all of the projects in your portfolio.
