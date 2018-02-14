@@ -18,7 +18,7 @@ In your express project, you create and add routes to your app as you normally w
 const express = require('express');
 const app = express();
 const server = require('http').Server(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, { origins: 'localhost:8080' });
 
 app.get('/', function(req, res) { // just a normal route
     res.sendStatus(200);
