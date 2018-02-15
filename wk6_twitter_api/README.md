@@ -2,8 +2,6 @@
 
 When we last left our <a href="wk2_dy4_ticker">ticker project</a> we were getting our headlines from a flat json file. Let's change it to get our headlines from the Twitter timeline of a news organization, such as <a href="https://twitter.com/theonion">the Onion</a>.
 
-## Prerequisites
-
 The <a href="https://dev.twitter.com/rest/public">Twitter API</a> requires authentication. This means credentials need to be passed with each request. If we were to make requests via ajax, we'd have to have our application's credentials available in the browser, which means they would be available to anyone using our site. Unacceptable! We will have to make our requests to the Twitter API from the server.
 
 Twitter's API requires all requests be made with HTTPS. Thus we will use the <a href="https://nodejs.org/api/https.html#https_https_request_options_callback">`request`</a> method of Node's <a href="https://nodejs.org/api/https.html">`https`</a> module. A fuller example of how to make a request is available <a href="https://docs.nodejitsu.com/articles/HTTP/clients/how-to-create-a-HTTP-request/">here</a> (this example uses the `http` module but the `https` interface is identical).
