@@ -105,7 +105,7 @@ function readdir(path) {
 
 ## `util.promisify`
 
-As of version 8 of Node it is now even easier to create promisified versions of functions that take callbacks. The [util](https://nodejs.org/api/util.html) module now has a [promisfy](https://nodejs.org/api/util.html#util_util_promisify_original) method to which you can pass a function that accepts a standard, node-style callback and get back a function that returns a promise.
+As of version 8 of Node it is now even easier to create promisified versions of functions that take callbacks. The [`util`](https://nodejs.org/api/util.html) module now has a [`promisfy`](https://nodejs.org/api/util.html#util_util_promisify_original) method to which you can pass a function that accepts a standard, node-style callback and get back a function that returns a promise.
 
 ```js
 var fs = require('fs');
