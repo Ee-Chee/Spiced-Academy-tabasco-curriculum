@@ -35,7 +35,7 @@ This page should have a link to another page that lists all of the people who ha
 A repo for this project has already been created. You should clone it.
 
 ```
-git clone git@github.com:spicedacademy/horseradish-petition.git
+git clone git@github.com:spicedacademy/cilantro-petition.git
 ```
 
 After cloning, `cd` into the directory and create a branch of your own.
