@@ -52,11 +52,13 @@ if (true) {
 ```
 
 ```js
-for (var i = 0; i < 5; i++) {}
+for (var i = 0; i < 5; i++) {
+}
 ```
 
 ```js
-function fn() {}
+function fn() {
+}
 ```
 
 There are a few exceptions to this. The one we will encounter most frequently at this stage is empty object literals. It is better not to do a line break between the curly braces for an empty object.
