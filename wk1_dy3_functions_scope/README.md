@@ -35,7 +35,7 @@ If you are not using strict mode you must take great care to avoid such mistakes
 
 # Hoisting
 
-In _both_ global and local scope, declarations of variables and functions are processed prior to the execution of all other code, including assignments. This is called _hoisting_. Hoisting makes the following three code snippets equivalent.
+In _both_ global and local scope, declarations of variables with `var` are processed prior to the execution of all other code, including assignments. This is called _hoisting_. Hoisting makes the following three code snippets equivalent.
 
 ```js
 var a = 100;
@@ -66,7 +66,7 @@ function sayHello() {
 }
 ```
 
-Function declarations, like variable declarations, are subject to hoisting. When you declare a function, the name of the function becomes a variable in the scope of the declaration and the value assigned to it is the function.
+Function declarations, like `var` declarations, are subject to hoisting. When you declare a function, the name of the function becomes a variable in the scope of the declaration and the value assigned to it is the function.
 
 ## Function expressions
 
