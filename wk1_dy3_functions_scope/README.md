@@ -6,7 +6,7 @@ If you are writing a Javascript program that runs in a browser and you declare a
 
 The fact that global variables can be accessed anywhere means that they can easily be overwritten accidentally, resulting in chaos. For this and other reasons it is best to minimize the number of global variables you create. There is seldom any reason to create more than one.
 
-There is a _global object_ and it is this object that `this` refers to in global scope. Variables that are declared in the global scope automatically become properties of the global object.
+There is a _global object_ and it is this object that `this` refers to in global scope. Variables that are declared in the global scope with `var` automatically become properties of the global object.
 
 ```js
 // Global scope code
