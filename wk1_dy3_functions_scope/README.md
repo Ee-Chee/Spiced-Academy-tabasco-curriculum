@@ -62,7 +62,7 @@ Note that in the third example above, there is no error in strict mode because t
 
 ```js
 function sayHello() {
-  console.log('hello');
+    console.log('hello');
 }
 ```
 
@@ -72,7 +72,7 @@ Function declarations, like `var` declarations, are subject to hoisting. When yo
 
 ```js
 var sayHello = function() {
-  console.log('hello');
+    console.log('hello');
 };
 ```
 
@@ -84,8 +84,8 @@ Variables declared in a function are in local scope. They are not accessible out
 
 ```js
 var fn = function() {
-  var n = 0;
-  console.log(typeof n);
+    var n = 0;
+    console.log(typeof n);
 };
 
 fn(); //logs 'number'
@@ -98,8 +98,8 @@ A common pattern is to define a function without assigning it to a variable and 
 
 ```js
 (function() {
-  var a = 1;
-  console.log(typeof a); //logs 'number'
+    var a = 1;
+    console.log(typeof a); //logs 'number'
 })();
 
 console.log(typeof a); //logs 'undefined'
@@ -118,9 +118,9 @@ When a function has been called and is running there is available to it in its l
 
 ```js
 function fn(a, b, c) {
-  console.log(arguments[0] == a); //logs 'true'
-  console.log(arguments[1] == b); //logs 'true'
-  console.log(arguments[2] == c); //logs 'true'
+    console.log(arguments[0] == a); //logs 'true'
+    console.log(arguments[1] == b); //logs 'true'
+    console.log(arguments[2] == c); //logs 'true'
 }
 ```
 
@@ -128,11 +128,11 @@ The `arguments` object is useful when the parameters passed to a function do not
 
 ```js
 var exclaim = function(a) {
-  var exclamation = a;
-  if (arguments[1]) {
-    exclamation = arguments[1];
-  }
-  return exclamation + '!!!';
+    var exclamation = a;
+    if (arguments[1]) {
+      exclamation = arguments[1];
+    }
+    return exclamation + '!!!';
 };
 
 exclaim('hello'); //'hello!!!'
@@ -145,15 +145,15 @@ Functions can be defined in other functions. Functions that are defined in other
 
 ```js
 var outer = function() {
-  var a = 100;
+    var a = 100;
 
-  var inner = function() {
-    var b = 'hello';
-    console.log(typeof a, typeof b);
-  };
+    var inner = function() {
+        var b = 'hello';
+        console.log(typeof a, typeof b);
+    };
 
-  inner(); //logs 'number', 'string'
-  console.log(typeof a, typeof b); //logs 'number', 'undefined'
+    inner(); //logs 'number', 'string'
+    console.log(typeof a, typeof b); //logs 'number', 'undefined'
 };
 outer();
 ```
@@ -162,9 +162,9 @@ Note that this does not just apply to declared variables but also to parameters 
 
 ```js
 var getCounter = function(num) {
-  return function() {
-    return num++;
-  };
+    return function() {
+      return num++;
+    };
 };
 
 var counter = getCounter(3);
@@ -179,7 +179,7 @@ Functions that are passed to other functions are often called _callbacks_.
 
 ```js
 setTimeout(function() {
-  console.log('hello');
+    console.log('hello');
 }, 1000);
 ```
 
@@ -191,10 +191,10 @@ Functions can call themselves! This is called _recursion_.
 
 ```js
 var cutDownToSize = function(str) {
-  if (str.length > 3) {
-    return cutDownToSize(str.slice(0, -1));
-  }
-  return str;
+    if (str.length > 3) {
+        return cutDownToSize(str.slice(0, -1));
+    }
+    return str;
 };
 
 cutDownToSize('teacher'); //'tea'
@@ -209,10 +209,10 @@ What if you want to define a recursive function using a function expression? You
 
 ```js
 var fn = function me(str) {
-  if (!str) {
-    return me('hello');
-  }
-  return str + '!';
+    if (!str) {
+        return me('hello');
+    }
+    return str + '!';
 };
 
 fn('hi'); //'hi!'
@@ -236,11 +236,11 @@ typeof me; //'undefined'
 2. Write a function that takes another function as a parameter. It should wait 1.5 seconds and then run the function that was passed in.
   ```js
   waitThenRun(function() {
-    console.log('Hello!');
+      console.log('Hello!');
   }); // logs 'Hello!' 1.5 seconds later
 
   waitThenRun(function() {
-    console.log('Goodbye!');
+      console.log('Goodbye!');
   }); // logs 'Goodbye!' 1.5 seconds later
   ```
 
