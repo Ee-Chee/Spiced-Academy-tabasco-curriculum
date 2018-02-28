@@ -6,18 +6,17 @@ CSS Selectors are patterns that are used to select HTML elements in order to app
 
 CSS selectors use patterns to determine the element we want to select.  These are the most common:
 
-|                 Selector                 |               What it does               |
-| :--------------------------------------: | :--------------------------------------: |
-|                 ```*```                  |   Global styles, selects *everything*    |
-|            ```div  .child```             | selects all _.child_ elements that are descendants of any _div_ element |
-|            ```div > .child```            | select all _.child_ elements where their parent is a *div* |
-|           ```div + .sibling```           | Selects an element (.*sibling*) that follows directly after the prior element (*div*), in which both elements share the same parent |
-|               ```p ~ ul```               | Selects an element (*ul*) that follows anywhere after the prior element (*p*), in which both elements share the same parent |
-|         ```.mydiv:first-child```         | selects every element with class *.mydiv* that is the first child of its parent |
-|         ```section.this-class```         | selects any _section_ element with a class of _.this-class_ |
-|             ```h1, h2, h3```             | selects all *h1*, *h2*, and *h3* elements |
-|        ```input[type=password]```        | selects all *input* elements that have a type equal to password |
-| ```a[href="https://spiced-academy.com"]``` | selects all *a* elements that have an href equal to https://spiced-academy.com |
+|          Selector          |           Name            |                         What it does                         |
+| :------------------------: | :-----------------------: | :----------------------------------------------------------: |
+|          ```*```           |      Global Selector      |             Global styles, selects *everything*              |
+|     ```div  .child```      |    Descendent Selector    | selects all _.child_ elements that are descendants of any _div_ element |
+|     ```div > .child```     |   Direct Child Selector   |  select all _.child_ elements where their parent is a *div*  |
+|    ```div + .sibling```    | Adjacent Sibling Selector | Selects an element (.*sibling*) that follows directly after the prior element (*div*), in which both elements share the same parent |
+|        ```p ~ ul```        | General Sibling Selector  | Selects an element (*ul*) that follows anywhere after the prior element (*p*), in which both elements share the same parent |
+|  ```.mydiv:first-child```  |       Pseudo Class        | selects every element with class *.mydiv* that is the first child of its parent |
+|  ```section.this-class```  |     Multiple classes      | selects any _section_ element with a class of _.this-class_  |
+|      ```h1, h2, h3```      | Comma separated selectors |          selects all *h1*, *h2*, and *h3* elements           |
+| ```input[type=password]``` |    Attribute Selector     | selects all *input* elements that have a type equal to password |
 
 The last two selectors from this table are called **attribute selectors**. They scan the attributes of the element specified. You can learn more about attibute selectors [here](https://css-tricks.com/almanac/selectors/a/attribute/).
 
