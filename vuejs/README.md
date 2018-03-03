@@ -13,7 +13,7 @@ When this file loads, it will put into global scope a constructor named `Vue`. Y
 Let's start out by calling it with the simplest imaginable object.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main'
 });
 ```
@@ -46,7 +46,7 @@ The expressions contained in `{{` and `}}` are automatically evaluated and rende
 You can specify data you want to render in your UI by adding a `data` property to the object you pass to `Vue`. All properties specified in this way will be available for use in your HTML.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main',
     data: {
         heading: 'My Vue App'
@@ -67,7 +67,7 @@ The fields you specify in the `data` object will be copied to your view instance
 The double curly brace syntax works for text nodes, but if you want to use data fields in HTML attributes you must do something a little different.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main',
     data: {
         heading: 'My Vue App',
@@ -85,7 +85,7 @@ var app = new Vue({
 `v-bind` is what is called a _directive_, a special attribute that begins with `v-` and has a Javascript expression as its value. There are many [directives](https://vuejs.org/v2/api/#Directives) that Vue understands (it is also possible to create your own). For example, `v-if` can be used to render content conditionally and `v-for` can be used to render lists of items.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main',
     data: {
         cities: [
@@ -115,7 +115,7 @@ var app = new Vue({
 The `v-model` directive is used on form fields to achieve two-way data binding. The form field will display the value of the property that is specified. When the user updates the value of the form field, the value of the property will be updated automatically.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main',
     data: {
         greetee: ''
@@ -135,7 +135,7 @@ var app = new Vue({
 The `v-on` directive is used to add event handlers to elements. You can add to your `Vue` instance methods to be called in event handlers (or elsewhere) by adding a `methods` property to the object you pass to the constructor.
 
 ```js
-var app = new Vue({
+new Vue({
     el: '#main',
     methods: {
         emphasize: function(e) {
