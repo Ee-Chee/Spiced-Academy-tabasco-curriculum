@@ -145,44 +145,44 @@ If a component does change the value of one of its props, and that prop is a pri
 If you want to have a component affect it's parent, you can have the component emit events that the parent listens for. You use the `$emit` method of the component to do this.
 
 ```js
-Vue.component('individual-city', {
-    props: ['id', 'name', 'country'],
-    methods: {
-        changed: function() {
-            this.$emit('changed', this.id, this.name);
-        }
-    },
-    template:
-        '<span>{{name}}, {{country}} <input v-model="name" v-on:input="changed"></span>'
-});
-
-var app = new Vue({
-    el: '#main',
-    data: {
-        cities: [
-            {
-                id: 1,
-                name: 'Berlin',
-                country: 'Germany'
-            },
-            {
-                id: 2,
-                name: 'Hamburg',
-                country: 'Germany'
+    Vue.component('individual-city', {
+        props: ['id', 'name', 'country'],
+        methods: {
+            changed: function(e) {
+                this.$emit('changed', this.id, e.target.value);
             }
-        ]
-    },
-    methods: {
-        updateCityName: function(id, name) {
-            for (var i = 0; i < this.cities.length; i++) {
-                if (this.cities[i].id == id) {
-                    this.cities[i].name = name;
-                    return;
+        },
+        template:
+            '<span>{{name}}, {{country}} <input v-bind:value="name" v-on:input="changed"></span>'
+    });
+
+    var app = new Vue({
+        el: '#main',
+        data: {
+            cities: [
+                {
+                    id: 1,
+                    name: 'Berlin',
+                    country: 'Germany'
+                },
+                {
+                    id: 2,
+                    name: 'Hamburg',
+                    country: 'Germany'
+                }
+            ]
+        },
+        methods: {
+            updateCityName: function(id, name) {
+                for (var i = 0; i < this.cities.length; i++) {
+                    if (this.cities[i].id == id) {
+                        this.cities[i].name = name;
+                        return;
+                    }
                 }
             }
         }
-    }
-});
+    });
 ```
 
 ```HTML
@@ -190,7 +190,8 @@ var app = new Vue({
     <ul>
         <li v-for="city in cities">
             <strong>Component for {{city.name}}:</strong>
-            <individual-city v-bind:id="city.id"
+            <individual-city
+                  v-bind:id="city.id"
                   v-bind:name="city.name"
                   v-bind:country="city.country"
                   v-on:changed="updateCityName"></individual-city>
