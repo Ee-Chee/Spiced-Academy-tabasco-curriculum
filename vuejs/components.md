@@ -16,7 +16,7 @@ The first argument is a string to use as the name of the component. You use the 
 <some-component></some-component>
 ```
 
-It is customary for the name to be all lowercase and have hyphens separating words (kebab case).
+It is customary for the name to be all lowercase and have hyphens separating words (kebab-case).
 
 The second argument is a configuration object of the sort you also pass to the `Vue` constructor. Almost everything you can pass to the `Vue` constructor you can also pass to `Vue.component`. Two important exceptions are `el` and `data`.
 
@@ -136,31 +136,11 @@ var app = new Vue({
 
 <img src="example3.png" width="400" alt="Vue Example">
 
-When you pass primitive values as props to a component, the component stores the props as properties of itself, just as it does the items passed in `data`. These properties are distinct from the properties of the parent that passed the props to the component. When the props of the component changes, the properties of the parent do not.
+When you pass props to a component, the component stores the props as properties of itself, just as it does the items passed in `data`. If the parent passes its own reactive properties as props, when the values of these properties change, the component will receive the updated values and re-rendering of the component will occur if necessary. 
 
-```js
-Vue.component('individual-city', {
-    props: ['id', 'name', 'country'],
-    template: '<span>{{name}}, {{country}} <input v-model="name"></span>'
-});
-```
+Because the props passed to a component will change any time the corresponding properties of the parent changes, it is best for components to treat the props they receive as read-only. If they change the values of any of them, they can't be certain that they won't change to something else through no action of their own.
 
-```HTML
-<div id="main">
-    <ul>
-        <li v-for="city in cities">
-            <strong>Component for {{city.name}}:</strong>
-            <individual-city v-bind:id="city.id" v-bind:name="city.name" v-bind:country="city.country"></individual-city>
-        </li>
-    </ul>
-</div>
-```
-
-<img src="props.gif" alt="Vue example" width="600">
-
-In this example, using the form field changes the value of the `name` property of the component. However, the `name` property of the city object in the array that belongs to the parent of the component does not change.
-
-This inability of a component to alter its parent is by design. By ensuring that data flows in one direction - from the parent to the component - Vue.js eliminates a lot of potential confusion.
+If a component does change the value of one of its props, and that prop is a primitive value, the corresponding property of the parent _will not_ be affected. This inability of a component to alter its parent is by design. By ensuring that data flows in one direction - from the parent to the component - Vue.js eliminates a lot of potential confusion.
 
 If you want to have a component affect it's parent, you can have the component emit events that the parent listens for. You use the `$emit` method of the component to do this.
 
