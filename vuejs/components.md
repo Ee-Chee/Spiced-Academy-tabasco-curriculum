@@ -105,7 +105,7 @@ Vue.component('individual-city', {
     template: '<span>{{name}}, {{country}}</span>'
 });
 
-var app = new Vue({
+new Vue({
     el: '#main',
     data: {
         cities: [
@@ -156,7 +156,7 @@ If you want to have a component affect it's parent, you can have the component e
             '<span>{{name}}, {{country}} <input v-bind:value="name" v-on:input="changed"></span>'
     });
 
-    var app = new Vue({
+    new Vue({
         el: '#main',
         data: {
             cities: [
