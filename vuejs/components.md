@@ -56,15 +56,8 @@ This approach is of limited value because you very often want to use components 
 
 Another option is to use a `<script>` tag for your template, as we did with our [client-side Handlebars templates](../wk4_handlebars).
 
-```js
-Vue.component('some-component', {
-    data: function() {
-        return {
-            heading: 'Some Component'
-        };
-    },
-    template: '#some-template'
-});
+```HTML
+<some-component></some-component>
 ```
 
 ```html
@@ -76,8 +69,15 @@ Vue.component('some-component', {
 </script>
 ```
 
-```HTML
-<some-component></some-component>
+```js
+Vue.component('some-component', {
+    data: function() {
+        return {
+            heading: 'Some Component'
+        };
+    },
+    template: '#some-template'
+});
 ```
 
 You can also set the `template` property to a string containing your template directly. This only works well for short (one-line) templates. Longer templates become hard to work with.
@@ -98,6 +98,16 @@ Note that, in all of the template examples above, only one root element is conta
 ### `props`
 
 Data can be passed to components as custom attributes. This data is referred to as `props` in Vue.js terminology. In order to pass a prop to a component, you must declare the name for it by listing it in an array named `props`.
+
+```HTML
+<div id="main">
+    <ul>
+        <li v-for="city in cities">
+            <individual-city v-bind:id="city.id" v-bind:name="city.name" v-bind:country="city.country"></individual-city>
+        </li>
+    </ul>
+</div>
+```
 
 ```js
 Vue.component('individual-city', {
@@ -124,16 +134,6 @@ new Vue({
 });
 ```
 
-```HTML
-<div id="main">
-    <ul>
-        <li v-for="city in cities">
-            <individual-city v-bind:id="city.id" v-bind:name="city.name" v-bind:country="city.country"></individual-city>
-        </li>
-    </ul>
-</div>
-```
-
 <img src="example3.png" width="400" alt="Vue Example">
 
 When you pass props to a component, the component stores the props as properties of itself, just as it does the items passed in `data`. If the parent passes its own reactive properties as props, when the values of these properties change, the component will receive the updated values and re-rendering of the component will occur if necessary. 
@@ -143,6 +143,22 @@ Because the props passed to a component will change any time the corresponding p
 If a component does change the value of one of its props, and that prop is a primitive value, the corresponding property of the parent _will not_ be affected. This inability of a component to alter its parent is by design. By ensuring that data flows in one direction - from the parent to the component - Vue.js eliminates a lot of potential confusion.
 
 If you want to have a component affect it's parent, you can have the component emit events that the parent listens for. You use the `$emit` method of the component to do this.
+
+
+```HTML
+<div id="main">
+    <ul>
+        <li v-for="city in cities">
+            <strong>Component for {{city.name}}:</strong>
+            <individual-city
+                  v-bind:id="city.id"
+                  v-bind:name="city.name"
+                  v-bind:country="city.country"
+                  v-on:changed="updateCityName"></individual-city>
+        </li>
+    </ul>
+</div>
+```
 
 ```js
     Vue.component('individual-city', {
@@ -183,21 +199,6 @@ If you want to have a component affect it's parent, you can have the component e
             }
         }
     });
-```
-
-```HTML
-<div id="main">
-    <ul>
-        <li v-for="city in cities">
-            <strong>Component for {{city.name}}:</strong>
-            <individual-city
-                  v-bind:id="city.id"
-                  v-bind:name="city.name"
-                  v-bind:country="city.country"
-                  v-on:changed="updateCityName"></individual-city>
-        </li>
-    </ul>
-</div>
 ```
 
 <img src="events.gif" alt="Vue example" width="600">
