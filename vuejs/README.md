@@ -45,6 +45,13 @@ The expressions contained in `{{` and `}}` are automatically evaluated and rende
 
 You can specify data you want to render in your UI by adding a `data` property to the object you pass to `Vue`. All properties specified in this way will be available for use in your HTML.
 
+
+```html
+<div id="main">
+    <h1>{{ heading }}</h1>
+</div>
+```
+
 ```js
 new Vue({
     el: '#main',
@@ -54,17 +61,17 @@ new Vue({
 });
 ```
 
-```html
-<div id="main">
-    <h1>{{ heading }}</h1>
-</div>
-```
-
 ![Vue Example](example2.png)
 
 The fields you specify in the `data` object will be copied to your view instance. Of course, a `Vue` instance is just a Javascript object and you could add properties to it directly in the normal way. However, if you add them via `data`, they will be _reactive_ properties. If their values change during the lifetime of your app, the UI will automatically update to reflect the change. For this reason you should use `data` to add any property you use in your HTML. If you don't have a value for the property at the time you are calling the `Vue` constructor, you should use a placeholder value such as an empty string or `null`.
 
 The double curly brace syntax works for text nodes, but if you want to use data fields in HTML attributes you must do something a little different.
+
+```html
+<div id="main">
+    <h1 v-bind:class="headingClassName">{{ heading }}</h1>
+</div>
+```
 
 ```js
 new Vue({
@@ -76,13 +83,16 @@ new Vue({
 });
 ```
 
-```html
+`v-bind` is what is called a _directive_, a special attribute that begins with `v-` and has a Javascript expression as its value. There are many [directives](https://vuejs.org/v2/api/#Directives) that Vue understands (it is also possible to create your own). For example, `v-if` can be used to render content conditionally and `v-for` can be used to render lists of items.
+
+
+```HTML
 <div id="main">
-    <h1 v-bind:class="headingClassName">{{ heading }}</h1>
+    <ul v-if="cities.length > 0">
+        <li v-for="city in cities">{{city.name}}, {{city.country}}
+    </ul>
 </div>
 ```
-
-`v-bind` is what is called a _directive_, a special attribute that begins with `v-` and has a Javascript expression as its value. There are many [directives](https://vuejs.org/v2/api/#Directives) that Vue understands (it is also possible to create your own). For example, `v-if` can be used to render content conditionally and `v-for` can be used to render lists of items.
 
 ```js
 new Vue({
@@ -102,17 +112,17 @@ new Vue({
 });
 ```
 
-```HTML
-<div id="main">
-    <ul v-if="cities.length > 0">
-        <li v-for="city in cities">{{city.name}}, {{city.country}}
-    </ul>
-</div>
-```
-
 <img src="example3.png" width="400" alt="Vue Example">
 
 The `v-model` directive is used on form fields to achieve two-way data binding. The form field will display the value of the property that is specified. When the user updates the value of the form field, the value of the property will be updated automatically.
+
+
+```html
+<div id="main">
+    <h1>Hello, <span>{{greetee || 'World'}}!</h1>
+    <input type="text" v-model="greetee">
+</div>
+```
 
 ```js
 new Vue({
@@ -123,16 +133,17 @@ new Vue({
 });
 ```
 
-```html
-<div id="main">
-    <h1>Hello, <span>{{greetee || 'World'}}!</h1>
-    <input type="text" v-model="greetee">
-</div>
-```
-
 <img src="model.gif" height="136" alt="Vue Example">
 
 The `v-on` directive is used to add event handlers to elements. You can add to your `Vue` instance methods to be called in event handlers (or elsewhere) by adding a `methods` property to the object you pass to the constructor.
+
+```HTML
+<div id="main">
+    <span v-on:mouseover="emphasize" v-on:mouseout="deemphasize">
+        Hello, World!
+    </span>
+</div>
+```
 
 ```js
 new Vue({
@@ -151,14 +162,6 @@ new Vue({
         }
     }
 });
-```
-
-```HTML
-<div id="main">
-    <span v-on:mouseover="emphasize" v-on:mouseout="deemphasize">
-        Hello, World!
-    </span>
-</div>
 ```
 
 ### Lifecycle
