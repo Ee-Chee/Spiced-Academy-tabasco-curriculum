@@ -14,7 +14,7 @@ Currently, you must have a property of your `Vue` instance that indicates whethe
 
 If you are currently passing more than just the image's id in the `props` for your component, you will have a small problem. You won't have any of the data for the image you want to show at the time you want to show it since the ajax request to get all of the most recently uploaded images has not completed yet. You should alter your component so that it expects only an image id and, when it mounts, does an ajax request to get all other information about the image.
 
-Users will be able to type anything they want in a hash so you should probably handle the possibility that what is in the hash is not a valid image id. A simple way to do this is to have your component fire the event to close the modal if the ajax request to get the image data is not successful. When the modal is closed the value of `location.hash` should be an empty string.
+Users will be able to type anything they want in a hash so you should probably handle the possibility that what is in the hash is not a valid image id. A simple way to do this is to have your component fire the event to close the modal if the ajax request to get the image data is not successful. When the modal is closed, the value of `location.hash` should be an empty string.
 
 Currently, you have a click handler on your most recently uploaded images that causes the modal to open. This should be changed. Instead of a click handler, there should be a simple link whose href consists a hash plus the id of the image. To know when a user clicks on one of these links, you should listen for the `hashchange` event on the `window` object. When a hash change occurs, you should call a method on your `Vue` instance that handles it.
 
