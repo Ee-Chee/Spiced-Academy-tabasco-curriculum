@@ -1,4 +1,4 @@
-# Image Board - Part 4 (bonus)
+# Image Board - Part 4
 
 A problem our image board has is that it is not possible for our users to share links that go directly to an individual image. There is only one url for the entire site and every time you go to it you will see all of the most recently uploaded images. There is no way to go directly to a view showing a single larger-sized image with its comments in a modal.
 
