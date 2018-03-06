@@ -10,7 +10,7 @@ There is a newer technique for doing client-side routing that does not use hashe
 
 ### Adding Routing to Your Image Board
 
-Currently, you must have a property of your `Vue` instance that indicates whether or not the modal should be visible. Most likely, this is the id of the image to show. Since this is a reactive property, it must be initialized in the `data` property with a placeholder value. To make the page show the image modal when it starts up, you can read the `location.hash` and see if it contains an image id. If it does, you an pass that as the initial value for the property in the `data` object. That should make the modal appear immediately.
+Currently, you must have a property of your `Vue` instance that indicates whether or not the modal should be visible. Most likely, this is the id of the image to show. Since this is a reactive property, it must be initialized in the `data` object with a placeholder value. To make the page show the image modal when it starts up, you can read the `location.hash` and see if it contains an image id. If it does, you can pass that as the initial value for the property in the `data` object. That should make the modal appear immediately.
 
 If you are currently passing more than just the image's id in the `props` for your component, you will have a small problem. You won't have any of the data for the image you want to show at the time you want to show it since the ajax request to get all of the most recently uploaded images has not completed yet. You should alter your component so that it expects only an image id and, when it mounts, does an ajax request to get all other information about the image.
 
