@@ -7,3 +7,5 @@ Here is a list of features that it would be great to incorporate into your proje
 2. On the home screen, periodically notify users if additional images have been uploaded since they arrived and allow them to refresh the display to include those images.
 
 3. On the upload form, allow users to enter the url of an image on the web rather than uploading one from their local disk. When you detect on your server that a user has submitted a url, you should make an http request to liberate the image from its host.
+
+4. Allow users to reply to comments.
