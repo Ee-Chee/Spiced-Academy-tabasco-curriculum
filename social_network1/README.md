@@ -1,6 +1,6 @@
 # Social Network - Part 1
 
-For our penultimate project we will make social network on which users can sign up, say a little about themselves, and become friends with other users. This will be a single-page application made with [React](https://facebook.github.io/react/docs/hello-world.html).
+For our penultimate project we will make social network on which users can sign up, say a little about themselves, and become friends with other users. This will be a single-page application made with [React](https://reactjs.org).
 
 Everything you will need to install is listed in the `package.json` in the repo. All you need do, as far as installation goes, is type `npm install`.
 
