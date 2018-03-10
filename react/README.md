@@ -2,7 +2,7 @@
 
 [React](https://reactjs.org) is an extremely popular library for constructing UIs that was created at Facebook. It seems like everybody is using it these days.
 
-Before you start your first [React project](../social_network1), it is recommended that you spend some time looking over the following articles from [reactjs.org](https://reactjs.org). They provide an excellent introduction to React.
+Before you start your [first React project](../social_network1), it is recommended that you spend some time looking over the following articles from [reactjs.org](https://reactjs.org). They provide an excellent introduction to React.
 
 1. [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
 
