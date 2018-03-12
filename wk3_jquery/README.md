@@ -72,7 +72,7 @@ jQuery also supports creating <a href="http://benalman.com/news/2010/03/jquery-s
 In order to use jquery, you have to include it with a `script` tag in your HTML. You can either download the [latest version](http://jquery.com/download/) or include it from the CDN like so:
 
 ```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 ```
 
