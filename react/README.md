@@ -14,7 +14,7 @@ Before you start your [first React project](../social_network1), it is recommend
 
 5. [Handling Events](https://reactjs.org/docs/handling-events.html)
 
-6. [Conditional Rendering](https://reactjs.org/docs/handling-events.html)
+6. [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
 
 7. [Forms](https://reactjs.org/docs/forms.html)
 
