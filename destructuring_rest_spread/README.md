@@ -45,7 +45,7 @@ a; // 10
 etc; // [20, 30]
 ```
 
-You can also use this pattern to insert all of the items in an array into another array you are creating.
+You can also use `...` to insert all of the items in an array into another array you are creating.
 
 ```js
 const arr = [10, 20, 30];
