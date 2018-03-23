@@ -57,4 +57,4 @@
 
 ## Part 3
 
-How would you complete Part 2 using `readdir` and `stat` (the asynchronous versions)?
+How would you complete Part 2 using `readdir` and `stat` (the asynchronous versions)? There is no need to write the code, just think through what the challenge would be.
