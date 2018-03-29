@@ -150,7 +150,7 @@ If the promise is resolved an array containing all of the resolved promises will
     done!
     ```
 
-2. Do the same thing recursively. That is, if an item is a directory, read its contents and log to the console whether each item it contains is a directory or not. The result should look like this:
+    **Bonus:** Do the same thing recursively. That is, if an item is a directory, read its contents and log to the console whether each item it contains is a directory or not. The result should look like this:
 
     ```
     /Users/discoduck/fun-with-fs/files/README.md is not a directory
