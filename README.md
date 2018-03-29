@@ -168,3 +168,29 @@
 ### Thursday
 
 [Express + Handlebars](wk6_express_handlebars)
+
+# Week 6
+
+### Tuesday
+
+[Twitter API](wk6_twitter_api)
+
+### Wednesday
+
+[Promises](wk6_promises)
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+### Thrusday
+
+[Intro to SQL](wk7_sql)
+
+[Node + Postgres](wk7_node_postgres)
+
+[spiced-pg](https://www.github.com/spicedacademy/spiced-pg)
+
+[Petition - Part 1](wk7_petition)
+
+### Friday
+
+[Petition - Part 2](wk7_petition2)
