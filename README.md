@@ -181,7 +181,7 @@
 
 [Twitter API - Part 2](wk6_twitter_api/part2.md)
 
-### Thrusday
+### Thursday
 
 [Intro to SQL](wk7_sql)
 
