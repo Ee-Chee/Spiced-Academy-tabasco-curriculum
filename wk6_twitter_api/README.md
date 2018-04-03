@@ -18,7 +18,7 @@ We will be using <a href="https://dev.twitter.com/oauth/application-only">Applic
 
 Follow <a href="https://dev.twitter.com/oauth/application-only">these instructions</a> step by step to obtain your bearer token (you have to scroll down a bit past the intro stuff).
 
-To get tweets we will use the endpoint described <a href="https://dev.twitter.com/rest/reference/get/statuses/user_timeline">here</a>. We will want to filter the results to remove tweets that do not have links and tweets that have more than one.
+To get tweets we will use the endpoint described <a href="https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline">here</a>. We will want to filter the results to remove tweets that do not have links and tweets that have more than one.
 
 In your response to your ajax request, include only tweets that have just one url that appears at the end of the tweet text. Do not include tweets that have no url, have more than one url, or have one url that appears medially. You should also remove the url from the tweet text. The text itself will be contained by an `<a>` tag so there is no need to show the url.
 
