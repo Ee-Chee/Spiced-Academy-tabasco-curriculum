@@ -14,7 +14,7 @@ A note about base64 encoding: This exercise requires you to base64-encode a stri
 new Buffer("take a deep breath").toString("base64"); // 'dGFrZSBhIGRlZXAgYnJlYXRo'
 ```
 
-We will be using <a href="https://dev.twitter.com/oauth/application-only">Application-only authentication</a> for this project. In order to make requests to get data, we will first have to obtain what they call a "bearer token." It is the bearer token that we will use to make subsequent requests.
+We will be using <a href="https://developer.twitter.com/en/docs/basics/authentication/overview/application-only">Application-only authentication</a> for this project. In order to make requests to get data, we will first have to obtain what they call a "bearer token." It is the bearer token that we will use to make subsequent requests.
 
 Follow <a href="https://dev.twitter.com/oauth/application-only">these instructions</a> step by step to obtain your bearer token (you have to scroll down a bit past the intro stuff).
 
