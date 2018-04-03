@@ -16,7 +16,7 @@ new Buffer("take a deep breath").toString("base64"); // 'dGFrZSBhIGRlZXAgYnJlYXR
 
 We will be using <a href="https://developer.twitter.com/en/docs/basics/authentication/overview/application-only">Application-only authentication</a> for this project. In order to make requests to get data, we will first have to obtain what they call a "bearer token." It is the bearer token that we will use to make subsequent requests.
 
-Follow <a href="https://dev.twitter.com/oauth/application-only">these instructions</a> step by step to obtain your bearer token (you have to scroll down a bit past the intro stuff).
+Follow <a href="https://developer.twitter.com/en/docs/basics/authentication/overview/application-only">these instructions</a> step by step to obtain your bearer token (you have to scroll down to the section entitled "Issuing application-only requests).
 
 To get tweets we will use the endpoint described <a href="https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline">here</a>. We will want to filter the results to remove tweets that do not have links and tweets that have more than one.
 
