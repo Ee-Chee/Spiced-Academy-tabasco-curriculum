@@ -40,7 +40,7 @@ In order to use psql, createdb, etc., from any directory, you need to update you
     You can do this by typing the following command:
 
     ```
-    source .bash_profile
+    source ~/.bash_profile
     ```
 
     Alternatively, you can just quit Terminal and restart it.
