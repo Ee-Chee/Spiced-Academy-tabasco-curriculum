@@ -194,3 +194,33 @@
 ### Friday
 
 [Petition - Part 2](wk7_petition2)
+
+# Week 7
+
+### Monday
+
+[Auth](wk8_passwords)
+
+[Petition - Part 3](wk7_petition3)
+
+### Tuesday
+
+[More SQL](wk7_sql_joins)
+
+[Petition - Part 4](wk7_petition4)
+
+### Wednesday
+
+[Petition - Part 5](wk8_petition5)
+
+### Thursday
+
+[Vulnerabilities](wk9_security)
+
+[Heroku](wk8_heroku)
+
+### Friday
+
+[Redis](wk8_redis)
+
+[Sessions with Redis](wk8_session)
