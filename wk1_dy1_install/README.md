@@ -14,7 +14,7 @@ Download and install Git from <a href="https://git-for-windows.github.io/">https
 
 When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity).
 
-## Add your public SSH key to your Github account
+## Add your public SSH key to your Github account [OPTIONAL]
 
 Github has instructions for generating and adding an SSH key for both <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-mac">macOS</a> and <a href="https://help.github.com/articles/generating-an-ssh-key/#platform-windows">Windows</a>. After you add your key, you will be able to take actions on your remote repositories at Github without having to enter your username and password repeatedly.
 
