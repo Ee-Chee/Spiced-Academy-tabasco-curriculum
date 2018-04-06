@@ -213,14 +213,14 @@
 
 [Petition - Part 5](wk8_petition5)
 
-### Thursday
-
 [Vulnerabilities](wk9_security)
+
+### Thursday
 
 [Heroku](wk8_heroku)
 
-### Friday
-
 [Redis](wk8_redis)
+
+### Friday
 
 [Sessions with Redis](wk8_session)
