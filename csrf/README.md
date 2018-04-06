@@ -38,6 +38,6 @@ To protect your Petition against CSRF attacks you must take a few simple steps.
        next();
    });	
    ```
-   Because it uses `req.csrfToken`, which is added by the csurf middleware, your middleware function will have to appear below your `app.use(csurf());` call.
+   Because it uses `req.csrfToken`, which is added by the csurf middleware, your middleware function will have to appear below your `app.use(csurf())` call.
 
  
