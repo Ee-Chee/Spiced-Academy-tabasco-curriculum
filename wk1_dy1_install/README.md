@@ -20,7 +20,7 @@ Github has instructions for generating and adding an SSH key for both <a href="h
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.pkg">v8.9.4</a>. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.11.1/node-v8.11.1.pkg">v8.11.1</a>. Installation should be straightforward on both macOS and Windows.
 
 ## Set up ESLint in Atom
 
