@@ -34,13 +34,7 @@ To further aid in preventing XSS attacks, most browsers now support the <a href=
 
 Cross-site request forgeries (CSRF) exploit the fact that browsers automatically send cookies set by a domain with every request to that domain. If a user who is logged in to your site goes to another malicious site, the malicious site can invisibly make a request to yours and it will look to you like it is a legitimate request from a logged-in user. This is a big problem if the request does anything more than simply return content.
 
-In the future this problem will go away when browsers support the ["SameSite"](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-3.2) attribute for cookies but we are not there yet. For now, the standard solution to this problem is to include in every legitimate request a token that verifies the request comes from your site. The <a href="https://github.com/expressjs/csurf">csurf</a> middleware helps with this. It automatically creates a token and it will automatically reject susceptible requests that do not have the token in <a href="https://github.com/expressjs/csurf#value">one of the places it looks for it</a>. All you have to do is make sure that the token is present for legitimate requests.
+In the future this problem will go away when browsers support the ["SameSite"](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-3.2) attribute for cookies but we are not there yet. For now, the standard solution to this problem is to include in every legitimate request a token that verifies the request comes from your site. The <a href="https://github.com/expressjs/csurf">csurf</a> middleware helps with this. It creates a token and it will automatically reject susceptible requests that do not have the token in <a href="https://github.com/expressjs/csurf#value">one of the places it looks for it</a>. All you have to do is make sure that the token is present for legitimate requests.
 
-You should probably also create a custom <a href="http://expressjs.com/en/guide/error-handling.html">error handling middleware</a> function so that these errors, and other errors, do not result in a stack trace being displayed to users.
+To protect your site from CSRF attacks, you should [follow these steps](../csrf).
 
-## Exercise
-
-Modify your <a href="../wk7_petition">Petition project</a> so that all POST requests are rejected if a CSRF token is not present. This requires
-* Using the <a href="https://github.com/expressjs/csurf">`csurf`</a> middleware
-
-* Passing to the templates containing forms the CSRF token (which is returned by calling `req.csrfToken` in routes using `csurf`) and inserting it into a hidden form field with the name `_csrf`, as in <a href="https://github.com/expressjs/csurf#example">this example</a>.
