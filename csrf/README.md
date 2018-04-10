@@ -23,11 +23,11 @@ To protect your Petition against CSRF attacks you must take a few simple steps.
 2. Next, you will have to update all of your templates that render forms so that there is a hidden form field in them with its name attribute set to `"_csrf"`. It is important that the field have this name because that is the name that the middleware will look for in the request body. The value you want to give the field should be the CSRF token, which, in the next step, we will make sure is available in all of your templates.
 
    ```html
-   <form method="POST" action="/signature/delete">
-       <button>
-           Delete Your Signature
-       </button>
-       <input type="hidden" name="_csrf" value="{{csrfToken}}">
+   <form method="POST" action="/login">
+      <input type="email" name="email">
+      <input type="password" name="pass">
+      <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <button>Submit</button>
    </form>
    ```
 
