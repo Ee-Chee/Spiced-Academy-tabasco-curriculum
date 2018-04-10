@@ -74,6 +74,3 @@ One option would be to do the `client.put` in a middleware function that runs af
 
 Another alternative would be to write a function that you can call from the route. The route would have to pass `req.file` to the function and the function would have to return a promise that is resolved or rejected in the `'response'` event handler (or call a callback).
 
-### What to store in the database
-
-It would be best not to store the full url in your database. You may decide down the road not to use S3 anymore and you don't want to have to change your data to support such a change. What you should store is the string you passed as the first argument to `client.put`. That is, just the file name with the prepended path if there is one. Because the database will not have the full working url, you will have to prepend the bucket url to the images you get back from queries if you want to have working urls. 
