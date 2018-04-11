@@ -157,7 +157,7 @@ for (var prop in obj) {
 
 Other methods that use property descriptors are <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">`Object.defineProperty`</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties">`Object.defineProperties`</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">`Object.getOwnPropertyDescriptor`</a>.
 
-## Unenumerable properties of all objects
+## Properties inherited from `Object.prototype`
 
 Objects inherit a number of properties that do not show up in `for..in` loops because they are not enumerable. Four particularly important properties that all objects inherit are:
 
