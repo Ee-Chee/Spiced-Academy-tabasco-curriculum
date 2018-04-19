@@ -61,7 +61,7 @@ Another option is to use a `<script>` tag for your template, as we did with our 
 ```
 
 ```html
-<script id="some-template" type="x-template">
+<script id="some-template" type="text/x-template">
 <div>
     <h1>{{ heading }}</h1>
     <p>This is a component!!!</p>
