@@ -4,8 +4,6 @@ ES6 modules are Javascript files that can _export_ functions and data that other
 
 Code in a module is automatically in [strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-Modules are not supported natively in any browser at this time. The syntax is final but details related to the loading of modules are still being worked out. The issues involved are [somewhat complicated](https://www.nczonline.net/blog/2016/04/es6-module-loading-more-complicated-than-you-think/).
-
 ## `export` and `import`
 
 In the following examples, `counter.js` is a module that exports several items, and `index.js` is a module that imports items from `counter.js`. It is assumed that the two files are in the same directory. 
