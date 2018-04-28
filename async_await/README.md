@@ -107,7 +107,7 @@ async function getHeadlines(screenName) {
 
 In this example, the execution of the async function `getHeadlines` is paused twice: once to wait for the promise returned by `getToken` and again to wait for the promise returned by `getTweets`. The promise that `getHeadlines` returns is finally resolved with the value returned by `filterTweets`, which presumably runs synchronously.
 
-The similarity between async functions and [generator functions](..generators) should be clear. Both kinds of function can be paused and resumed. Generator functions are paused by `yield` expressions, while async functions are paused by `await` expressions. An important difference is that generator functions can only be resumed by calling `next` on the iterator objects they return. Async functions are automatically resumed when the promise in the `await` expression that paused execution is settled.
+The similarity between async functions and [generator functions](../generators) should be clear. Both kinds of function can be paused and resumed. Generator functions are paused by `yield` expressions, while async functions are paused by `await` expressions. An important difference is that generator functions can only be resumed by calling `next` on the iterator objects they return. Async functions are automatically resumed when the promise in the `await` expression that paused execution is settled.
 
 When `await` is used with a value that is not a promise, that value is treated as if it were the value that a promise had been resolved with. For example, `await 'funky chicken'` would be automatically converted to `await Promise.resolve('funky chicken')`.
 
