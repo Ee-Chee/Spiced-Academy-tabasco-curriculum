@@ -66,9 +66,11 @@ const leo = {
     oscars: 1
 };
 
-const { name, oscars } = leo;
+const { name, age } = leo;
 
-console.log(`${name} has received ${oscars} academy award(s)`);
+const { oscars: numOscars } = leo;
+
+console.log(`${name} is ${age} years old and has received ${numOscars} academy award(s).`);
 ```
 
 This is great, but we often want to go the other way. That is, we often start out with variables and want to assign properties to objects with the same names and values as those variables. The old school way to do this was not fun:
