@@ -19,4 +19,4 @@ The value of the a parameter is 100
 The value of the b parameter is 200
 ```
 
-All of this can be accomplished using Node's <a href="https://nodejs.org/api/url.html">ur`</a> and <a href="https://nodejs.org/api/querystring.html">querystring</a> modules, both of which have a `parse` method that accepts a string as a parameter and returns an object. (The [parse](https://nodejs.org/api/url.html#url_url_parse_urlstring_parsequerystring_slashesdenotehost) method of the url module is described as a legacy API. It is not deprecated, however, and you can feel free to use it).
+All of this can be accomplished using Node's <a href="https://nodejs.org/api/url.html">url</a> and <a href="https://nodejs.org/api/querystring.html">querystring</a> modules, both of which have a `parse` method that accepts a string as a parameter and returns an object. (The [parse](https://nodejs.org/api/url.html#url_url_parse_urlstring_parsequerystring_slashesdenotehost) method of the url module is described as a legacy API. It is not deprecated, however, and you can feel free to use it).
