@@ -143,4 +143,20 @@
 
 [Text-based Adventure](cli_game)
 
+# Week 5
+
+### Monday
+
+[`fs`](wk5_fun_with_fs)
+
+### Tuesday
+
+[HTTP Request Listener](wk5_http_request_listener)
+
+[Colorful Console](wk5_colorful_console)
+
+### Wednesday
+
+[Portfolio](wk5_portfolio)
+
 
