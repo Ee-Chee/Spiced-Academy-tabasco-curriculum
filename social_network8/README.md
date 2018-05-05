@@ -17,7 +17,7 @@ socket.io adds to socket objects a `request` property. This property holds the r
 ```js
 const cookieSession = require('cookie-session');
 const cookieSessionMiddleware = cookieSession({
-    secret: 'a very secretive secret',
+    secret: `I'm always angry.`,
     maxAge: 1000 * 60 * 60 * 24 * 90
 });
 
