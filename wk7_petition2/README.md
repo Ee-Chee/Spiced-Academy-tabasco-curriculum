@@ -16,7 +16,7 @@ To use `cookie-session` you just have to require it and do some initial configur
 var cookieSession = require('cookie-session');
 
 app.use(cookieSession({
-    secret: 'a really hard to guess secret',
+    secret: `I'm always angry.`,
     maxAge: 1000 * 60 * 60 * 24 * 14
 }));
 ```
