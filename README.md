@@ -159,4 +159,36 @@
 
 [Portfolio](wk5_portfolio)
 
+# Week 6
+
+### Monday
+
+[Express](wk6_express)
+
+[Basic Auth](wk10_basic_auth)
+
+### Tuesday
+
+[Express + Handlebars](wk6_express_handlebars)
+
+### Wednesday
+
+[Twitter API](wk6_twitter_api)
+
+### Thursday
+
+[Promises](wk6_promises)
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+### Friday
+
+[Intro to SQL](wk7_sql)
+
+[Node + Postgres](wk7_node_postgres)
+
+[spiced-pg](https://www.github.com/spicedacademy/spiced-pg)
+
+[Petition - Part 1](wk7_petition)
+
 
