@@ -105,11 +105,6 @@ Note that if you have an object that you want to store in Redis, you should call
 
 Modify your <a href="../wk7_petition">petition project</a> so that before doing your query to get the list of people who have signed the petition you check Redis to see if you have the rows cached. If you don't have them in the cache you should do the query and then store the rows in Redis. Then modify your code that inserts data into the `signatures` and `user_profiles` tables so that the rows stored in Redis are deleted after the insertions, since the data is now stale.
 
-## Bonus
-
-Use Redis to prevent attempts to hack accounts. If a user enters an incorrect password, make a record of the attempt in Redis. If a user makes three incorrect guesses with less than a minute between each, do not allow that user to log in for 90 seconds. If the user makes another attempt during those 90 seconds, block them for another 180 seconds. If the user makes another attempt during those 180 seconds, block them for another 360 seconds. And so on.
-
-
 **_Please create a new branch to contain all of your work with Redis_.**
 ```
 git checkout -b discoduck_redis origin/discoduck 
