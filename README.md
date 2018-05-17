@@ -191,4 +191,32 @@
 
 [Petition - Part 1](wk7_petition)
 
+# Week 7
+
+### Tuesday
+
+[Petition - Part 2](wk7_petition2)
+
+[Vulnerabilities](wk9_security)
+
+[csurf](csrf)
+
+### Wednesday
+
+[Auth](wk8_passwords)
+
+[Petition - Part 3](wk7_petition3)
+
+### Thursday
+
+[More SQL](wk7_sql_joins)
+
+[Petition - Part 4](wk7_petition4)
+
+[Heroku](wk8_heroku)
+
+### Friday
+
+[Petition - Part 5](wk8_petition5)
+
 
