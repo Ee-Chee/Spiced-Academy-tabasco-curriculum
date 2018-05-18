@@ -213,11 +213,11 @@
 
 [Petition - Part 4](wk7_petition4)
 
+[Heroku](wk8_heroku)
+
 ### Friday
 
 [Petition - Part 5](wk8_petition5)
-
-[Heroku](wk8_heroku)
 
 
 
