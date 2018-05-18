@@ -219,5 +219,11 @@
 
 [Petition - Part 5](wk8_petition5)
 
+### Saturday 
+
+[Redis](wk8_redis)
+
+[Sessions with Redis](wk8_session)
+
 
 
