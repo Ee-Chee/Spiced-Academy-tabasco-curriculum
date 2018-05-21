@@ -1,5 +1,3 @@
-# Security
-
 We have already discussed <a href="https://github.com/spicedacademy/fullstackcohort1/tree/master/wk7_node_postgres#important-note-about-preventing-sql-injection">preventing SQL injection attacks</a>. There are several other vulnerabilities that are extremely easy to introduce into your site by accident. It is best to use libraries and adopt policies and procedures that help you to prevent these vulnerabilities. However, even if you do this, you must remain constantly vigilant.
 
 ## `eval`
@@ -37,4 +35,7 @@ Cross-site request forgeries (CSRF) exploit the fact that browsers automatically
 In the future this problem will go away when browsers support the ["SameSite"](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-3.2) attribute for cookies but we are not there yet. For now, the standard solution to this problem is to include in every legitimate request a token that verifies the request comes from your site. The <a href="https://github.com/expressjs/csurf">csurf</a> middleware helps with this. It creates a token and it will automatically reject susceptible requests that do not have the token in <a href="https://github.com/expressjs/csurf#value">one of the places it looks for it</a>. All you have to do is make sure that the token is present for legitimate requests.
 
 To protect your site from CSRF attacks, you should [follow these steps](../csrf).
+
+## Helmet
+[Helmet](https://github.com/helmetjs/helmet) is a collection of Express middlewares that set HTTP headers in order to prevent several of the vulnerabilities described here as well as a few others. 
 
