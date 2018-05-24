@@ -253,11 +253,11 @@ Petition Review
 
 ### Thursday
 
+[`class`](es6_class)
+
 [Image Board - Part 3](imageboard3)
 
 [Image Board - Part 4](imageboard4)
-
-[`class`](es6_class)
 
 ### Friday
 
