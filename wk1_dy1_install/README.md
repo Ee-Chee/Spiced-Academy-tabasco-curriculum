@@ -20,7 +20,7 @@ Github has instructions for generating and adding an SSH key for both <a href="h
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.11.1/node-v8.11.1.pkg">v8.11.1</a>. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install <a href="https://nodejs.org/dist/v8.11.2/node-v8.11.2.pkg">v8.11.2</a>. Installation should be straightforward on both macOS and Windows.
 
 ## Set up ESLint in Atom
 
@@ -30,7 +30,7 @@ A linter is a program that analyzes your code and identifies potential errors an
 
 
     ```
-    npm install -g eslint
+    npm install -g eslint@4
     ```
 
 2. Download our [configuration file](https://gist.github.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a) for linter-eslint by pasting the following into your command line:
