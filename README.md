@@ -261,11 +261,13 @@ Petition Review
 
 ### Friday
 
+[`import` and `export`](import_export)
+
 [Image Board - Part 3](imageboard3)
 
 [Image Board - Part 4](imageboard4)
 
-[`import` and `export`](import_export)
+
 
 
 
