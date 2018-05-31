@@ -42,3 +42,34 @@
 
 <a href="wk1_html_css_lab_2">HTML/CSS Lab</a>
 
+# Week 2
+
+### Monday
+
+[The Document Object Model](wk2_dy1_dom)
+
+[Ticker](wk2_dy4_ticker)
+
+### Tuesday
+
+[DOM Events](wk2_dy2_dom_events)
+
+[Ticker](wk2_dy4_ticker)
+
+### Wednesday
+
+[Canvas](wk2_dy4_canvas)
+
+[Hamburger Menu](wk2_dy3_hamburger_menu)
+
+### Thursday
+
+[Flexbox](flexbox)
+
+[CSS Grid](css_grid)
+
+
+### Friday
+
+[Kitty Carousel](wk2_carousel)
+
