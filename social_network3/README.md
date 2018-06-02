@@ -12,16 +12,10 @@ In addition to `Logo`, the `App` component should contain a `ProfilePic` compone
 
 # Image Upload
 
- Let's add a third component that is only visible after the user clicks on the profile pic.
-
-
+ Let's add a third component, also a child of `App`, that is only visible after the user clicks on the profile pic.
 
 ![Munity image upload](munity2.png)
 
-This `ProfilePicUpload` component can display as a modal or inline in the page. Whether or not it is displayed should be determine by a property (called, for example, `uploaderVisible`) of the `state` of the `App` component. `ProfilePic`  should be passed a function from `App` for setting this property to `true`. 
+This `Uploader` component should display as a modal. Whether or not it is displayed should be determine by a property (called, for example, `uploaderIsVisible`) of the `state` of the `App` component. `ProfilePic` should be passed a function from `App` for setting this property to `true`.
 
-The `ProfilePicUpload` component should be passed a function for setting the `profilePicUrl` of the `App` component's state. After a successful upload, it should set this appropriately. This should cause `ProfilePic` to automatically switch to the new image. The function for setting `profilePicUrl` should also set `uploaderVisible` to `false`.
-
-
-
- 
+The `Uploader` component should be passed a function for setting the `profilePicUrl` of the `App` component's state. After a successful upload, it should call this function and pass to it the url of the image that was just uploaded (your POST route on the server will have to include this url in the response it sends). This should cause `ProfilePic` to automatically switch to the new image. The function for setting `profilePicUrl` should also set `uploaderIsVisible` to `false`.
