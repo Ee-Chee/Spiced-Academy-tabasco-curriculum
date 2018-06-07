@@ -18,7 +18,7 @@ For now we are only going to need one `Route` for the path `'/'`. The component 
 
 ## Profile
 
-The `Profile` component should show the user's profile pic (use the `ProfilePic` module from part 2 but style it differently with CSS), the user's first and last name, and their bio. Initially, users will not have a bio but they have the opportunity to create it here. After they have created, they can always edit it.
+The `Profile` component should show the user's profile pic (use the `ProfilePic` module from part 3 but style it differently with CSS), the user's first and last name, and their bio. Initially, users will not have a bio but they have the opportunity to create it here. After they have created, they can always edit it.
 
 ![Munity add bio](munity1.png)
 
