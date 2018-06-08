@@ -87,13 +87,13 @@
 
 ### Wednesday
 
-[HTTP Review](wk3_http)
-
 [`JSON`](wk3_json)
 
 [`try...catch`](wk3_try_catch)
 
 [`localStorage`](wk9_localstorage)
+
+[HTTP Review](wk3_http)
 
 ### Thursday
 
