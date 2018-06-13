@@ -60,6 +60,8 @@ There are <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">47 s
 
 * `Authorization` - set by the client and to communicate user credentials for access to restricted resources
 
+* `Location` - set by the server to indicate a url that the client should redirect to. 
+
 ## HTTP Status Codes
 
 There are <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">over 50 defined status codes</a> currently. Some status codes you will frequently encounter are:
