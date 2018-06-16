@@ -21,7 +21,7 @@ Handlebars should be used for HTML rendering.
 
 A couple of things to keep in mind:
 
-1. There should be no ajax request made when the user has only entered her username and password. The only ajax requests to make are the ones to get the repos and the commits. There is no "logging in" to the API. Rather, we use the username and password the user enters to make the `Authorization` header that we will include in all of our requests to get the repos and the commits.
+1. There should be no ajax request made when the user has only entered her username and password. The only ajax requests to make are the ones to get the repos and the commits. There is no "logging in" to the API. The user's username and password should only be used to construct the `Authorization` header that must be included in all requests to get the repos and commits.
 
 2. **DO NOT PUT YOUR GITHUB USER NAME AND PASSWORD INTO YOUR SOURCE CODE**. The whole point of having the username and password fields for this project is to avoid doing that.
 
