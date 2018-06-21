@@ -20,11 +20,6 @@ You can make your own objects be instances of `EventEmitter` in all of the ways 
 
 ```js
 var events = require('events');
-var myEmitter = Object.create(new events.EventEmitter);
-```
-
-```js
-var events = require('events');
 var MyEmitter = function() {
 };
 MyEmitter.prototype = new events.EventEmitter;
