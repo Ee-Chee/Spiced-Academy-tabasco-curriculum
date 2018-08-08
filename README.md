@@ -203,3 +203,9 @@
 [Vulnerabilities](wk9_security)
 
 [csurf](csrf)
+
+### Friday
+
+[Auth](wk8_passwords)
+
+[Petition - Part 3](wk7_petition3)
