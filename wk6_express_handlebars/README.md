@@ -77,7 +77,7 @@ By default layouts are expected to be in a subdirectory of the views directory n
     ```json
     {
         "name": "Kitty Carousel",
-        "description:": "This was the first project I did using CSS transitions and DOM event handling. The hardest part was getting the right images to slide in and slide out at the right time. It was like herding cats."
+        "description": "This was the first project I did using CSS transitions and DOM event handling. The hardest part was getting the right images to slide in and slide out at the right time. It was like herding cats."
     }
     ```
 
