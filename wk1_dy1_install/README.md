@@ -29,7 +29,17 @@ Download and install Git from <a href="https://git-for-windows.github.io/">https
 
 ## Configure git
 
-When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity).
+When you've made sure git is installed, you should set it up correctly by following [these instructions](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup#Your-Identity). The important commands to run are the following.
+
+```
+git config --global user.name "YOUR NAME"
+
+git config --global user.email YOUREMAIL@example.com
+
+git config --global core.editor nano
+```
+
+Nano is a command line text editor that is easier to use than the alternatives.
 
 ## Add your public SSH key to your Github account [OPTIONAL]
 
