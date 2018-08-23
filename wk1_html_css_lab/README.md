@@ -13,3 +13,5 @@ As you check what your HTML looks like when the browser renders it, familiarize 
 As a next step let's make our webpage display nicely on phones.
 
 <img src="mini.png" alt="webpage">
+
+**_NOTA BENE_**: You should not use `display: flex` or `display: grid` (or the inline versions thereof) for this project. We will discuss Flexbox and Grid in due course. For now, please stick to the techniques discussed [here](https://github.com/spicedacademy/sage/tree/master/css_positioning).
