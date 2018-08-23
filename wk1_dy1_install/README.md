@@ -1,3 +1,7 @@
+_Note to Windows 10 users_: It is highly recommended that you follow [these instructions](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to install [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) before proceeding. WSL makes it possible to run Linux programs on your Windows machine. This will make installations of much of the software we use easier, and in the immediate term, allow you to run [bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)). Without WSL, you will be stuck using git-bash, a sort of fake bash that comes with Git for Windows.
+
+WSL requires Window 10 [build 16215 or later](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number) and something like 1GB of free disk space to install the distro you choose. It is recommended and assumed that you will choose [Ubuntu](https://www.microsoft.com/store/p/ubuntu/9nblggh4msv6).
+
 ## Install Git
 
 ### macOS
@@ -8,7 +12,20 @@ You can also install Git from <a href="http://git-scm.com/download/mac.">http://
 
 ### Windows
 
-Download and install Git from <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>
+#### If you are running WSL/Ubuntu:
+Start bash by running cmd.exe and typing
+
+```
+bash
+```
+Then type
+```
+sudo apt-get install git
+```
+
+#### If you cannot install WSL:
+
+Download and install Git from <a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a>. This will also install git-bash, which you will use for your command line.
 
 ## Configure git
 
