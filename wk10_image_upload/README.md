@@ -69,12 +69,18 @@ The call to `single` indicates that we are only expecting one file. The string p
 
 ## Browser stuff
 
-To get started, create a page that displays a form with an `<input>` element whose `type` attribute has the value `"file"` and a submit `<button>`.
+To get start, we'll need an `<input>` element on our page whose `type` attribute has the value `"file"`.
+
+```html
+<input type="file" accept="image/*">
+```
+
+The `accept` attribute tells the browser to disallow files that are not images.
 
 For a long time it was not possible to do an image upload via ajax but now it is due to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData">`FormData` API</a>. Here's how it works. First, you get the file the user has specified in the form:
 
 ```js
-var file = $('input[type="file"]').get(0).files[0];
+var file = myFileInput.files[0];
 ```
 
 Then you create a `FormData` instance and `append` the file to it.
