@@ -69,7 +69,7 @@ The call to `single` indicates that we are only expecting one file. The string p
 
 ## Browser stuff
 
-To get start, we'll need an `<input>` element on our page whose `type` attribute has the value `"file"`.
+To get started, we'll need an `<input>` element on our page whose `type` attribute has the value `"file"`.
 
 ```html
 <input type="file" accept="image/*">
