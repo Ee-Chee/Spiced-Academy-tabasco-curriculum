@@ -33,9 +33,11 @@ When you've made sure Git is installed, you should set it up correctly by follow
 
 ```
 git config --global user.name "YOUR NAME"
-
+```
+```
 git config --global user.email YOUREMAIL@example.com
-
+```
+```
 git config --global core.editor nano
 ```
 
