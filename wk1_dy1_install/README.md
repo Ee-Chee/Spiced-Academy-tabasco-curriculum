@@ -55,7 +55,8 @@ _Note to WSL users_: There is currently a bug that prevents a Windows installati
 
 ```
 sudo apt install nodejs
-
+```
+```
 sudo apt install npm
 ```
 
