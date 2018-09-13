@@ -106,3 +106,43 @@
 ### Friday
 
 [Connect Four](connect_four)
+
+# Week 4
+
+### Monday
+
+[Connect Four](connect_four) Review
+
+[Spotify Search](wk3_spotify_search)
+
+### Tuesday
+
+[Spotify Search](wk3_spotify_search)
+
+[Handlebars](wk4_handlebars)
+
+### Wednesday
+
+[GitHub Api](wk4_github_api)
+
+[`let` and `const`](let_const)
+
+[Arrow functions](arrow_functions)
+
+[Template strings](template_strings)
+
+[Destructuring, `...`, etc.](destructuring_rest_spread)
+
+### Thursday
+
+[Node Modules](wk5_node_modules)
+
+[Event Emitters](wk5_event_emitters)
+
+[Callbacks](wk5_callbacks)
+
+[Text-based Adventure](cli_game)
+
+### Friday
+
+[`fs`](wk5_fun_with_fs)
