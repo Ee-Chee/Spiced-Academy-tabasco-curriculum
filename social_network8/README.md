@@ -59,7 +59,7 @@ A couple of other points:
 
   ```js
   function getUsersByIds(arrayOfIds) {
-      const query = `SELECT * FROM users WHERE id = ANY($1)`;
+      const query = `SELECT id, first, last, pic FROM users WHERE id = ANY($1)`;
       return db.query(query, [arrayOfIds]);
   }
   ```
