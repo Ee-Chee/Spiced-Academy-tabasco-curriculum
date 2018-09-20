@@ -3,7 +3,7 @@ Write a module that describes a url passed to it as a command line argument. It 
 For example, if you run the module with "http://127.0.0.1:8080/test?a=100&b=200" as input
 
 ```
-node urldescr.js "http://127.0.0.1:8080/test?a=100&b=200"
+node index.js "http://127.0.0.1:8080/test?a=100&b=200"
 ```
 
 you would get the following as output
