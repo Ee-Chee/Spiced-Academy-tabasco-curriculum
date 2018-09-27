@@ -173,4 +173,34 @@
 
 [Twitter API](wk6_twitter_api)
 
+# Week 6
+
+### Monday
+
+[Promises](wk6_promises)
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+### Tuesday
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+[Intro to SQL](wk7_sql)
+
+### Thursday
+
+[Node + Postgres](wk7_node_postgres)
+
+[spiced-pg](https://www.github.com/spicedacademy/spiced-pg)
+
+[Petition - Part 1](wk7_petition)
+
+### Friday
+
+[Petition - Part 2](wk7_petition2)
+
+[Vulnerabilities](wk9_security)
+
+[csurf](csrf)
+
 
