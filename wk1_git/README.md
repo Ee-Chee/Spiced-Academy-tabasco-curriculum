@@ -1,6 +1,6 @@
 # Git
 
-Git is a tool that we use for version control. When you're in a git repository (which is just a directory with a `.git` directory in it), git tracks all changes for you and lets you package and label them. This is immensely useful when you want to retrace how and why a piece of software was written. And it is equally useful for undoing changes and getting back to earlier versions of your work. There is a lot to know about git, but to get started, let's get acquainted with the basic git workflow you'll be using every day at Spiced.
+Git is a tool that we use for version control. When you're in a git repository (which is just a directory with a `.git` directory in it), git tracks all changes for you and lets you package and label them. This is immensely useful when you want to retrace how and why a piece of software was written. And it is equally useful for undoing changes and getting back to earlier versions of your work. There is a lot to know about git, but to get started, let's get acquainted with the basic git workflow you'll be using every day at SPICED.
 
 ## Check the status
 
