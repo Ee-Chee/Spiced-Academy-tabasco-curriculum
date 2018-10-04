@@ -35,3 +35,34 @@
 [Media Queries](media_queries)
 
 <a href="wk1_html_css_lab">HTML/CSS Lab</a>
+
+# Week 2
+
+### Monday
+
+[Constructors, Prototypes](wk1_dy5_constructors_prototypes), and [`this`](wk1_dy5_this)
+
+[The Document Object Model](wk2_dy1_dom)
+
+### Tuesday
+
+[DOM Events](wk2_dy2_dom_events)
+
+[Ticker](wk2_dy4_ticker)
+
+### Wednesday
+
+[Flexbox](flexbox)
+
+[CSS Grid](css_grid)
+
+### Thursday
+
+[Canvas](wk2_dy4_canvas)
+
+[Hamburger Menu](wk2_dy3_hamburger_menu)
+
+### Friday
+
+[Kitty Carousel](wk2_carousel)
+
