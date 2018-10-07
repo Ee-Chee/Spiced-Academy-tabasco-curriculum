@@ -85,7 +85,7 @@ A linter is a program that analyzes your code and identifies potential errors an
    wget https://gist.githubusercontent.com/spicedacademy/c846c627c4df1bcd255c7bf6eb92a15a/raw/2d7262cbff80936fd721678d8c98c89c3b0e8a05/.eslintrc.json -out ~/.eslintrc.json
    ```
 
-3. In Atom, go to Preferences > Packages > Install (MacOS) or Settings > Packages > Install (Windows). Search for the "linter-eslint" package and install it. The package has dependencies (other packages that it needs in order to function correctly) and you will be prompted to install these as well.
+3. In Atom, go to Preferences > Install (MacOS) or Settings > Install (Windows). Search for the "linter-eslint" package and install it. The package has dependencies (other packages that it needs in order to function correctly) and you will be prompted to install these as well.
 
 To test if everything works, create a JavaScript file in Atom, type some JavaScript and omit a semicolon or a closing curly brace. When you save the file, ESLint should warn you about these errors.
 
