@@ -66,7 +66,7 @@ _Note to WSL users_: You should open a new instance of Windows PowerShell to fol
 
 A linter is a program that analyzes your code and identifies potential errors and violations of stylistic rules. ESLint is a Javascript linter and linter-eslint is an a package that integrates it into Atom. To install, follow these steps:
 
-1. Install ESLint program on your computer. By typing the following on the command line:
+1. Install ESLint by typing the following on the command line:
 
 
     ```
