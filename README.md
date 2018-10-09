@@ -56,6 +56,8 @@
 
 [CSS Grid](css_grid)
 
+[Ticker](wk2_dy4_ticker)
+
 ### Thursday
 
 [Canvas](wk2_dy4_canvas)
