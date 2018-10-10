@@ -13,7 +13,7 @@ Mac users can download Redis <a href="http://redis.io/download">here</a>. After 
 
 Ubuntu users should be able to type `sudo apt-get install redis-server` to download and install.
 
-Windows users are out of luck! Redis does not work on your OS. However, there is a <a href="https://github.com/MSOpenTech/redis">Windows port</a> of Redis you can try. Alternatively, you can talk to your friendly neighborhood SPICED instructor about using a Redis installation on a different machine.
+Windows users who are not using WSL are out of luck! Redis does not work on your OS. However, there is a <a href="https://github.com/MSOpenTech/redis">Windows port</a> of Redis you can try. Alternatively, you can talk to your friendly neighborhood SPICED instructor about using a Redis installation on a different machine.
 
 After installation, you can start Redis by typing the following:
 
