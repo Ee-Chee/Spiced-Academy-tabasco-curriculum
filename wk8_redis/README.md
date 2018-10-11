@@ -7,15 +7,60 @@ Caching is a strategy developers use to make their applications perform better. 
 <a href="http://redis.io">Redis</a> is a <a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a> database that has many uses. It keeps all its data in memory, which helps to make it very fast, but this also means that it is not a great place to put data you want to keep forever. The stuff we want to cache is stuff we want quick access to but not stuff we want to keep forever so it makes sense to use Redis as our cache.
 
 ## Installation
+The following installation instructions are for users of macOS and Windows Subsystem for Linux. Windows users who do not run WSL are out of luck. There is no Windows version of Redis. However, there is a <a href="https://github.com/MSOpenTech/redis">Windows port</a> of Redis you can try. Alternatively, you can talk to your friendly neighborhood SPICED instructor about using a Redis installation on a different machine.
 
-Mac users can download Redis <a href="http://redis.io/download">here</a>. After you have downloaded it,
-`cd` into the unzipped directory and type `make` to build it.
+1. Open Bash and `cd` into the directory in which you would like to keep Redis
 
-Ubuntu users should be able to type `sudo apt-get install redis` to download and install.
+2. Mac users should enter
+    ```
+    curl http://download.redis.io/releases/redis-4.0.11.tar.gz -o redis-4.0.11.tar.gz
+    ```
+    While Ubuntu users should enter
+    ```
+    wget http://download.redis.io/releases/redis-4.0.11.tar.gz
+    ```
+    This will download the compressed file.
+3. To decompress, enter the following:
+    ```
+    tar xzf redis-4.0.11.tar.gz
+    ```
+4. Move into the decompressed directory
+    ```
+    cd redis-4.0.11
+    ```
+5. Start compilation by entering
+    ```
+    make
+    ```
+6. When the compilation is complete, print the working directory and copy it into to your clipboard
+    ```
+    pwd
+    ```
+7. Mac users should open .bash_profile in nano
+    ```
+    nano ~/.bash_profile
+    ```
+    While Ubuntu users should open .bashrc
+    ```
+    nano ~/.bashrc
+    ```
+8. Add the following line to the file. Be sure to replace the placeholder path with the one in your clipboard and add /src to the end
+    ```
+    PATH=$PATH:/THE/PATH/YOU/COPIED/EARLIER/src
+    ```
+9. Hit ctrl + x to save the file and exit nano.
+10. Mac users should enter
+    ```
+    source .bash_profile
+    ```
+    While Ubuntu users should enter
+    ```
+    source .bashrc
+    ```
+    This causes Bash to re-run the file you just edited
+    
+You can now start Redis by typing the following:
 
-Windows users who don't have WSL are out of luck! Redis does not work on your OS. However, there is a <a href="https://github.com/MSOpenTech/redis">Windows port</a> of Redis you can try. Alternatively, you can talk to your friendly neighborhood SPICED instructor about using a Redis installation on a different machine.
-
-After installation, you can start Redis by typing the following:
 
 ```
 redis-server --daemonize yes
