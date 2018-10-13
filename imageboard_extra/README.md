@@ -11,3 +11,5 @@ Here is a list of features that it would be great to incorporate into your proje
 4. On the upload form, allow users to enter the url of an image on the web rather than uploading one from their local disk. When you detect on your server that a user has submitted a url, you should make an http request to liberate the image from its host.
 
 5. Allow users to reply to comments.
+
+6. Allow users to delete images. Since there are no user accounts, you would have to make it so any user can delete any image no matter who uploaded it. Presumably only high quality images that nobody wants to delete would survive this free for all!
