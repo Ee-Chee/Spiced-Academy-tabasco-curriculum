@@ -122,9 +122,9 @@
 
 [`let` and `const`](let_const)
 
-[Arrow functions](arrow_functions)
-
 [Template strings](template_strings)
+
+[Arrow functions](arrow_functions)
 
 [Destructuring, `...`, etc.](destructuring_rest_spread)
 
