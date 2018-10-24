@@ -14,4 +14,13 @@ If a user attempts to view her own profile by going to the `user/:id` route, you
 this.props.history.push('/');
 ```
 
-Another tricky thing to be aware of is that React Router will reuse components it has on hand. For example, if the view shown at `user/1` contains a link to `user/2`, you will notice that the constructor for your component does not run again when that link is clicked. React Router recycles the instance it already has and passes it new props. The old way to handle this situation was to use the now-deprecated lifecycle method of `React.Component` called `componentWillReceiveProps`. The new way to handle it is to use the static lifecycle method [`getDerivedStateFromProps`](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) in conjunction with [`componentDidUpdate`](https://reactjs.org/docs/react-component.html#componentdidupdate). In `getDerivedStateFromProps` you can detect that a prop has changed and reset any state properties that need to change with it. In `componentDidUpdate` you can detect that the state no longer has what it needs for the component to render correctly and trigger a network request to get new data. An example illustrating how to use this technique can be found [here](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#fetching-external-data-when-props-change).
+Another tricky thing to be aware of is that React Router will reuse components it has on hand. For example, if the view shown at `/user/1` contains a link to `/user/2`, you will notice that the constructor for your component does not run again when that link is clicked. React Router recycles the instance it already has and passes it new props. There is [a very simple way](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#recommendation-fully-uncontrolled-component-with-a-key) to fix this. If you give your component a unique `key` attribute, React will be forced to create a whole new instance of the component when the key changes.
+
+```js
+<Route
+    path="/user/:id"
+    render={props => (
+        <OtherUserProfile {...props} key={props.match.url} />
+    )}
+/>
+```
