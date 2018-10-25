@@ -15,8 +15,6 @@ In general, your game should work as follows:
 
 *Bonus 1*: Let your users pick the color of the questions by passing an argument when they start the game.
 
-*Bonus 2*: Keep your game flexible. Changing the storyline shouldn't require changing your logic. It's advisable to keep your storyline in an object that looks something like this.
-
 ```javascript
 var story = {
     q: "Welcome to The Land Of Wizards! Would you like to play?",
