@@ -8,7 +8,7 @@ For your adventure, you can come up with any number of decisions and riddles. Se
 
 In general, your game should work as follows:
 
-1. When started, it should greet the player by name and ask them if they want to start.
+1. When started, it should greet the player and ask them if they want to start.
 2. When the player confirms, it should start asking the player questions, displaying the available options if appropriate.
 3. It should react appropriately to the user's input. Your game shouldn't crash when the user input is something unexpected!
 4. Once the game is complete, the program should end.
