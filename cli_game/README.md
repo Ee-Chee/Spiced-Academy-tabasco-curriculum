@@ -65,4 +65,3 @@ var chalk = require('chalk');
  
 console.log(chalk.blue('Hello world!'));
 ```
-In node,`process.env` is a big object which holds a lot of useful information about the environment your code is running in. You'll need it to complete this challenge so go ahead and take a look at it!
