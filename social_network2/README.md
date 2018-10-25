@@ -38,7 +38,7 @@ function Welcome() {
 }
 ```
 
-The `render` function of this `Welcome` component will always show an `<h1>` and an `<img>` tag. If hash portion of the url of the page is set to either `/` or `/login`, then either the `Registration` or `Login` component will also be rendered.
+The `render` function of this `Welcome` component will always show an `<h1>` and an `<img>` tag. If the hash portion of the url of the page is set to either `/` or `/login`, then either the `Registration` or `Login` component will also be rendered.
 
 The `HashRouter` element simply sets up the routing functionality and has no visual consequences. The `HashRouter` component can have only one child, which is why there is a `<div>` in it that contains our two `Route` elements.
 
