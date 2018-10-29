@@ -40,7 +40,7 @@ In order to pass props to `Profile`, we can use an alternative to the `component
             id={this.state.id}
             first={this.state.first}
             last={this.state.last}
-            profilePic={this.state.profilePic}
+            image={this.state.image}
             bio={this.state.bio}
             setBio={this.setBio}
             showUploader={this.showUploader}
