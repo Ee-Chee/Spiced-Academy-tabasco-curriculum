@@ -23,9 +23,9 @@
 
 * If there is not an item in the projects directory that matches the `url` of the request, send a 404.
 
-* If the item that matches the request url is a directory, and the url ends with '/', the index.html file that is in that directory should be served.
+* If the item that matches the request url is a directory, and the url ends with a slash, the index.html file that is in that directory should be served.
 
-* If the item that matches the request url is a directory, and the url does not end with '/', redirect to the request url with a '/' added to the end of it.
+* If the item that matches the request url is a directory, and the url does not end with a slash, redirect to the request url with a slash added to the end of it.
 
 * It is critical that we only allow files that are contained in the projects directory to be served. If you are checking the file system for a file that corresponds to the url with every request, you cannot trust that the url will not be crafted in such a way that when it is appended to `__dirname + '/projects'` it would not refer to a file that is not in that directory. You must perform validation to prevent such mischief. A good way to validate the url would be to use [`path.normalize`](https://nodejs.org/api/path.html#path_path_normalize_path):
   ```js
