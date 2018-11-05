@@ -168,7 +168,7 @@
 
 [Twitter API](wk6_twitter_api)
 
-# Week 7
+# Week 6
 
 ### Monday
 
