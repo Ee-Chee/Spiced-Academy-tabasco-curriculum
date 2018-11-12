@@ -16,4 +16,8 @@ The city names should also be links. When these links are clicked, users should 
 
 <img src="petition10.png" alt="Local signers">
 
-**Bonus**: Change the `signatures` table so that it no longer includes columns for first and last name. When showing the list of people who have signed the petition, get their names by joining the `users` table.
+Additionally, you should now make the following changes:
+
+1. Change the `signatures` table so that it no longer includes columns for first and last name. When showing the list of people who have signed the petition, get their names by joining the `users` table.
+
+2. Change the query that retrieves information from the `users` table by email address so that it also gets data from the signatures table. Thus you will be able to know whether the user has signed the petition or not as soon as they log in.
