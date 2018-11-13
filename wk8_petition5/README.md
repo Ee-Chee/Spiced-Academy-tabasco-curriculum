@@ -27,3 +27,5 @@ Let's also make it possible for users to unsign the petition.
 Since the request to delete the signature will cause a permanent change, it should be made using the `POST` method. That means the UI for making the request cannot be a link - it must be a form. However, you can use CSS to make the submit button look like a link, as in the example above.
 
 After unsigning, logged in users should be redirected to the page on which they can sign the petition.
+
+**Bonus**: Allow users to delete their entire account.
