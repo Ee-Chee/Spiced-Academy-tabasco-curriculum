@@ -29,9 +29,8 @@
 
     <img src="resources_tab.png" alt="Resources">
 
-7. Download and install the Heroku CLI from <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up">this page</a>.
+7. Download and install the Heroku CLI from <a href="https://devcenter.heroku.com/articles/heroku-cli">this page</a>.
 
-    <img src="download_cli.png" alt="Download">
 
 8. On the command line, log in with the Heroku CLI you installed.
 
