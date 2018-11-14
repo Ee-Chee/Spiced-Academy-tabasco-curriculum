@@ -231,4 +231,38 @@
 
 [Express Router](express_router)
 
+# Week 8
+
+### Monday
+
+Petition Review
+
+[Vue.js](vuejs)
+
+[Image Board - Part 1](imageboard1)
+
+### Tuesday
+
+[Image Upload](wk10_image_upload)
+
+[Image Upload - Part 2](knox_s3)
+
+[Image Board - Part 2](imageboard2)
+
+### Wednesday
+
+[Vue Components](vuejs/components.md)
+
+[Image Board - Part 3](imageboard3)
+
+### Thursday
+
+[Image Board - Pagination](https://github.com/spicedacademy/catnip/blob/master/imageboard1/pagination.md)
+
+[Image Board - Part 4](imageboard4)
+
+### Friday
+
+[Image Board - Bonus Features](imageboard_extra)
+
 
