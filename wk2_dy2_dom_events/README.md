@@ -143,8 +143,6 @@ There is <a href="https://developer.mozilla.org/en-US/docs/Web/Events">a huge nu
 
 * `unload` - the page is about to be unloaded (the user is navigating elsewhere or closing the tab)
 
-* `visibilitychange` - the tab containing the page has become visible or hidden
-
 ## Removing event handlers
 
 If you are adding event handlers to elements on the fly it is easy to add them multiple times by mistake or to leave them attached when they are no longer needed. To avoid this you should use `removeEventListener`.
