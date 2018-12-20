@@ -146,3 +146,23 @@
 ### Friday
 
 [`fs`](wk5_fun_with_fs)
+
+# Week 5
+
+### Wednesday
+
+[HTTP Request Listener](wk5_http_request_listener)
+
+[Colorful Console](wk5_colorful_console)
+
+### Thursday
+
+[Portfolio](wk5_portfolio)
+
+### Friday
+
+[Express](wk6_express)
+
+[Basic Auth](wk10_basic_auth)
+
+
