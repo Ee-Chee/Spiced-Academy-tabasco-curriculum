@@ -13,7 +13,7 @@ In general, your game should work as follows:
 3. It should react appropriately to the user's input. Your game shouldn't crash when the user input is something unexpected!
 4. Once the game is complete, the program should end.
 
-*Bonus 1*: Let your users pick the color of the questions by passing an argument when they start the game.
+*Bonus*: Let your users pick the color of the questions by passing an argument when they start the game.
 
 ```javascript
 var story = {
