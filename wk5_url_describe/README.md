@@ -1,4 +1,4 @@
-Write a module that describes a url passed to it as a command line argument. It should log to the console the following parts of the url: the protocol, the host, the hostname, the port, the path, the pathname, and the query string. Additionally, if there is query string in the url, it should log the value of each parameter.
+Write a module that describes a url passed to it as a command line argument. It should log to the console the following parts of the url: the protocol, the host, the hostname, the port, the pathname, and the query string. Additionally, if there is query string in the url, it should log the value of each parameter.
 
 For example, if you run the module with "http://127.0.0.1:8080/test?a=100&b=200" as input
 
