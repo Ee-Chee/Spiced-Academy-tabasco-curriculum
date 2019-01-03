@@ -35,7 +35,7 @@ This page should have a link to another page that lists all of the people who ha
 A repo for this project has already been created. You should clone it.
 
 ```
-git clone https://github.com/spicedacademy/garlic-petition.git
+git clone https://github.com/spicedacademy/wintergreen-petition.git
 ```
 
 After cloning, `cd` into the directory and create a branch of your own.
