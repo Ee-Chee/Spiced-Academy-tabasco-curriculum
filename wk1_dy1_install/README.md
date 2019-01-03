@@ -49,7 +49,7 @@ Github has instructions for generating and adding an SSH key for both <a href="h
 
 ## Install Node
 
-Go to <a href="https://nodejs.org">nodejs.org</a> and install v10.13.0. Installation should be straightforward on both macOS and Windows.
+Go to <a href="https://nodejs.org">nodejs.org</a> and install v10.15.0. Installation should be straightforward on both macOS and Windows.
 
 _Note to WSL users_: There is currently a bug that prevents a Windows installation of Node from running when it is evoked from Bash. If you would like to run Node from Bash, you should also install it there.
 
