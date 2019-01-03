@@ -165,4 +165,41 @@
 
 [Basic Auth](wk10_basic_auth)
 
+# Week 6
+
+### Monday
+
+[Twitter API](wk6_twitter_api)
+
+### Tuesday
+
+[Promises](wk6_promises)
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+### Wednesday
+
+[Twitter API - Part 2](wk6_twitter_api/part2.md)
+
+[Testing](testing)
+
+### Thursday
+
+[Intro to SQL](wk7_sql)
+
+[Node + Postgres](wk7_node_postgres)
+
+[spiced-pg](https://www.github.com/spicedacademy/spiced-pg)
+
+[Petition - Part 1](wk7_petition)
+
+### Thursday
+
+[Petition - Part 2](wk7_petition2)
+
+[Vulnerabilities](wk9_security)
+
+[csurf](csrf)
+
+
 
