@@ -141,7 +141,13 @@ If the promise is resolved an array containing all of the resolved promises will
 
 ## Exercises
 
-1. In your <a href="../wk5_fun_with_fs">Fun with fs</a> project create a module that contains promisified versions of `fs.readdir` and `fs.stat`. Use these functions to read the `files` directory and log to the console whether or not each item in it is a directory. After you have done this for every item, log the string "done!" to the console. The result should look like this:
+1. In your <a href="../wk5_fun_with_fs">Fun with fs</a> project create a module that has promisified versions of `fs.readdir` and `fs.stat` available. You can create functions that use the `Promise` constructor yourself or use `util.promisify`. There is a new, third alternative: the experimental [Promises API](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api).
+
+    ```js
+    const {readdir, stat} = require('fs').promises;
+    ```
+
+    Once you have your promisifed `readir` and `stat`, use them to read the `files` directory and log to the console whether or not each item in it is a directory. After you have done this for every item, log the string "done!" to the console. The result should look like this:
 
     ```
     /Users/discoduck/fun-with-fs/files/README.md is not a directory
@@ -173,5 +179,5 @@ If the promise is resolved an array containing all of the resolved promises will
     /Users/discoduck/fun-with-fs/files/part1/b/images/boxes.png is not a directory
     done!
     ```
-    
+
 3. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
