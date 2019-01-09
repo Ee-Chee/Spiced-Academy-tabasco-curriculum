@@ -1,4 +1,4 @@
-# CSS Selectors, Transforms, Transitions, Animations, & Filters
+# CSS Selectors, Transforms, Transitions, and Animations
 
 ## Selectors
 
@@ -131,39 +131,5 @@ The animate property has several *sub-properties* you can define for further cus
 
 Here's a link to MDN explaining more about [@keyframes](https://developer.mozilla.org/en/docs/Web/CSS/@keyframes).
 
-
-## BONUS FEATURE: CSS Filters!
-
-CSS filters are cool effects that you can put on images. These effects are similar to Instagram or Photoshop filters. You can add some interesting effects to the images on your web page very quickly and easily.
-
-```css
-.img-to-blur {
-  filter: blur(20px) sepia(1);
-}
-```
-
-Notice that you can use multiple filters in one line, but note that **order matters**.
-
-You can demo all the different filters [here](http://html5-demos.appspot.com/static/css/filters/index.html).
-
-Here is a list of most of the filters availble to you. Unless otherwise specified, they accept a number or percentage.
-
-- **blur()** - takes a length (in px)
-- **brightness()**
-- **contrast()**
-- **drop-shadow()** - takes a length (in px) and a color
-- **grayscale()**
-- **hue-rotate()** - takes angle. Max is 360deg.
-- **invert()**
-- **opacity()**
-- **saturate()**
-- **sepia()**
-
-
-Note that CSS filters do not have universal browser support [yet]. If you look at [caniuse.com](http://caniuse.com/#feat=css-filters), you will see that  CSS filters are not supported on IE11.
-
-## Additional Resources
-
 - [This article from CSS Tricks](https://css-tricks.com/pseudo-class-selectors/) details all of the different pseudo class selectors.
 - [Here's a more detailed article on :nth-of-type](https://css-tricks.com/almanac/selectors/n/nth-of-type/).
-- [Full list of filter properties.](https://developer.mozilla.org/en/docs/Web/CSS/filter#Syntax)
