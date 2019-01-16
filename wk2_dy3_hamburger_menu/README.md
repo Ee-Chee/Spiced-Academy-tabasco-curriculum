@@ -4,4 +4,4 @@ Let's take <a href="../wk1_html_css_lab">the page we worked on last week</a> and
 
 <img src="minimenu.png" width="320">
 
-**Bonus**: Use [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to make the white menu slide in from the right when the user clicks the hamburger button. 
+Use [CSS transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) to make the white menu slide in from the right when the user clicks the hamburger button. 
