@@ -1,24 +1,6 @@
 # Social Network - Part 4
 
-Now is a good time to add routing to our logged-in experience. For this we want to use `BrowserRouter` rather than `HashRouter`. `BrowserRouter` uses the [history api](https://developer.mozilla.org/de/docs/Web/API/History) - no hashes! It's neat, but it requires us to do a couple of things to ensure that it works.
-
-For one thing, we have to be diligent about using React Router's `Link` elements for all of our links to routes. If we used plain old `<a>` tags with `href` attributes, clicks on our links would result in our page unloading and a request for an HTML page being made to the server.
-
-Even if we use `Link` for all of our links, it will still be possible for requests for pages to make it to the server. For example, if a user is on a route and uses the browser reload button, a GET request for the url of the page will go to the server. When our server receives such requests, it should serve the index.html file. This can be accomplished with a catch-all route, which you likely already have:
-
-```js
-app.get('*', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
-```
-
-When index.html loads in the browser, React Router will determine and automatically render the correct component(s) based on the url.
-
-For now we are only going to need one `Route` for the path `'/'`. The component that this route will render is the `Profile` component described below.
-
-## Profile
-
-The `Profile` component should show the user's profile pic (use the `ProfilePic` module from part 3 but style it differently with CSS), the user's first and last name, and their bio. Initially, users will not have a bio but they have the opportunity to create it here. After they have created, they can always edit it.
+For this part we want to show users all of their profile information on the screen they seen when they first log in. This includes their name, their profile picture, and their bio. On this screen, users should also be able to update their profile picture and edit their bio (or add one if they haven't already).
 
 ![Munity add bio](munity1.png)
 
@@ -26,25 +8,93 @@ The `Profile` component should show the user's profile pic (use the `ProfilePic`
 
 ![Munity bio](munity3.png)
 
-Since the bio text will be in the `state` of our `App` component, neither the `Profile` component nor any child component of it will be able to change it. In order for our bio editing functionality to work, our `App` component must pass a function for changing the bio to the `Profile` component along with all the other properties that `Profile` needs.
+Two new components will be required for this part: `Profile` and `BioEditor`.
 
-A similar situation exists for the `ProfilePic` component that will be a child of the `Profile` component. When the user clicks on it, the `Uploader` component contained by `App` should appear. This means that the function that `App` created for making the `Uploader` appear will have to be passed from `App` to `Profile` so that `Profile` can pass it to the `ProfilePic` component it contains.
+## 1. `Profile`
 
-In order to pass props to `Profile`, we can use an alternative to the `component` prop in our `Route`. The `Route` component allows you to specify a `render` function to run for the route. This function should return JSX, which gives us an opportunity to pass props.
+The `Profile` component will be responsible for laying out the content we want to show: the user's name, profile picture, and bio. `Profile` will be a direct child of `App`.
+
+The `Profile` component will itself contain two other components:
+
+1. The existing `ProfilePic` component, which will show the user's pic in a larger size.
+
+2. A new `BioEditor` component, which will show the user's bio if they have one and allow them to add one if they don't. Also, if the user does already have a bio, the `BioEditor` component will allow them to edit it.
+
+It is not necessary to create a component to show the user's name. The `Profile` component can just print the name out in its render function.
+
+## 2. `BioEditor`
+
+The `BioEditor` component should expect to receive a prop that contains the user's current bio text. Since the bio text is coming from outside itself, the `BioEditor` component will also need to be passed a function that it can call and pass the new bio text when a new bio has been saved. This function would be much like the one that `Uploader` had to be passed so that it could  cause the `state` of `App` to be updated with the new image url when a new image was uploaded.
+
+If the user has a bio saved, the `BioEditor` component should show that text, along with an "Edit Bio" button.
+
+If the user's current bio text doesn't exist (it is an empty string or `undefined` or `null`), the `BioEditor` component should show an "Add Bio" button.
+
+When the user clicks either the "Edit Bio" or the "Add Bio" buttons, the component should enter 'editing mode'. When the user is editing, a `textarea` for the user to type in should be visible along with a `Save` button. When the button is clicked, the component should make a POST request to save the new bio to the database. When the request is successful, the component should exit editing mode and call the function it was passed to update the bio.
+
+The logic for determining what to show in the `render` function of `BioEditor` goes like this:
+
+```
+  Is the bio being edited?
+          /       \
+         /         \
+    yes /           \ no
+       /             \
+      /               \
+<textarea>           Is there a saved bio already?
+"Save" button                 /       \
+                             /         \
+                        yes /           \ no
+                           /             \
+                          /               \
+            Current bio text             "Add" button
+            "Edit" button
+```
+
+`BioEditor` will require a property in its `state` for keeping track of whether it is in editing mode. It will also need a property to store the "draft" bio that is produced as the user types in the text area. This can be set initially to the current bio text that the component receives as a prop.
+
+## Passing props
+
+Since information that `Profile` needs to show is held in the `state` of `App`, `App` will have to pass this information as props to `Profile`. In order for `Profile` to show the user's name, `App` will have to pass the first and last name it has in its state as props to `Profile`.
+
+Similarly, both `BioEditor` and the second instance of `ProfilePic` will have to be passed data and functions that live in `App`. However, neither of these components are children of `App`, which complicates things considerably.
+
+Perhaps the most obvious solution is to have `App` pass to `Profile` everything that `BioEditor` and the second `ProfilePic` need and then have `Profile` pass those props to its children.
 
 ```js
-<Route
-    path="/"
-    render={() => (
-        <Profile
+<Profile
+    id={this.state.id}
+    first={this.state.first}
+    last={this.state.last}
+    image={this.state.image}
+    onClick={this.showUploader}
+    bio={this.state.bio}
+    setBio={this.setBio}
+/>
+```
+
+A less obvious approach would be to pass components to `Profile` and let `Profile` render them in the correct spot.
+
+```js
+<Profile
+    first={this.state.first}
+    last={this.state.last}
+    profilePic={
+        <ProfilePic
             id={this.state.id}
             first={this.state.first}
             last={this.state.last}
             image={this.state.image}
+            onClick={this.showUploader}
+        />
+    }
+    bioEditor={
+        <BioEditor
             bio={this.state.bio}
             setBio={this.setBio}
-            showUploader={this.showUploader}
         />
-    )}
+    }
 />
 ```
+
+There are other solutions to this problem of passing props to components deep in the tree that we shall discuss later.
