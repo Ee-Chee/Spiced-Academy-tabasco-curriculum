@@ -17,7 +17,7 @@
 * By default, the number of results per request is limited to 20. If there are more results, there is a field in the payload that give you the url to get the next batch. You can use the presence of this field to tell you whether or not  to include a "more" link at the bottom of the result list. Note, however, that you can't use this url to request more results directly. If you want to use it, you need to first replace `'https://api.spotify.com/v1/search'` in it with `'https://elegant-croissant.glitch.me/spotify'`. 
 <img src="ledzep.gif">
 
-## Part 2 - Infinite Scroll (bonus)
+## Part 2 - Infinite Scroll
 
 If the string `scroll=infinite` appears in the query string when the page loads, no "More" button should appear. Instead, when users scroll down to the bottom of the listed results, the next page of results should be automatically loaded and appended.
 
