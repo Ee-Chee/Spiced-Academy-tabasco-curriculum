@@ -48,7 +48,7 @@ Once the profile data is retrieved, it should be added to the component's state 
 
 There are a couple of other small things regarding `OtherProfile` to be aware of:
 
-1. It will be possible for users to view their own profiles by navigating to the url for it. It is not straightforward to disallow this because `OtherProfile` doesn't know the logged in user's id and, at the time `OtherProfile` mounts, the `App` component may not know it yet either. If you want to disallow it, the best way to do it would be to let the ajax request that `OtherProfile` makes get to the server and have the server send back some specific message indicating that the id that was passed to it is the same as the id of the logged in user. If the server responds in this way, you can then redirect the user away using the `history` prop that React Router will automatically pass to your component:
+1. Unless you take steps to prevent it, it will be possible for users to view their own profiles by navigating to the url for it. It is not straightforward to disallow this because `OtherProfile` doesn't know the logged in user's id and, at the time `OtherProfile` mounts, the `App` component may not know it yet either. The best way to disallow it would be to let the ajax request that `OtherProfile` makes get to the server and have the server send back some specific message indicating that the id that was passed to it is the same as the id of the logged in user. If the server responds in this way, you can then redirect the user away using the `history` prop that React Router will automatically pass to your component:
 
     ```js
     this.props.history.push('/');
