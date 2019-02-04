@@ -58,7 +58,7 @@ There are a couple of other small things regarding `OtherProfile` to be aware of
     <Route
         path="/user/:id"
         render={props => (
-            <OtheProfile
+            <OtherProfile
                 key={props.match.url}
                 match={props.match}
                 history={props.history}
