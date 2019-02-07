@@ -4,14 +4,6 @@
 
 ![Bill and Ted](billandted.gif)
 
-![Tardis](tardis.gif)
-
-![Back to the Future](backtothefuture.gif)
-
-![Superman](superman.gif)
-
-![Cher](cher.gif)
-
 The easiest and least invasive way to get Redux DevTools working is to use the [Chrome extension](https://github.com/zalmoxisus/redux-devtools-extension), which can be installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd). In addition to the extension itself, you should install the `redux-devtools-extension` package into your project.
 
 ```
