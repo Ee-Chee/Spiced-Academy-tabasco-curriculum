@@ -213,6 +213,34 @@
 
 [Petition - Part 3](wk7_petition3)
 
+# Week 7
+
+### Monday
+
+[More SQL](wk7_sql_joins)
+
+[Petition - Part 4](wk7_petition4)
+
+### Tuesday
+[Petition - Part 5](wk8_petition5)
+
+### Wednesday
+
+[Heroku](wk8_heroku)
+
+[Petition - Part 5](wk8_petition5)
+
+### Thursday
+
+[Redis](wk8_redis)
+
+[Express Router](express_router)
+
+### Friday
+[Sessions with Redis](wk8_session)
+
+
+
 
 
 
