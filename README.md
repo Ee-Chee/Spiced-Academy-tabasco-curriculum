@@ -234,9 +234,9 @@
 
 [Redis](wk8_redis)
 
+### Friday
 [Express Router](express_router)
 
-### Friday
 [Sessions with Redis](wk8_session)
 
 
