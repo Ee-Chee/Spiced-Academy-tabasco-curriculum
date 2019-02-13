@@ -226,9 +226,9 @@
 
 ### Wednesday
 
-[Heroku](wk8_heroku)
-
 [Petition - Part 5](wk8_petition5)
+
+[Heroku](wk8_heroku)
 
 ### Thursday
 
