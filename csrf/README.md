@@ -9,7 +9,7 @@ To protect your Petition against CSRF attacks you must take a few simple steps.
     const csurf = require('csurf');
 
     app.use(cookieSession({
-        secret: 'nobody knows this secret but me',
+        secret: `I'm always angry.`,
         maxAge: 1000 * 60 * 60 * 24 * 7 * 6
     });
 
