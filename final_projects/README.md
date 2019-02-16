@@ -20,4 +20,4 @@ You should have already discussed your project with your friendly neighborhood f
 
 If you are short on ideas, rest assured that there are [plenty out there](https://github.com/tastejs/awesome-app-ideas) to choose from.
 
-![Project](project.gif)
+[![Project](project.gif)](https://www.youtube.com/watch?v=K5G1rUewM9o#t=0m06)
