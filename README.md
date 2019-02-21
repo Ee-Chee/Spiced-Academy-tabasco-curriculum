@@ -232,13 +232,14 @@
 
 ### Thursday
 
-[Redis](wk8_redis)
+[Express Router](express_router)
 
 ### Friday
 
+[Redis](wk8_redis)
+
 [Sessions with Redis](wk8_session)
 
-[Express Router](express_router)
 
 
 
