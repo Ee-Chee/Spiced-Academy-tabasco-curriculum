@@ -1,6 +1,6 @@
 # Social Network - Part 4
 
-For this part we want to show users all of their profile information on the screen they seen when they first log in. This includes their name, their profile picture, and their bio. On this screen, users should also be able to update their profile picture and edit their bio (or add one if they haven't already).
+For this part we want to show users all of their profile information on the screen they see when they first log in. This includes their name, their profile picture, and their bio. On this screen, users should also be able to update their profile picture and edit their bio (or add one if they haven't already).
 
 ![Munity add bio](munity1.png)
 
