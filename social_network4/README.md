@@ -30,7 +30,7 @@ If the user has a bio saved, the `BioEditor` component should show that text, al
 
 If the user's current bio text doesn't exist (it is an empty string or `undefined` or `null`), the `BioEditor` component should show an "Add Bio" button.
 
-When the user clicks either the "Edit Bio" or the "Add Bio" buttons, the component should enter 'editing mode'. When the user is editing, a `textarea` for the user to type in should be visible along with a `Save` button. When the button is clicked, the component should make a POST request to save the new bio to the database. When the request is successful, the component should exit editing mode and call the function it was passed to update the bio.
+When the user clicks either the "Edit Bio" or the "Add Bio" buttons, the component should enter 'editing mode'. When the user is editing, a `textarea` for the user to type in should be visible along with a "Save" button. When the button is clicked, the component should make a POST request to save the new bio to the database. When the request is successful, the component should exit editing mode and call the function it was passed to update the bio.
 
 The logic for determining what to show in the `render` function of `BioEditor` goes like this:
 
