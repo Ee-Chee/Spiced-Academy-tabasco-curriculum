@@ -78,7 +78,7 @@ In order to use jquery, you have to include it with a `script` tag in your HTML.
 
 ## Exercises
 
-1. Refactor your <a href="wk2_dy4_ticker">ticker project</a> to use jQuery for all DOM manipulations.
+1. Refactor your <a href="wk2_dy4_ticker">ticker project</a> to use jQuery for all DOM manipulations. Do not change how the animation works. That is, you should continue to use `requestAnimationFrame` just as you are already.
 
 2. Using jquery, create a modal dialog for your 'Welcome to Berlin and the Future' page. A modal dialog is a popup that users must interact with before they can do anything else. Typically, modals on website involve a box of content sitting on top of a semi-transparent background that fills the browser window.
 
