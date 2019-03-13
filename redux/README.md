@@ -155,7 +155,7 @@ const ConnectedBio = connect(mapStateToProps)(Bio);
 
 But the result is the same: a component that wraps around the `Bio` functional component and provides to it a prop named `bio`. This prop is mapped to the `bio` property of the `user` object attached to the global state object. If the `user` object in the state is replaced with one with a different `bio` property, the `ConnectedBio` component will re-render to reflect the change.
 
-In addition to `mapStateToProps`, you can pass another function as the second argument to `connect`. This argument is referred to as `mapDispatchToProps` and it is for creating functions that use your store's `dispatch` function. If you do not pass a second argument to `connect`, as in the example above, the `dispatch` function is automatically passed to the contained component as a prop. If we wanted to dispatch and action when the user clicks on the 'Please add your bio' text, we could make the following modifications:
+In addition to `mapStateToProps`, you can pass another function as the second argument to `connect`. This argument is referred to as `mapDispatchToProps` and it is for creating functions that use your store's `dispatch` function. If you do not pass a second argument to `connect`, as in the example above, the `dispatch` function is automatically passed to the contained component as a prop. If we wanted to dispatch an action when the user clicks on the 'Please add your bio' text, we could make the following modifications:
 
 ```js
 import { connect } from 'react-redux';
@@ -167,8 +167,6 @@ const mapStateToProps = function(state) {
     };
 };
 
-const ConnectedBio = connect(mapStateToProps)(Bio);
-
 function Bio(props) {
     const showBioEditor = () => this.props.dispatch(showBioEditor());
     return (
@@ -177,6 +175,8 @@ function Bio(props) {
         </div>
     );
 }
+
+export default connect(mapStateToProps)(Bio);
 ```
 
 Alternatively, you could use the second argument to `connect` to create functions that use dispatch and that will be merged in with the rest of the props.
@@ -197,8 +197,6 @@ const mapDispatchToProps = function(dispatch) {
     };
 };
 
-const ConnectedBio = connect(mapStateToProps, mapDispatchToProps)(Bio);
-
 function Bio(props) {
     return (
         <div className="bio">
@@ -206,4 +204,6 @@ function Bio(props) {
         </div>
     );
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Bio);
 ```
