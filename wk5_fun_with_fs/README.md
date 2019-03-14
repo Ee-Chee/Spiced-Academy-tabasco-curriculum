@@ -1,30 +1,46 @@
 # Fun with `fs`
 
-* Create a new directory named "fun-with-fs" and add to it a js file named "index.js"
+* Create a new directory named "fun-with-fs" and add to it a js file named "index.js."
 
-* Download <a href="files.zip">files.zip</a>, unzip it, and place the unzipped directory into the directory created previously
+* Download <a href="files.zip">files.zip</a>, unzip it, and place the unzipped directory into into the directory created previously,
 
-* In index.js, require the <a href="https://nodejs.org/api/fs.html">`fs`</a> module and use its <a href="https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback">`readdir`</a> method to get a list of items contained in the files directory and log it to the console. Then use the <a href="https://nodejs.org/api/fs.html#fs_fs_stat_path_callback">`stat`</a> method on each item to determine if it is a directory (you can do this by using the `isDirectory` method of the <a href="https://nodejs.org/api/fs.html#fs_class_fs_stats">`Stats`</a> instance passed to the callback you pass to `stat`). Log the contents of each directory recursively so that when you run index.js you see something like the following:
+* In index.js, require the [`fs`](https://nodejs.org/api/fs.html) module. You will be using its [`readdir`](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback) and [`stat`](https://nodejs.org/api/fs.html#fs_fs_stat_path_options_callback) methods in Part 1 and its [`readdirSync`](https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options), [`statSync`](https://nodejs.org/api/fs.html#fs_fs_statsync_path_options) and [`wrtieFileSync`](https://nodejs.org/api/fs.html#fs_fs_writefilesync_file_data_options) methods in Part 2.
 
+## Part 1
+* Write a function named `logSizes` that expects to be passed the full path to a directory. It should use `fs.readdir` with the `withFileTypes` option set to `true` in order to read the contents of the directory. Once the contents are known, it should loop through them and do the following:
+
+    * For every file it should call `fs.stat` to determine the file's size. Once the size is known, it should log the path to the file followed by a colon and the size of the file.
+
+    * For every directory, it should call itself and pass the path to the directory so that the sizes of all the files contained in the directory will be logged.
+
+* Call `logSizes` and pass to it the full path to the files directory. The output should end up looking like this:
     ```
-  /Users/discoduck/fun-with-fs/files contains README.md, part1, part2
-  /Users/discoduck/fun-with-fs/files/part1 contains a, b
-  /Users/discoduck/fun-with-fs/files/part2 contains index.html, script.js
-  /Users/discoduck/fun-with-fs/files/part1/a contains images, index.html, stylesheet.css
-  /Users/discoduck/fun-with-fs/files/part1/b contains images, index.html, stylesheet.css
-  /Users/discoduck/fun-with-fs/files/part1/a/images contains cats.png, kitty1_150x150.jpg, kitty2_150x150.jpg, kitty3_150x150.jpg
-  /Users/discoduck/fun-with-fs/files/part1/b/images contains boxes.png
+    /Users/funkychicken/fun-with-fs/files/README.md: 12
+    /Users/funkychicken/fun-with-fs/files/part2/index.html: 160
+    /Users/funkychicken/fun-with-fs/files/part2/script.js: 1998
+    /Users/funkychicken/fun-with-fs/files/part1/a/index.html: 241
+    /Users/funkychicken/fun-with-fs/files/part1/a/stylesheet.css: 40
+    /Users/funkychicken/fun-with-fs/files/part1/b/index.html: 243
+    /Users/funkychicken/fun-with-fs/files/part1/b/stylesheet.css: 39
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/cats.png: 573350
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty1_150x150.jpg: 9279
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty2_150x150.jpg: 14355
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty3_150x150.jpg: 13387
+    /Users/funkychicken/fun-with-fs/files/part1/b/images/boxes.png: 156804
     ```
 
-* If any of the callbacks you pass to `readdir` or `stat` get passed an error, log the error to the console and call `process.exit`.
+* If any of the callbacks you pass to `readdir` or `stat` get passed an error, log the error to the console.
 
 ## Part 2
 
-* Add a file to the directory named "part2.js"
+* Write a function named `mapSizes` that expects to be passed the full path to a directory. It should use `fs.readdirSync` with the `withFileTypes` option set to `true` in order to read the contents of the directory. Once the contents are known, it should create an object and add to it a property for each of the items found.
+    * If the item is a file, the name of the property should be the item's name and the value of the property should be the item's size. To get the size you will have to call `statSync` and pass to it the full path to the file.
 
-* In part2.js, write a function that uses <a href="https://nodejs.org/api/fs.html#fs_fs_readdirsync_path_options">`readdirSync`</a> and <a href="https://nodejs.org/api/fs.html#fs_fs_statsync_path">`statSync`</a> to add properties to an object for each item contained in the files directory and its subdirectories. If the item is a file, a property should be added whose name is that of the file and whose value is the size of the file (you can get the size by accessing the `size` property of the `Stats` object returned by `stat`). If the item is a directory, the property's name should be the directory's name and its value should be an object that has properties for each file and subdirectory the directory contains.
+    * If the item is a directory, the name of the property should be the item's name and the value should be the object you get by calling `mapSizes` again and passing it the full path to the directory.
 
-* After you've built up this object, convert it to a JSON string and use <a href="https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback">`writeFile`</a> to write it to a file named "files.json". The contents of the resulting file should look like this (assuming that you pass `4` as the third parameter to <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">`JSON.stringify`</a>):
+    After adding a property for each file and directory, `mapSizes` should return the object it created.
+
+* Call `mapSizes` and pass to it the full path to the files directory. Use [`JSON.stringify`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) to convert the object it returns to a string and then use `fs.writeFileSync` to write that string to a file named "files.json". The contents of the resulting file should look like this (assuming that you pass `4` as the third parameter to `JSON.stringify`):
 
   ```JSON
     {
