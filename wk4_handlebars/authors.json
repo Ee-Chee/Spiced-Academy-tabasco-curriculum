@@ -25,15 +25,16 @@
             "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Oscar_Wilde_Sarony.jpg/800px-Oscar_Wilde_Sarony.jpg"
         },
         {
-            "name": "Sylvia Plath",
-            "born": 1932,
-            "died": 1963,
+            "name": "Maya Angelou",
+            "born": 1928,
+            "died": 2014,
             "selectedWritings": [
-                "The Bell Jar",
-                "Ariel"
+                "I Know Why the Caged Bird Sings",
+                "Gather Together in My Name",
+                "The Heart of a Woman"
             ],
-            "quote": "To the person in the bell jar, blank and stopped as a dead baby, the world itself is a bad dream.",
-            "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sylvia_Plath.jpg"
+            "quote": "I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.",
+            "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Angelou_at_Clinton_inauguration.jpg"
         }
     ]
 }
