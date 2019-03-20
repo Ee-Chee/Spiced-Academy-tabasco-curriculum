@@ -2,7 +2,7 @@
 
 Let's use the <a href="https://developer.github.com/v3/">GitHub API</a> to make a UI that allows users to see a list of public repos belonging to a GitHub user that they specify and to see the last 10 commits made to each.
 
-When  users arrive at this page they should be asked to enter their GitHub username and password. The GitHub API doesn't require authentication but without a username and password we will run up against rate limits very quickly. Once you have the user's username and password, you can use them to build an `Authorization` header. The value of this header should be the string `'Basic `' followed by the username and password joined on `':'` and [base64](https://en.wikipedia.org/wiki/Base640) encoded. The [btoa](https://developer.mozilla.org/en/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) function can be used to base64 encode. For example:
+When  users arrive at this page they should be asked to enter their GitHub username and password. The GitHub API doesn't require authentication but without a username and password we will run up against rate limits very quickly. Once you have the user's username and password, you can use them to build an `Authorization` header. The value of this header should be the string `'Basic `' followed by the username and password joined on `':'` and [base64](https://en.wikipedia.org/wiki/Base64) encoded. The [btoa](https://developer.mozilla.org/en/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) function can be used to base64 encode. For example:
 
 ```js
 $.ajax({
