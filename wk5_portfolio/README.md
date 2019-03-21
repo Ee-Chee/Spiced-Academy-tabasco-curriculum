@@ -51,12 +51,13 @@ Does the request url correspond to an item in the projects folder?
                                   /           \
                                  /             \
                     Serve the file             Does the request url end with a slash?
-                                                          /     \
-                                                         /       \
-                                                     no /         \ yes
-                                                       /           \
-                                                      /             \
-Redirect to the request url with a slash appended to it             Serve the index.html file that's in the directory
+                                                              /     \
+                                                             /       \
+                                                         no /         \ yes
+                                                           /           \
+                                                          /             \
+                                Redirect to the request url             Serve the index.html file 
+                                with a slash appended to it             that is in the directory
 ```
 ## Part 2
 
