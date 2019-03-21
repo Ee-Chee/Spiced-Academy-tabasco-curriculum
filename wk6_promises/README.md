@@ -140,44 +140,41 @@ Promise.all([
 If the promise is resolved an array containing all of the resolved promises will be passed to the success handler.
 
 ## Exercises
-
-1. In your <a href="../wk5_fun_with_fs">Fun with fs</a> project create a module that has promisified versions of `fs.readdir` and `fs.stat` available. You can create functions that use the `Promise` constructor yourself or use `util.promisify`. There is a new, third alternative: the experimental [Promises API](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_promises_api).
+1. Redo [Part 1](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs#part-1) of your [`fs`](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs) project but this time use versions of `readdir` and `stat` that return promises. You can obtain these versions of by using the experimental promises API of the `fs` module.
 
     ```js
     const {readdir, stat} = require('fs').promises;
     ```
 
-    Once you have your promisifed `readir` and `stat`, use them to read the `files` directory and log to the console whether or not each item in it is a directory. After you have done this for every item, log the string "done!" to the console. The result should look like this:
+    If that makes you uncomfortable, you can use `util.promisify` on the versions that accept callbacks.
+
+    ```js
+    let {readdir, stat} = require('fs');
+    const {promisify} = require('util');
+
+    readdir = promisify(readdir);
+    stat = promisify(stat);
+    ```
+
+    A third option would be to write two new functions that each return a promise created with the `Promise` constructor and call `fs.readdir` or `fs.stat` in the function you pass to `Promise`.
+
+    Once you have your `logSizes` function working with your promisified `readdir` and `stat`, modify it so that it returns a single promise that is resolved when all of the promises it causes to be created are resolved.
+
+    Finally, call `logSizes` and pass it the path to your files directory. When the promise it returns is resolved, log the string `"done!"` to the console. The output should end up looking like this:
 
     ```
-    /Users/discoduck/fun-with-fs/files/README.md is not a directory
-    /Users/discoduck/fun-with-fs/files/part1 is a directory
-    /Users/discoduck/fun-with-fs/files/part2 is a directory
+    /Users/funkychicken/fun-with-fs/files/README.md: 12
+    /Users/funkychicken/fun-with-fs/files/part2/index.html: 160
+    /Users/funkychicken/fun-with-fs/files/part2/script.js: 1998
+    /Users/funkychicken/fun-with-fs/files/part1/a/index.html: 241
+    /Users/funkychicken/fun-with-fs/files/part1/a/stylesheet.css: 40
+    /Users/funkychicken/fun-with-fs/files/part1/b/index.html: 243
+    /Users/funkychicken/fun-with-fs/files/part1/b/stylesheet.css: 39
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/cats.png: 573350
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty1_150x150.jpg: 9279
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty2_150x150.jpg: 14355
+    /Users/funkychicken/fun-with-fs/files/part1/a/images/kitty3_150x150.jpg: 13387
+    /Users/funkychicken/fun-with-fs/files/part1/b/images/boxes.png: 156804
     done!
     ```
-
-    **Bonus:** Do the same thing recursively. That is, if an item is a directory, read its contents and log to the console whether each item it contains is a directory or not. The result should look like this:
-
-    ```
-    /Users/discoduck/fun-with-fs/files/README.md is not a directory
-    /Users/discoduck/fun-with-fs/files/part2 is a directory
-    /Users/discoduck/fun-with-fs/files/part1 is a directory
-    /Users/discoduck/fun-with-fs/files/part2/index.html is not a directory
-    /Users/discoduck/fun-with-fs/files/part2/script.js is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a is a directory
-    /Users/discoduck/fun-with-fs/files/part1/b is a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/images is a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/index.html is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/stylesheet.css is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/b/images is a directory
-    /Users/discoduck/fun-with-fs/files/part1/b/index.html is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/b/stylesheet.css is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/images/cats.png is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty1_150x150.jpg is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty2_150x150.jpg is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/a/images/kitty3_150x150.jpg is not a directory
-    /Users/discoduck/fun-with-fs/files/part1/b/images/boxes.png is not a directory
-    done!
-    ```
-
-3. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
+2. Refactor your [Twitter API](wk6_twitter_api) project to use promises for everything asynchronous.
