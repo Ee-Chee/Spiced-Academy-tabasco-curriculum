@@ -37,7 +37,7 @@
   }
   ```
 * The logic in the request handler goes like this:
-```
+  ```
 Does the request url correspond
 to an item in the projects folder?
             /     \
