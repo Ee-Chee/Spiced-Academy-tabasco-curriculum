@@ -36,28 +36,28 @@
       return res.end();
   }
   ```
-* The overall logic of the request handler runs like this:
-  ```
-  Does the request url correspond to an item in the projects folder?
-                        /     \
-                       /       \
-                  no  /         \ yes
-                     /           \
-                    /             \
-                  404            Is it a directory?
-                                       /     \
-                                      /       \
-                                  no /         \ yes
-                                    /           \
-                                   /             \
-                      Serve the file             Does the request url end with a slash?
-                                                             /     \
-                                                            /       \
-                                                        no /         \ yes
-                                                          /           \
-                                                         /             \
-   Redirect to the request url with a slash appended to it             Serve the index.html file that is in the directory
-  ```
+The overall logic of the request handler runs like this:
+```
+Does the request url correspond to an item in the projects folder?
+                      /     \
+                     /       \
+                no  /         \ yes
+                   /           \
+                  /             \
+                404            Is it a directory?
+                                     /     \
+                                    /       \
+                                no /         \ yes
+                                  /           \
+                                 /             \
+                    Serve the file             Does the request url end with a slash?
+                                                          /     \
+                                                         /       \
+                                                     no /         \ yes
+                                                       /           \
+                                                      /             \
+Redirect to the request url with a slash appended to it             Serve the index.html file that's in the directory
+```
 ## Part 2
 
 Create a page that lists and links to all of the projects in your portfolio.
