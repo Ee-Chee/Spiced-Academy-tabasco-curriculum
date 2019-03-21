@@ -36,30 +36,27 @@
       return res.end();
   }
   ```
-* The logic in the request handler goes like this:
+* The overall logic of the request handler runs like this:
   ```
-  Does the request url correspond
-  to an item in the projects folder?
-              /     \
-             /       \
-        no  /         \ yes
-           /           \
-          /             \
-        404            Is it a directory?
-                            /     \
-                           /       \
-                       no /         \ yes
-                         /           \
-                        /             \
-           Serve the file             Does the request url
-                                      end with a slash?
-                                             /     \
-                                            /       \
-                                        no /         \ yes
-                                          /           \
-                                         /             \
-               Redirect to the request url             Serve the index.html file
-               with a slash appended to it             that is in the directory
+  Does the request url correspond to an item in the projects folder?
+                        /     \
+                       /       \
+                  no  /         \ yes
+                     /           \
+                    /             \
+                  404            Is it a directory?
+                                       /     \
+                                      /       \
+                                  no /         \ yes
+                                    /           \
+                                   /             \
+                      Serve the file             Does the request url end with a slash?
+                                                             /     \
+                                                            /       \
+                                                        no /         \ yes
+                                                          /           \
+                                                         /             \
+   Redirect to the request url with a slash appended to it             Serve the index.html file that is in the directory
   ```
 ## Part 2
 
