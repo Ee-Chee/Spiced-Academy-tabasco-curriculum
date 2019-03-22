@@ -140,7 +140,7 @@ Promise.all([
 If the promise is resolved an array containing all of the resolved promises will be passed to the success handler.
 
 ## Exercises
-1. Redo [Part 1](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs#part-1) of your [`fs`](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs) project but this time use versions of `readdir` and `stat` that return promises. You can obtain these versions of by using the experimental promises API of the `fs` module.
+1. Redo [Part 1](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs#part-1) of your [`fs`](https://github.com/spicedacademy/tabasco/tree/master/wk5_fun_with_fs) project but this time use versions of `readdir` and `stat` that return promises. You can obtain these versions by using the experimental promises API of the `fs` module.
 
     ```js
     const {readdir, stat} = require('fs').promises;
@@ -158,7 +158,7 @@ If the promise is resolved an array containing all of the resolved promises will
 
     A third option would be to write two new functions that each return a promise created with the `Promise` constructor and call `fs.readdir` or `fs.stat` in the function you pass to `Promise`.
 
-    Once you have your `logSizes` function working with your promisified `readdir` and `stat`, modify it so that it returns a single promise that is resolved when all of the promises it causes to be created are resolved.
+    Once you have your `logSizes` function working with your promisified `readdir` and `stat`, modify it so that it returns a single promise that is resolved when all of the promises it causes creates are resolved.
 
     Finally, call `logSizes` and pass it the path to your files directory. When the promise it returns is resolved, log the string `"done!"` to the console. The output should end up looking like this:
 
