@@ -158,7 +158,7 @@ If the promise is resolved an array containing all of the resolved promises will
 
     A third option would be to write two new functions that each return a promise created with the `Promise` constructor and call `fs.readdir` or `fs.stat` in the function you pass to `Promise`.
 
-    Once you have your `logSizes` function working with your promisified `readdir` and `stat`, modify it so that it returns a single promise that is resolved when all of the promises it causes creates are resolved.
+    Once you have your `logSizes` function working with your promisified `readdir` and `stat`, modify it so that it returns a single promise that is resolved when all of the promises it creates are resolved.
 
     Finally, call `logSizes` and pass it the path to your files directory. When the promise it returns is resolved, log the string `"done!"` to the console. The output should end up looking like this:
 
