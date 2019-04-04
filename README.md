@@ -229,9 +229,9 @@
 
 ### Wednesday
 
-[Express Router](express_router)
-
 [Heroku](wk8_heroku)
+
+[Express Router](express_router)
 
 ### Thursday
 
