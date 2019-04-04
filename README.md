@@ -229,13 +229,11 @@
 
 ### Wednesday
 
-[Petition - Part 5](wk8_petition5)
+[Express Router](express_router)
 
 [Heroku](wk8_heroku)
 
 ### Thursday
-
-[Express Router](express_router)
 
 [SuperTest](supertest)
 
