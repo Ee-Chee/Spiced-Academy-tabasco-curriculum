@@ -237,7 +237,7 @@
 
 [Express Router](express_router)
 
-[SuperTest[(supertest)
+[SuperTest](supertest)
 
 ### Friday
 
