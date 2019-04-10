@@ -29,11 +29,11 @@
 
     <img src="resources_tab.png" alt="Resources">
 
-7. Download and install the Heroku CLI. *WSL* users can do this by typing the following:
+7. Download and install the Heroku CLI. **WSL** users can do this by typing the following:
    ```
    curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
    ```
-   *Mac* users can download the [installer](https://cli-assets.heroku.com/heroku.pkg) from [this page](https://devcenter.heroku.com/articles/heroku-cli).
+   **Mac** users can download the [installer](https://cli-assets.heroku.com/heroku.pkg) from [this page](https://devcenter.heroku.com/articles/heroku-cli).
 
 
 8. On the command line, log in with the Heroku CLI you installed.
