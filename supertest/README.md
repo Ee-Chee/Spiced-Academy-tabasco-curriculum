@@ -2,7 +2,7 @@
 
 [SuperTest](https://github.com/visionmedia/supertest) is a tool for testing HTTP request handling. With SuperTest, you can send specific requests to your Express app or router and then make assertions about the response you receive.
 
-When you require SuperTest, you get a function to which you must pass an Express app or router. The object this function returns has methods for making requests (`get`, `post`, etc.). When you call one of these methods and make a request, you get back a promise that is resolved with a response object.
+When you require SuperTest, you get a function to which you must pass an Express app (or a Node `Server` object if you are not using Express). The object this function returns has methods for making requests (`get`, `post`, etc.). When you call one of these methods and make a request, you get back a promise that is resolved with a response object.
 
 ```js
 const supertest = require('supertest');
