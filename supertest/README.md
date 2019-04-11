@@ -75,7 +75,7 @@ test('Make request with a specific session property', () => {
 });
 ```
 
-Unless you are using [`express.Router`](../express_router), you will have to export your app and require it in your .test.js file. If the file in which you export your app is also the file in which you call its `listen` method, your server will start listening for requests when you run your tests. This would not be a problem in and of itself. The problem would be that the server would never stop listening for requests and Jest would complain that your tests never complete. To avoid this, you can simply not call `listen` when you're running tests. If your app is not already listening on a port, SuperTest will automatically bind your app to a port it chooses when you make a request and unbind it when the request is done.
+You will have to export your app and require it in your .test.js file. If the file in which you export your app is also the file in which you call its `listen` method, your server will start listening for requests when you run your tests. This would not be a problem in and of itself. The problem would be that the server would never stop listening for requests and Jest would complain that your tests never complete. To avoid this, you can simply not call `listen` when you're running tests. If your app is not already listening on a port, SuperTest will automatically bind your app to a port it chooses when you make a request and unbind it when the request is done.
 
 Since the module in which you call `listen` is usually the main module when you are not running tests, the following is probably a good way to avoid calling `listen` when you are running tests:
 
