@@ -245,3 +245,33 @@
 
 [Sessions with Redis](wk8_session)
 
+# Week 8
+
+### Monday
+
+Petition Review
+
+[Vue.js](vuejs)
+
+[Image Board - Part 1](imageboard1)
+
+### Tuesday
+
+[Image Upload](wk10_image_upload)
+
+[Image Upload - Part 2](knox_s3)
+
+[Image Board - Part 2](imageboard2)
+
+### Wednesday
+
+[Vue Components](vuejs/components.md)
+
+[Image Board - Part 3](imageboard3)
+
+### Thursday
+
+[Image Board - Pagination](imageboard1/pagination.md)
+
+[Image Board - Part 4](imageboard4)
+
