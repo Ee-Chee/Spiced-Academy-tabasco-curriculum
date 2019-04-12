@@ -8,16 +8,16 @@ You can create your own [Amazon Web Services account](https://aws.amazon.com/fre
 
 ## knox
 
-[knox](https://github.com/Automattic/knox) is an easy-to-use S3 client you will want to install.
+knox is an easy-to-use S3 client you will want to install.
 
 ```
-npm install knox --save
+npm install knox-s3 --save
 ```
 
 Once it is installed, you can use it to send the files users have uploaded to S3. First, you create a client.
 
 ```js
-const knox = require('knox');
+const knox = require('knox-s3');
 let secrets;
 if (process.env.NODE_ENV == 'production') {
     secrets = process.env; // in prod the secrets are environment variables
