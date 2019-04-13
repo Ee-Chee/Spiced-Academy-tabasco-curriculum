@@ -21,8 +21,8 @@ npm install connect-redis --save
 With both of these modules installed, you just have to do a little configuration in the file in which you set up your Express router.
 
 ```js
-var session = require('express-session'),
-var Store = require('connect-redis')(session);
+const session = require('express-session'),
+const Store = require('connect-redis')(session);
 
 app.use(session({
     store: new Store({
@@ -32,7 +32,7 @@ app.use(session({
     }),
     resave: false,
     saveUninitialized: true,
-    secret: 'my super fun secret'
+    secret: `I'm always angry.`
 }));
 ```
 
