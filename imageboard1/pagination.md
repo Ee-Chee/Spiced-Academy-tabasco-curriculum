@@ -28,7 +28,7 @@ exports.getMoreImages = (startId, offset) => db.query(
         WHERE id < $1
         ORDER BY id DESC
         LIMIT 10
-        OFFSET = $2`,
+        OFFSET $2`,
         [startId, offset]
     ).then(
         ({rows}) => rows
