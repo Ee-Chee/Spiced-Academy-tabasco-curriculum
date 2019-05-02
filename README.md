@@ -336,3 +336,30 @@ Image Board Review
 ### Saturday
 
 [Symbols](symbols)
+
+# Week 11
+
+### Monday
+
+[Social Network - Part 7](social_network7)
+
+### Tuesday
+
+[socket.io](socket.io)
+
+[Social Network - Part 8](social_network8)
+
+### Wednesday
+
+[Social Network - Part 9](social_network9)
+
+### Thursday
+
+[Social Network - Part 9](social_network9)
+
+### Friday
+
+Social Network Wrap-up
+
+[Final Project](final_projects) Kick-off
+
