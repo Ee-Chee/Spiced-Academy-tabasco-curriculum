@@ -357,7 +357,7 @@ Image Board Review
 
 ### Thursday
 
-[Social Network - Part 9](social_network9)
+[Social Network - Additional Features](social_network_additional)
 
 ### Friday
 
