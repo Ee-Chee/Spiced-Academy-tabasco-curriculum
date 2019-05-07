@@ -365,3 +365,7 @@ Social Network Wrap-up
 
 [Final Project](final_projects) Kick-off
 
+# Week 12
+
+[Final Projects](final_projects)
+
